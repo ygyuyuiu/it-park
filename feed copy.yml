@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2024-07-01">
+<shop>
+<name>IT-ПАРК</name>
+<url>https://itpark32.ru/</url>
+<email>itpark.team@yandex.ru</email>
+<picture>https://itpark32.ru/img/seo/105x105.webp</picture>
+<description>Курсы программирования с нуля. Освойте профессию и станьте IT-специалистом за 12 месяцев. Пробное занятие бесплатно!</description>
+<currencies>
+<currency id="RUR" rate="1"/>
+</currencies>
+<offers>
+<offer id="1">
+<name>Разработка сайтов и веб-приложений</name>
+<url>https://itpark32.ru#webCourse</url>
+<categoryId>101</categoryId>
+<price>1500</price>
+<currencyId>RUR</currencyId>
+<param name="Ссылка на контент курса">https://itpark32.ru#webCourse</param>
+<param name="Продолжительность" unit="месяц">14</param>
+<param name="Результат обучения">Сертификат</param>
+<param name="Часы в неделю">10</param>
+<description>Полный курс обучения с нуля для тех, кто только начинает свой путь в IT. Разработка сайтов и веб-приложений на HTML, CSS, JS, PHP, React, Laravel.</description>
+</offer>
+<offer id="2">
+<name>Серверное программирование на Java</name>
+<url>https://itpark32.ru#javaCourse</url>
+<categoryId>107</categoryId>
+<price>1500</price>
+<currencyId>RUR</currencyId>
+<param name="Ссылка на контент курса">https://itpark32.ru#javaCourse</param>
+<param name="Продолжительность" unit="месяц">14</param>
+<param name="Результат обучения">Сертификат</param>
+<param name="Часы в неделю">10</param>
+<description>Разработка приложений для сервера, компьютеров и мобильных устройств на Java.</description>
+</offer>
+<offer id="3">
+<name>Фронтенд-разработка на JavaScript и React</name>
+<url>https://itpark32.ru#frontendCourse</url>
+<categoryId>101</categoryId>
+<price>1500</price>
+<currencyId>RUR</currencyId>
+<param name="Ссылка на контент курса">https://itpark32.ru#frontendCourse</param>
+<param name="Продолжительность" unit="месяц">12</param>
+<param name="Результат обучения">Сертификат</param>
+<param name="Часы в неделю">10</param>
+<description>Разработка сайтов и веб-приложений на JavaScript, TypeScript, React, Redux.</description>
+</offer>
+<offer id="4">
+<name>Разработка Telegram ботов на Java</name>
+<url>https://itpark32.ru#tgJavaCourse</url>
+<categoryId>107</categoryId>
+<price>1500</price>
+<currencyId>RUR</currencyId>
+<param name="Ссылка на контент курса">https://itpark32.ru#tgJavaCourse</param>
+<param name="Продолжительность" unit="месяц">4</param>
+<param name="Результат обучения">Сертификат</param>
+<param name="Часы в неделю">10</param>
+<description>Разработка Telegram ботов с использованием баз данных на Java.</description>
+</offer>
+</offers>
+</shop>
+</yml_catalog>

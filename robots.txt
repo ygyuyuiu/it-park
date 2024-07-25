@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Sitemap: https://itpark32.ru/sitemap.xml
