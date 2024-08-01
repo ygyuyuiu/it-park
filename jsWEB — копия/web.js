@@ -221,7 +221,7 @@ $(document).ready(function (){
 		arrows: true,
 		dots: true,
 		centerPadding: '0px',
-		slidesToShow: 5,
+		slidesToShow: 3,
 		centerMode: true,
 		slidesToScroll: 1,
 		speed: 200,
