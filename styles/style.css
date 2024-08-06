@@ -401,6 +401,16 @@ body {
   font-size: clamp(16px, 13.2174px + 0.8696vi, 24px);
 }
 
+/* modal submit */
+.modal__content-submit {
+  background-color: #262a3d;
+}
+.modal__close-submit {
+  background-image: url(../img/button/close-btn.png);
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+
 /* header */
 .header__nav-label {
   font-family: var(--font-family-common);

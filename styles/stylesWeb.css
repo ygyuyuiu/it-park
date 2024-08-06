@@ -358,6 +358,9 @@ body {
   font-size: var(--font-size-big);
   margin-bottom: 32px;
 }
+.promo__link{
+  font-size: var(--font-size-for-button);
+}
 .promo__btn-wrapper{
   gap: 15px;
 }
@@ -433,7 +436,7 @@ body {
   gap: 6px;
 }
 .description__img{
-  border-radius: var(--border-radius-large);
+  border-radius: 100px;
   max-width: 656px;
 }
 
@@ -484,6 +487,8 @@ body {
 }
 .school__video {
   position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 100px;
 }
 .school__video::after {
   content: "";
@@ -578,12 +583,6 @@ body {
 }
 .course__inner-item-fourth{
   background-color:rgba(207, 234, 252, 1);
-}
-.course__inner-item-first,
-.course__inner-item-second,
-.course__inner-item-third,
-.course__inner-item-fourth{
-  gap: 12px;
 }
 .course__subtitle-first,
 .course__subtitle-second,
@@ -767,7 +766,7 @@ body {
 }
  .slider__content{
   position: relative;
-  padding: 0 50px;
+  padding-inline: 143px;
  }
 .slider__content .slick-arrow {
   position: absolute;
@@ -806,13 +805,16 @@ body {
 }
 .slider__item{
   transition: var(--transition-duration);
-  text-align: center;
   opacity: 0.5;
   transform: scale(0.9);
+  display: flex;
+  justify-content: center;
 }
+
 .slider__content .slick-slide.slick-current {
   transform: scale(1.0);
   opacity: 1;
+  width: 330px;
 } 
 .slick-list {
   overflow: hidden;
@@ -899,20 +901,19 @@ body {
  }
 .lesson__wrapper .slick-arrow {
   position: absolute;
-  top: 50%;
-  bottom: 50%;
-  transform: translate(0, -50%);
+  top: 165px;
+  bottom: 165px;
   z-index: 10;
   font-size: 0;
   width: 70px;
   height: 70px;
 }
 .lesson__wrapper .slick-arrow.slick-prev {
-  left: 0px;
+  left: -25px;
   background: url(../imgWEB/slider/arrow-left.svg) 0 0 / 100% no-repeat;
 }
 .lesson__wrapper .slick-arrow.slick-next {
-  right: 0;
+  right: -20px;
   background: url(../imgWEB/slider/arrow-right.svg) 0 0 / 100% no-repeat;
 }
 .slick-list {
@@ -1480,6 +1481,65 @@ rgba(0, 0, 0, 1));
   margin-left: 33px;
 }
 
+/* footer */
+.footer_gray {
+  color: var(--color-gray);
+}
+.footer__title {
+  max-width: 227px;
+  margin-bottom: 68px;
+}
+.footer__title-text {
+  font-size: 26px;
+  font-family: var(--font-family-common);
+  color: var(--color-content);
+}
+.footer__text {
+  font-size: var(--font-size-small);
+}
+.footer__item:first-child {
+  margin-bottom: 8px;
+}
+.footer__link {
+  color: var(--color-content);
+}
+.footer__link-w {
+  /* width: 237px; */
+  display: inline-block;
+  color: var(--color-content);
+}
+.footer__link:hover,
+.footer__link-w:hover {
+  color: var(--color-accent);
+}
+.footer__form-input {
+  padding-block: 16px;
+}
+.footer__frame {
+  padding-block: 16px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius-small);
+}
+
+/* loader wrapper*/
+.modal__footer {
+  position: relative;
+}
+.modal__footer-loader-wrapper {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-color: #ffffff00;
+  z-index: 2;
+}
+.modal__footer-btn-text,
+.modal__footer-label-text {
+  cursor: pointer;
+}
+
 /* button */
 .fixed{
   position: fixed;
@@ -1642,6 +1702,9 @@ rgba(0, 0, 0, 1));
   .scholl__text,
   .school__list{
     max-width: 100%;
+  }
+  .school__wrapper{
+    margin-bottom: 49px;
   }
   .lesson__desc,
   .lesson__desc_h{
@@ -1897,6 +1960,9 @@ rgba(0, 0, 0, 1));
     width: 50px;
     height: 50px;
   }
+  .school__img-wrapper::after{
+    top: 40%;
+  }
   .description__decor-img{
     width: 50px;
     height: 50px;
@@ -1941,6 +2007,12 @@ rgba(0, 0, 0, 1));
   .school__video::after {
     background-size: 90px;
     background-position: 30px 50px;
+  }
+  .course__text-first,
+  .course__text-second,
+  .course__text-third,
+  .course__text-fourth {
+    max-width: 100%;
   }
   .testimonials__slider .slick-dots button {
     width: 12px;
@@ -1996,7 +2068,7 @@ rgba(0, 0, 0, 1));
   .promo__img-man,
   .promo__img-absolute, 
   .description__img,
-  .school__img {
+  .school__img-wrapper {
     border-radius: var(--border-radius);
   }
   .slider__content{

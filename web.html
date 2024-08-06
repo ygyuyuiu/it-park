@@ -232,11 +232,11 @@
             <p class="promo__desc-text lh-base">С нуля научим верстать адаптивные сайты на HTML, CSS, разрабатывать современные веб-приложения с использованием JavaScript, TypeScript и React, а также писать серверную часть на PHP, Laravel</p>
           </div>
 					<div class="promo__btn-wrapper d-flex flex-column d-sm-flex  flex-sm-row ">
-						<a href="#courses" class="link button  btn btn-primary rounded-pill fw-semibold px-4 py-3">
+						<a href="#courses" class="link button  btn btn-primary rounded-pill fw-semibold px-4 py-3 promo__link">
 							Записаться на курс
 						</a>
 						<a href="#exampleModalToggle" data-bs-toggle="modal"
-							class="link button  btn btn-outline-primary rounded-pill fw-semibold px-4 py-3">
+							class="link button  btn btn-outline-primary rounded-pill fw-semibold px-4 py-3 promo__link">
 							Нужна консультация
 						</a>
 					</div>
@@ -415,24 +415,24 @@
 					<div class="course__wrapper-first d-flex flex-column d-xl-flex flex-xl-row">
 
 						<div class="course__inner-first col-12 col-xl-4">
-							<div class=" course__inner-item course__inner-item-first d-flex justify-content-between">
+							<div class=" course__inner-item course__inner-item-first d-flex flex-column d-sm-flex justify-content-sm-between">
 								<div>
 								<h3 class="course__subtitle-first h3_new lh-sm">14+</h3>
 								<p class="course__text-first lh-sm mb-0">Для старшеклассников, студентов и взрослых <b>(14+)</b> </p>
 							</div>
-								<div class="course__img-wrapper_abs">
+								<div class="course__img-wrapper_abs align-self-center align-self-sm-end mt-5 mt-sm-0">
 									<img class="course__img-first d-block d-xl-none" src="imgWEB/course/1.svg" alt="Картинка декор">
 								</div>
 							</div>
 						</div>
 
 						<div class="course__inner-second col-12 col-xl-8">
-							<div class=" course__inner-item course__inner-item-second d-flex justify-content-between">
+							<div class=" course__inner-item course__inner-item-second d-flex flex-column d-sm-flex flex-sm-row justify-content-sm-between">
 								<div>
 								<h3 class="course__subtitle-second h3_new lh-sm">Новички в IT</h3>
 								<p class="course__text-second lh-sm mb-0">Для желающих освоить новую профессию с нуля, <b>даже без технического образования</b> и опыта </p>
 								</div>
-								<div class="course__img-wrapper-second">
+								<div class="course__img-wrapper-second align-self-center align-self-sm-end">
 									<img class="course__img-second" src="imgWEB/course/2.svg" alt="Картинка декор">
 								</div>
 							</div>
@@ -442,24 +442,24 @@
 
 					<div class="course__wrapper-second  d-flex flex-column d-xl-flex flex-xl-row">
 						<div class="course__inner-third col-12 col-xl-8">
-							<div class=" course__inner-item course__inner-item-third d-flex justify-content-between">
+							<div class=" course__inner-item course__inner-item-third d-flex flex-column d-sm-flex flex-sm-row justify-content-sm-between">
 								<div>
 									<h3 class="course__subtitle-third h3_new lh-sm">Опыт для трудоустройства</h3>
 									<p class="course__text-third lh-sm mb-0">Для тех, кто хочет <b>научиться создавать сайты и веб-приложения</b> с нуля, наработать портфолио из реальных проектов и получить опыт работы в команде </p>
 								</div>
-								<div class="course__img-wrapper-third">
+								<div class="course__img-wrapper-third align-self-center ">
 									<img class="course__img-third" src="imgWEB/course/3.svg" alt="Картинка декор">
 								</div>
 							</div>
 						</div>
 
 						<div class="course__inner-fourth col-12 col-xl-4">
-							<div class=" course__inner-item course__inner-item-fourth d-flex justify-content-between">
+							<div class=" course__inner-item course__inner-item-fourth d-flex flex-column d-sm-flex flex-sm-row justify-content-sm-between">
 								<div>
 								<h3 class="course__subtitle-fourth h3_new lh-sm">Продвинутые</h3>
 								<p class="course__text-fourth lh-sm mb-0">Для тех, <b>кто уже имеет базовые знания</b> и желает их углубить </p>
 							</div>
-								<div class="course__img-wrapper_abs-second">
+								<div class="course__img-wrapper_abs-second align-self-center align-self-sm-end mt-5 mt-sm-0">
 									<img class="course__img-fourth d-block d-xl-none" src="imgWEB/course/4.svg" alt="Картинка декор">
 								</div>
 							</div>
@@ -1260,6 +1260,107 @@
 			</div>
 		</div>
 	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row d-flex flex-column  d-md-flex flex-md-row gap-4 gap-md-0 ">
+				<div class="col-12 col-md-4 col-lg-3  d-flex flex-column align-items-center">
+					<div class="footer__logo-wrapper d-flex gap-3 ">
+						<a href="index.html">
+							<img class="footer__logo" src="img/header/logo.svg" alt="Логотип IT-ПАРК" loading="lazy" />
+							<div class="footer__title  d-flex flex-column mb-3">
+								<span class="footer__title-text d-inline-block fw-bold">IТ-ПАРК</span>
+						</a>
+						<span class="footer__text d-inline-block lh-sm">Образовательный онлайн-проект для начинающих
+							программистов</span>
+					</div>
+				</div>
+				<div class="row footer__span-wrapper footer_gray d-flex flex-column gap-2 text-center text-md-start ">
+					<span class="footer__span d-inline-block">ИП Смыслов Алексей Михайлович</span>
+					<span class="footer__span d-inline-block">ОГРНИП: 318325600036243</span>
+					<span class="footer__span d-inline-block">ИНН: 325502986267</span>
+					<span class="footer__span d-inline-block">Дата присвоения ОГРНИП: 06.07.2018</span>
+				</div>
+			</div>
+
+
+
+			<div class="col d-none d-lg-flex justify-content-center ">
+				<ul class="footer__list d-flex flex-column gap-2">
+					<li class="footer__item footer_gray">Навигация</li>
+					<li class="footer__item"><a href="#courses" class="footer__link">Курсы</a>
+					</li>
+					<li class="footer__item"><a href="#about" class="footer__link">О нас</a>
+					</li>
+					<li class="footer__item"><a href="#testimonials" class="footer__link">Отзывы</a>
+					</li>
+					<li class="footer__item"><a href="#teach" class="footer__link">Наша команда</a>
+					</li>
+					<li class="footer__item"><a href="#soc1al" class="footer__link">Соцсети</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-12 col-md-4 col-lg-3">
+				<ul
+					class="footer__list d-md-flex flex-column gap-2 align-items-md-start d-flex align-items-center mb-md-0 mb-4 ps-0">
+					<li class="footer__item footer_gray">Связаться с нами</li>
+					<li class="footer__item"><a href="tel:+79532819045" target="_blank" class="footer__link">+7 (953)
+							281-90-45</a>
+					</li>
+					<li class="footer__item"><a href="mailto:itpark.team@yandex.ru" target="_blank"
+							class="footer__link d-inline-block mb-2">itpark.team@yandex.ru</a>
+					</li>
+					<li class="footer__item footer_gray mt-3">Или написать в мессенджерах</li>
+					<li class="footer__item d-flex gap-3">
+						<a href="https://t.me/itpark32" target="_blank" class="footer__link">
+							<img src="img/footer/social/telegram.svg" alt="Иконка Telegram" loading="lazy" />
+						</a>
+						<a href="https://wa.me/79532819045" target="_blank" class="footer__link">
+							<img src="img/footer/social/whatsApp.svg" alt="Иконка WhatsApp" loading="lazy" />
+						</a>
+						<a href="https://vk.com/itpark32" target="_blank" class="footer__link">
+							<img src="img/footer/social/vk.svg" alt="Иконка VK" loading="lazy" />
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class=" col-12 col-md-4 col-lg-3  text-md-end">
+				<ul
+					class="footer__list d-flex flex-column align-items-center gap-2  d-md-flex align-items-md-end   d-xxl-flex align-items-xxl-start  ps-0">
+					<li class="footer__item footer_gray">Информация</li>
+					<li class="footer__item"><a href="assets/confidentiality.pdf" target="_blank" class="footer__link-w">Политика
+							конфиденциальности</a></li>
+					<li class="footer__item"><a href="#pay" data-bs-toggle="modal" class="footer__link">Способы оплаты</a></li>
+					<li class="footer__item"><a href="#refund" data-bs-toggle="modal" class="footer__link">Возврат денежных
+							средств</a></li>
+
+					<li class="footer__item mt-3">
+						<div class="footer__frame d-flex align-items-center justify-content-center gap-2  text-md-start px-3">
+							<img class="footer__img " src="img/footer/pay/verefication.svg" alt="Иконка безопасной передачи данных"
+								loading="lazy" />
+							<span class="footer__span footer_gray d-inline-block">Безопасная <br> передача данных</span>
+						</div>
+					</li>
+
+					<li class="footer__item d-flex justify-content-between gap-4 mt-3">
+						<img src="img/footer/pay/visa.svg" alt="Иконка Visa" loading="lazy" />
+						<img src="img/footer/pay/mastercard.svg" alt="Иконка MasterCard" loading="lazy" />
+						<img src="img/footer/pay/mir.svg" alt="Иконка Мир" loading="lazy" />
+					</li>
+				</ul>
+			</div>
+
+			<div class="row">
+				<div class="footer__rights-reserved footer_gray text-center">
+					<span class="footer__rights-reserved-text d-block ">© 2016-2024 IТ-ПАРК. Все права защищены.</span>
+				</div>
+			</div>
+		</div>
+		</div>
+	</footer>
+
 
 
 

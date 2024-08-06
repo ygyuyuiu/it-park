@@ -82,7 +82,7 @@
 					"description": "Полный курс обучения с нуля для тех, кто только начинает свой путь в IT. Разработка сайтов и веб-приложений на HTML, CSS, JS, PHP, React, Laravel.",
 					"provider": {
 						"@type": "Organization",
-						"name": "IT-ПАРК",
+						"name": "IT-ПАРК"
 					}
 				},
 				{
@@ -91,7 +91,7 @@
 					"description": "Разработка приложений для сервера, компьютеров и мобильных устройств на Java.",
 					"provider": {
 						"@type": "Organization",
-						"name": "IT-ПАРК",
+						"name": "IT-ПАРК"
 					}
 				},
 				{
@@ -100,7 +100,7 @@
 					"description": "Разработка сайтов и веб-приложений на JavaScript, TypeScript, React, Redux.",
 					"provider": {
 						"@type": "Organization",
-						"name": "IT-ПАРК",
+						"name": "IT-ПАРК"
 					}
 				},
 				{
@@ -109,7 +109,7 @@
 					"description": "Разработка Telegram ботов с использованием баз данных на Java.",
 					"provider": {
 						"@type": "Organization",
-						"name": "IT-ПАРК",
+						"name": "IT-ПАРК"
 					}
 				}
 			],
@@ -233,7 +233,7 @@
 					<ol class="promo__list lh-base ">
 						<li class="promo__list-item">Выберите свой курс</li>
 						<li class="promo__list-item">
-							Запишитесь на бесплатное пробное занятие
+							Запишитесь на бесплатное пробное онлайн занятие
 						</li>
 						<li class="promo__list-item">
 							Начните обучение по выбранной IT-специальности
@@ -284,7 +284,7 @@
 							<div class="card-text set__card-text col-12 col-lg-12 col-xl-8 col-xxl-7">
 								<h4 class="card-title lh-base fw-semibold set__title">Хотите понять, какая профессия вам больше
 									подходит?</h4>
-								<p class="card-text lh-base">Приглашаем на бесплатные пробные занятия по курсам
+								<p class="card-text lh-base">Приглашаем на бесплатные пробные онлайн занятия по курсам
 									«Разработка сайтов и веб-приложений» и «Серверное программирование на Java», которые пройдут <b>с 17
 										по 31 августа 2024 г .</b></p>
 								<p class="card-text lh-base">Подробности и запись на бесплатные занятия на курс
@@ -335,7 +335,7 @@
 		<div class="container-xxl px-0">
 			<div class="d-flex flex-column gap-4">
 				<h2 class="cards__title h2 fw-bold pb-3 mb-2">Выберите свой курс</h2>
-				<p class="cards__desc lh-base pb-3 mb-2">Мы предлагаем качественное и современное образование в сфере IT, целью
+				<p class="cards__desc lh-base pb-3 mb-2">Мы предлагаем качественное и современное онлайн образование в сфере IT, целью
 					которого является профессиональное освоение выбранной вами специальности. Программа обучения подходит для
 					каждого. Единственное, что от вас требуется – это уверенное владение компьютером и работоспособность.</p>
 
@@ -363,7 +363,8 @@
 										React, Laravel
 									</p>
 									<a href="web.html"
-										class="link button btn btn-primary rounded-pill fw-medium px-4 py-3 link" target="_blank">
+										class="link button btn btn-primary rounded-pill fw-medium px-4 py-3 link"
+										data-bs-target="#webCourse" target="_blank">
 										Подробнее
 										<span class="card__arrow">&rarr;</span>
 									</a>
@@ -718,7 +719,7 @@
 				<h2 class="advantages__title h2 fw-bold mb-4 ">
 					Образование
 				</h2>
-				<p class="advantages__text lh-base mb-3 pb-2">Мы даём качественное и современное образование в сфере IT</p>
+				<p class="advantages__text lh-base mb-3 pb-2">Мы даём качественное и современное онлайн образование в сфере IT</p>
 			</div>
 			<div
 				class="row d-flex  align-items-center justify-content-between d-lg-flex flex-lg-row justify-content-lg-center align-items-lg-center">
@@ -1222,7 +1223,7 @@
 				<div class="modal-body">
 					<p class="modal__text lh-base mb-4">Выберите любой удобный мессенджер и Вы сможете напрямую связаться с
 						руководителем школы, и уточнить все интересующие вопросы</p>
-					<div class="modal__image-wrapper d-flex gap-1 gap-sm-3 mb-2">
+					<div class="modal__image-wrapper d-flex gap-1 gap-sm-3 mb-4">
 						<div class="modal__image-inner d-flex flex-column ">
 							<a target="_blank" href="https://wa.me/79532819045"
 								class="modal__link d-flex flex-column align-items-center justify-content-center gap-2">
@@ -1245,6 +1246,8 @@
 							</a>
 						</div>
 					</div>
+					<p class="modal__text lh-base mb-2">Или по телефону: <a href="tel:+79532819045">+7 (953) 281-90-45</a>
+</p>
 				</div>
 			</div>
 		</div>
@@ -1253,7 +1256,8 @@
 	<!-- starts modal-course-wrapper - обертка для очистки форм а также для удаления хещей из урла при закрытии модалок -->
 	<div class="modal-course-wrapper">
 		<!-- Modal description - разработка сайтов и веб-приложений-->
-		<div class="modal fade" id="webCourse" tabindex="-1" aria-labelledby="webCourseLabel" aria-hidden="true">
+		<div class="modal modal-course fade" id="webCourse" tabindex="-1" aria-labelledby="webCourseLabel"
+			aria-hidden="true">
 			<div class="modal-dialog modal-xl">
 				<div class="modal-content modal__content-description rounded-5">
 					<div class="modal-header modal__header-description">
@@ -1394,60 +1398,134 @@
 							<h2 class="modal__body-title h4 fw-bold">Стоимость обучения</h2>
 							<p class="modal__body-description-text lh-base mb-0">1500 ₽/неделя</p>
 						</div>
+
+						<div>
+							<h2 class="modal__body-title h4 fw-bold">А можно мне сначала попробовать?</h2>
+							<p class=" lh-base modal__body-description-text-second">Конечно! Первое занятие курса бесплатное. Вы лично
+								сможете
+								оценить качество нашего обучения, понять, как будут проходить ваши занятия, а также задать все
+								интересующие вас вопросы. Если все понравится, добро пожаловать на курс!</p>
+						</div>
 					</div>
 
-					<div class="modal-footer modal__footer text-light  rounded-5 pb-4">
-						<h2 class="modal__footer-title h4 mb-3">Записаться на курс</h2>
-						<hr>
-						<p class="modal__footer-text lh-base my-3">1. Для
-							этого выберите любой удобный мессенджер <br>2. Просто
-							напишите: "Хочу на курс по разработке сайтов"<br>3. Мы обязательно
-							свяжемся с вами и уточним всю
-							интересующую информацию<br>
-							4. Пригласим на беспллатное пробное занятие, где вы лично сможете оценить качество нашего обучения,
-							понять,
-							как будут проходить ваши занятия, а также задать все интересующие вас вопросы. Если все понравится,
-							добро пожаловать на курс</p>
-						<hr>
-						<div class="modal__image-wrapper d-flex gap-1 gap-sm-3 mt-4">
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://vk.me/itpark32_official?message=Здравствуйте! Я хочу записаться на курс "Разработка сайтов и веб-приложений"'>
-									<img class="modal__img" src="img/modal/vk.png" alt="Логотип ВКонтакте">
-									<span class="modal__span d-inline-block">ВКонтакте</span>
-								</a>
+					<div class="modal-footer modal__footer text-light  rounded-5">
+						<h2 class="modal__footer-title h4  pb-3">Оставить заявку на обучение профессии</h2>
+						<p class="modal__footer-text lh-base pb-3 mb-3">Оставьте заявку на беспллатное пробное занятие. Мы
+							обязательно
+							свяжемся с вами и уточним всю интересующую информацию</p>
+						<form class="modal__footer-form" method="post">
+							<input type="text" name="course" value="Разработка сайтов и веб-приложений" hidden>
+							<div class="col-12">
+								<label class="d-flex flex-column gap-2" for="name">Как вас зовут?
+									<input class="form-control mb-4 mt-2" type="text" name="name" id="name" placeholder="Введите ваше имя"
+										maxlength="100" required>
+								</label>
+								<label class="d-flex flex-column gap-2" for="age">Сколько вам лет?
+									<input class="form-control mb-4 mt-2" type="number" name="age" id="age" maxlength="10"
+										placeholder="Введите ваш возраст">
+								</label>
+								<p class="modal__footer-text lh-base ">Выберите любой удобный способ связи и заполните поле с контактом
+								</p>
 							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://t.me/amsmyslov?text=Здравствуйте! Я хочу записаться на курс "Разработка сайтов и веб-приложений"'>
-									<img class="modal__img" src="img/modal/tg.png" alt="Логотип Telegram">
-									<span class="modal__span d-inline-block">Telegram</span>
-								</a>
-							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									href='https://wa.me/79532819045?text=Здравствуйте! Я хочу записаться на курс "Разработка сайтов и веб-приложений"'
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2">
-									<img class="modal__img" src="img/modal/whatsApp.png" alt="Логотип WhatsApp">
-									<span class=" modal__span d-inline-block">WhatsApp</span>
-								</a>
-							</div>
-						</div>
 
+							<div
+								class="modal__footer-contacts col-12 d-flex flex-column d-lg-flex flex-lg-row gap-4 gap-lg-3 gap-xl-0">
+								<div class="col-12 col-lg-6 d-flex flex-column gap-4 ">
+									<div class="d-flex align-items-center gap-4">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/whatsApp.png" alt="Логотип WhatsApp" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="phone">WhatsApp</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="text" name="whatsApp" id="whatsApp"
+											placeholder="Введите номер или ссылку на профиль" maxlength="100">
+									</div>
+
+									<div class="d-flex align-items-center gap-4">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/tg.png" alt="Логотип Telegram" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="telegram">Telegram</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="text" name="telegram" id="telegram"
+											placeholder="Введите номер или ссылку на профиль" maxlength="100">
+									</div>
+
+
+								</div>
+
+								<div class="col-12 col-lg-6 d-flex flex-column gap-4 ">
+									<div class="d-flex align-items-center gap-4 align-self-xl-end">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/vk.png" alt="Логотип ВКонтакте" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="vk">ВКонтакте</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="text" name="vk" id="vk"
+											placeholder="Введите номер или ссылку на профиль" maxlength="100">
+									</div>
+
+
+
+									<div class="d-flex align-items-center gap-4 align-self-xl-end">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/tel.png" alt="Логотип телефона" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="telephone">Телефон</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="tel" name="telephone" id="telephone"
+											placeholder="Введите номер телефона" maxlength="100">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-floating col-12 d-flex flex-column gap-3">
+								<div>
+									<label for="floatingTextarea" class="lh-base">Ваш комментарий или вопрос (при необходимости)</label>
+								</div>
+								<div>
+									<textarea class="form-control" name="question" placeholder="Оставить комментарий"
+										id="floatingTextarea"></textarea>
+								</div>
+							</div>
+
+
+							<div class="modal__footer-btn-wrapper d-flex flex-column gap-3 pt-4 mt-3">
+								<div class="form-check mb-3">
+
+									<label class="form-check-label d-flex align-items-center d-lg-flex align-items-lg-end">
+										<input class="modal__footer-check form-check-input d-flex align-self-start"
+											style="width: 20px;height: 20px;" type="checkbox" id="webCheck" checked required>
+										<label for="webCheck" class="d-inline-block px-3 lh-sm modal__footer-label-text">Отправляя
+											форму, вы соглашаетесь на <a href="assets/confidentiality.pdf" target="_blank">обработку
+												персональных данных
+											</a></label>
+									</label>
+								</div>
+								<button type="submit"
+									class="modal__footer-btn button btn btn-primary rounded-pill fw-medium px-4 py-3  d-flex align-items-center justify-content-center align-self-lg-start">
+									<label class="modal__footer-btn-text">Записаться на обучение</label>
+									<span class="modal__footer-loader spinner-border spinner-border ms-3 mb-2 d-none"
+										aria-hidden="true"></span>
+								</button>
+							</div>
+						</form>
+
+						<!-- Обертка для блокировки UI во время запроса -->
+						<div class="modal__footer-loader-wrapper d-none"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Modal description - серверное программирование на java-->
-		<div class="modal fade" id="javaCourse" tabindex="-1" aria-labelledby="javaCourseLabel" aria-hidden="true">
+		<div class="modal modal-course fade" id="javaCourse" tabindex="-1" aria-labelledby="javaCourseLabel"
+			aria-hidden="true">
 			<div class="modal-dialog modal-xl">
 				<div class="modal-content modal__content-description rounded-5">
 					<div class="modal-header modal__header-description">
 						<h1 class="modal-title modal__header-title lh-base fw-bold pb-3" id="javaCourseLabel">
-							Онлайн-курс «Серверное программирование на Java (16+)»</h1>
+							Онлайн-курс «Серверное программирование на Java»</h1>
 						<button type="button" class="btn-close modal__close-description" data-bs-dismiss="modal"
 							aria-label="Close"></button>
 
@@ -1591,55 +1669,126 @@
 							<h2 class="modal__body-title h4 fw-bold">Стоимость обучения</h2>
 							<p class="modal__body-description-text lh-base mb-0">1500 ₽/неделя</p>
 						</div>
+						<div>
+							<h2 class="modal__body-title h4 fw-bold">А можно мне сначала попробовать?</h2>
+							<p class=" lh-base modal__body-description-text-second">Конечно! Первое занятие курса бесплатное. Вы лично
+								сможете
+								оценить качество нашего обучения, понять, как будут проходить ваши занятия, а также задать все
+								интересующие вас вопросы. Если все понравится, добро пожаловать на курс!</p>
+						</div>
 					</div>
 
-					<div class="modal-footer modal__footer text-light  rounded-5 pb-4">
-						<h2 class="modal__footer-title h4 mb-3">Записаться на курс</h2>
-						<hr>
-						<p class="modal__footer-text lh-base my-3">1. Для
-							этого выберите любой удобный мессенджер <br>2. Просто
-							напишите: "Хочу на курс по Java"<br>3. Мы обязательно
-							свяжемся с вами и уточним всю
-							интересующую информацию<br>
-							4. Пригласим на беспллатное пробное занятие, где вы лично сможете оценить качество нашего обучения,
-							понять,
-							как будут проходить ваши занятия, а также задать все интересующие вас вопросы. Если все понравится,
-							добро пожаловать на курс</p>
-						<hr>
-						<div class="modal__image-wrapper d-flex gap-1 gap-sm-3 mt-4">
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://vk.me/itpark32_official?message=Здравствуйте! Я хочу записаться на курс "Серверное программирование на Java"'>
-									<img class="modal__img" src="img/modal/vk.png" alt="Логотип ВКонтакте">
-									<span class="modal__span d-inline-block">ВКонтакте</span>
-								</a>
+					<div class="modal-footer modal__footer text-light  rounded-5">
+						<h2 class="modal__footer-title h4  pb-3">Оставить заявку на обучение профессии</h2>
+						<p class="modal__footer-text lh-base pb-3 mb-3">Оставьте заявку на беспллатное пробное занятие. Мы
+							обязательно
+							свяжемся с вами и уточним всю интересующую информацию</p>
+						<form class="modal__footer-form" method="post">
+							<input type="text" name="course" value="Серверное программирование на Java" hidden>
+							<div class="col-12">
+								<label class="d-flex flex-column gap-2" for="name">Как вас зовут?
+									<input class="form-control mb-4 mt-2" type="text" name="name" id="name" placeholder="Введите ваше имя"
+										maxlength="100" required>
+								</label>
+								<label class="d-flex flex-column gap-2" for="age">Сколько вам лет?
+									<input class="form-control mb-4 mt-2" type="number" name="age" id="age"
+										placeholder="Введите ваш возраст" maxlength="10" maxlength="100">
+								</label>
+								<p class="modal__footer-text lh-base ">Выберите любой удобный способ связи и заполните поле с контактом
+								</p>
 							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://t.me/amsmyslov?text=Здравствуйте! Я хочу записаться на курс "Серверное программирование на Java"'>
-									<img class="modal__img" src="img/modal/tg.png" alt="Логотип Telegram">
-									<span class="modal__span d-inline-block">Telegram</span>
-								</a>
-							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									href='https://wa.me/79532819045?text=Здравствуйте! Я хочу записаться на курс "Серверное программирование на Java"'
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2">
-									<img class="modal__img" src="img/modal/whatsApp.png" alt="Логотип WhatsApp">
-									<span class=" modal__span d-inline-block">WhatsApp</span>
-								</a>
-							</div>
-						</div>
 
+							<div
+								class="modal__footer-contacts col-12 d-flex flex-column d-lg-flex flex-lg-row gap-4 gap-lg-3 gap-xl-0">
+								<div class="col-12 col-lg-6 d-flex flex-column gap-4 ">
+									<div class="d-flex align-items-center gap-4">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/whatsApp.png" alt="Логотип WhatsApp" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="phone">WhatsApp</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="text" name="whatsApp" id="whatsApp"
+											placeholder="Введите номер или ссылку на профиль" maxlength="100">
+									</div>
+
+									<div class="d-flex align-items-center gap-4">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/tg.png" alt="Логотип Telegram" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="telegram">Telegram</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="text" name="telegram" id="telegram"
+											placeholder="Введите номер или ссылку на профиль" maxlength="100">
+									</div>
+
+								</div>
+
+								<div class="col-12 col-lg-6 d-flex flex-column gap-4 ">
+									<div class="d-flex align-items-center gap-4 align-self-xl-end">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/vk.png" alt="Логотип ВКонтакте" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="vk">ВКонтакте</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="text" name="vk" id="vk"
+											placeholder="Введите номер или ссылку на профиль" maxlength="100">
+									</div>
+
+									<div class="d-flex align-items-center gap-4 align-self-xl-end">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/tel.png" alt="Логотип телефона" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="telephone">Телефон</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="tel" name="telephone" id="telephone"
+											placeholder="Введите номер телефона" maxlength="100">
+									</div>
+
+								</div>
+							</div>
+
+							<div class="form-floating col-12 d-flex flex-column gap-3">
+								<div>
+									<label for="floatingTextarea" class="lh-base">Ваш комментарий или вопрос (при необходимости)</label>
+								</div>
+								<div>
+									<textarea class="form-control" name="question" placeholder="Оставить комментарий"
+										id="floatingTextarea"></textarea>
+								</div>
+							</div>
+
+
+							<div class="modal__footer-btn-wrapper d-flex flex-column gap-3 pt-4 mt-3">
+								<div class="form-check mb-3">
+
+									<label class="form-check-label d-flex align-items-center d-lg-flex align-items-lg-end">
+										<input class="modal__footer-check form-check-input d-flex align-self-start"
+											style="width: 20px;height: 20px;" type="checkbox" id="javaCheck" checked required>
+										<label for="javaCheck" class="d-inline-block px-3 lh-sm modal__footer-label-text">Отправляя
+											форму, вы соглашаетесь на <a href="assets/confidentiality.pdf" target="_blank">обработку
+												персональных данных
+											</a></label>
+									</label>
+								</div>
+								<button type="submit"
+									class="modal__footer-btn button btn btn-primary rounded-pill fw-medium px-4 py-3  d-flex align-items-center justify-content-center align-self-lg-start">
+									<label class="modal__footer-btn-text">Записаться на обучение</label>
+									<span class="modal__footer-loader spinner-border spinner-border ms-3 mb-2 d-none"
+										aria-hidden="true"></span>
+								</button>
+							</div>
+						</form>
+
+						<!-- Обертка для блокировки UI во время запроса -->
+						<div class="modal__footer-loader-wrapper d-none"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Modal description - js react-->
-		<div class="modal fade" id="frontendCourse" tabindex="-1" aria-labelledby="frontendCourseLabel" aria-hidden="true">
+		<div class="modal modal-course fade" id="frontendCourse" tabindex="-1" aria-labelledby="frontendCourseLabel"
+			aria-hidden="true">
 			<div class="modal-dialog modal-xl">
 				<div class="modal-content modal__content-description rounded-5">
 					<div class="modal-header modal__header-description">
@@ -1779,55 +1928,124 @@
 							<h2 class="modal__body-title h4 fw-bold">Стоимость обучения</h2>
 							<p class="modal__body-description-text lh-base mb-0">1500 ₽/неделя</p>
 						</div>
+						<div>
+							<h2 class="modal__body-title h4 fw-bold">А можно мне сначала попробовать?</h2>
+							<p class=" lh-base modal__body-description-text-second">Конечно! Первое занятие курса бесплатное. Вы лично
+								сможете
+								оценить качество нашего обучения, понять, как будут проходить ваши занятия, а также задать все
+								интересующие вас вопросы. Если все понравится, добро пожаловать на курс!</p>
+						</div>
 					</div>
 
-					<div class="modal-footer modal__footer text-light  rounded-5 pb-4">
-						<h2 class="modal__footer-title h4 mb-3">Записаться на курс</h2>
-						<hr>
-						<p class="modal__footer-text lh-base my-3">1. Для
-							этого выберите любой удобный мессенджер <br>2. Просто
-							напишите: "Хочу на курс по Фронтенду"<br>3. Мы обязательно
-							свяжемся с вами и уточним всю
-							интересующую информацию<br>
-							4. Пригласим на беспллатное пробное занятие, где вы лично сможете оценить качество нашего обучения,
-							понять,
-							как будут проходить ваши занятия, а также задать все интересующие вас вопросы. Если все понравится,
-							добро пожаловать на курс</p>
-						<hr>
-						<div class="modal__image-wrapper d-flex gap-1 gap-sm-3 mt-4">
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://vk.me/itpark32_official?message=Здравствуйте! Я хочу записаться на курс "Фронтенд-разработка на JavaScript и React"'>
-									<img class="modal__img" src="img/modal/vk.png" alt="Логотип ВКонтакте">
-									<span class="modal__span d-inline-block">ВКонтакте</span>
-								</a>
+					<div class="modal-footer modal__footer text-light  rounded-5">
+						<h2 class="modal__footer-title h4  pb-3">Оставить заявку на обучение профессии</h2>
+						<p class="modal__footer-text lh-base pb-3 mb-3">Оставьте заявку на беспллатное пробное занятие. Мы
+							обязательно
+							свяжемся с вами и уточним всю интересующую информацию</p>
+						<form class="modal__footer-form" method="post">
+							<input type="text" name="course" value="Фронтенд-разработка на JavaScript и React" hidden>
+							<div class="col-12">
+								<label class="d-flex flex-column gap-2" for="name">Как вас зовут?
+									<input class="form-control mb-4 mt-2" type="text" name="name" id="name" placeholder="Введите ваше имя"
+										maxlength="100" required>
+								</label>
+								<label class="d-flex flex-column gap-2" for="age">Сколько вам лет?
+									<input class="form-control mb-4 mt-2" type="number" name="age" id="age"
+										placeholder="Введите ваш возраст" maxlength="10" maxlength="10">
+								</label>
+								<p class="modal__footer-text lh-base ">Выберите любой удобный способ связи и заполните поле с контактом
+								</p>
 							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://t.me/amsmyslov?text=Здравствуйте! Я хочу записаться на курс "Фронтенд-разработка на JavaScript и React"'>
-									<img class="modal__img" src="img/modal/tg.png" alt="Логотип Telegram">
-									<span class="modal__span d-inline-block">Telegram</span>
-								</a>
-							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									href='https://wa.me/79532819045?text=Здравствуйте! Я хочу записаться на курс "Фронтенд-разработка на JavaScript и React"'
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2">
-									<img class="modal__img" src="img/modal/whatsApp.png" alt="Логотип WhatsApp">
-									<span class=" modal__span d-inline-block">WhatsApp</span>
-								</a>
-							</div>
-						</div>
 
+							<div
+								class="modal__footer-contacts col-12 d-flex flex-column d-lg-flex flex-lg-row gap-4 gap-lg-3 gap-xl-0">
+								<div class="col-12 col-lg-6 d-flex flex-column gap-4 ">
+									<div class="d-flex align-items-center gap-4">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/whatsApp.png" alt="Логотип WhatsApp" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="phone">WhatsApp</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="text" name="whatsApp" id="whatsApp"
+											placeholder="Введите номер или ссылку на профиль" maxlength="100">
+									</div>
+
+									<div class="d-flex align-items-center gap-4">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/tg.png" alt="Логотип Telegram" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="telegram">Telegram</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="text" name="telegram" id="telegram"
+											placeholder="Введите номер или ссылку на профиль" maxlength="100">
+									</div>
+								</div>
+
+								<div class="col-12 col-lg-6 d-flex flex-column gap-4 ">
+									<div class="d-flex align-items-center gap-4 align-self-xl-end">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/vk.png" alt="Логотип ВКонтакте" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="vk">ВКонтакте</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="text" name="vk" id="vk"
+											placeholder="Введите номер или ссылку на профиль" maxlength="100">
+									</div>
+
+									<div class="d-flex align-items-center gap-4 align-self-xl-end">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/tel.png" alt="Логотип телефона" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="telephone">Телефон</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="tel" name="telephone" id="telephone"
+											placeholder="Введите номер телефона" maxlength="100">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-floating col-12 d-flex flex-column gap-3">
+								<div>
+									<label for="floatingTextarea" class="lh-base">Ваш комментарий или вопрос (при необходимости)</label>
+								</div>
+								<div>
+									<textarea class="form-control" name="question" placeholder="Оставить комментарий"
+										id="floatingTextarea"></textarea>
+								</div>
+							</div>
+
+
+							<div class="modal__footer-btn-wrapper d-flex flex-column gap-3 pt-4 ">
+								<div class="form-check mb-3">
+
+									<label class="form-check-label d-flex align-items-center d-lg-flex align-items-lg-end">
+										<input class="modal__footer-check form-check-input d-flex align-self-start"
+											style="width: 20px;height: 20px;" type="checkbox" id="frontendCheck" checked required>
+										<label for="frontendCheck" class="d-inline-block px-3 lh-sm modal__footer-label-text">Отправляя
+											форму, вы соглашаетесь на <a href="assets/confidentiality.pdf" target="_blank">обработку
+												персональных данных
+											</a></label>
+									</label>
+								</div>
+								<button type="submit"
+									class="modal__footer-btn button btn btn-primary rounded-pill fw-medium px-4 py-3  d-flex align-items-center justify-content-center align-self-lg-start">
+									<label class="modal__footer-btn-text">Записаться на обучение</label>
+									<span class="modal__footer-loader spinner-border spinner-border ms-3 mb-2 d-none"
+										aria-hidden="true"></span>
+								</button>
+							</div>
+						</form>
+
+						<!-- Обертка для блокировки UI во время запроса -->
+						<div class="modal__footer-loader-wrapper d-none"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Modal description - tgJavaCourse -->
-		<div class="modal fade" id="tgJavaCourse" tabindex="-1" aria-labelledby="tgJavaCourseLabel" aria-hidden="true">
+		<div class="modal modal-course fade" id="tgJavaCourse" tabindex="-1" aria-labelledby="tgJavaCourseLabel"
+			aria-hidden="true">
 			<div class="modal-dialog modal-xl">
 				<div class="modal-content modal__content-description rounded-5">
 					<div class="modal-header modal__header-description">
@@ -1967,50 +2185,119 @@
 							<h2 class="modal__body-title h4 fw-bold">Стоимость обучения</h2>
 							<p class="modal__body-description-text lh-base mb-0">1500 ₽/неделя</p>
 						</div>
-					</div>
-
-					<div class="modal-footer modal__footer text-light  rounded-5 pb-4">
-						<h2 class="modal__footer-title h4 mb-3">Записаться на курс</h2>
-						<hr>
-						<p class="modal__footer-text lh-base my-3">1. Для
-							этого выберите любой удобный мессенджер <br>2. Просто
-							напишите: "Хочу на курс по ботам на Java"<br>3. Мы обязательно
-							свяжемся с вами и уточним всю
-							интересующую информацию<br>
-							4. Пригласим на беспллатное пробное занятие, где вы лично сможете оценить качество нашего обучения,
-							понять,
-							как будут проходить ваши занятия, а также задать все интересующие вас вопросы. Если все понравится,
-							добро пожаловать на курс</p>
-						<hr>
-						<div class="modal__image-wrapper d-flex gap-1 gap-sm-3 mt-4">
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://vk.me/itpark32_official?message=Здравствуйте! Я хочу записаться на курс "Разработка Telegram ботов на Java"'>
-									<img class="modal__img" src="img/modal/vk.png" alt="Логотип ВКонтакте">
-									<span class="modal__span d-inline-block">ВКонтакте</span>
-								</a>
-							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://t.me/amsmyslov?text=Здравствуйте! Я хочу записаться на курс "Разработка Telegram ботов на Java"'>
-									<img class="modal__img" src="img/modal/tg.png" alt="Логотип Telegram">
-									<span class="modal__span d-inline-block">Telegram</span>
-								</a>
-							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									href='https://wa.me/79532819045?text=Здравствуйте! Я хочу записаться на курс "Разработка Telegram ботов на Java"'
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2">
-									<img class="modal__img" src="img/modal/whatsApp.png" alt="Логотип WhatsApp">
-									<span class=" modal__span d-inline-block">WhatsApp</span>
-								</a>
-							</div>
+						<div>
+							<h2 class="modal__body-title h4 fw-bold">А можно мне сначала попробовать?</h2>
+							<p class=" lh-base modal__body-description-text-second">Конечно! Первое занятие курса бесплатное. Вы лично
+								сможете
+								оценить качество нашего обучения, понять, как будут проходить ваши занятия, а также задать все
+								интересующие вас вопросы. Если все понравится, добро пожаловать на курс!</p>
 						</div>
-
 					</div>
 
+					<div class="modal-footer modal__footer text-light  rounded-5">
+						<h2 class="modal__footer-title h4  pb-3">Оставить заявку на обучение профессии</h2>
+						<p class="modal__footer-text lh-base pb-3 mb-3">Оставьте заявку на беспллатное пробное занятие. Мы
+							обязательно
+							свяжемся с вами и уточним всю интересующую информацию</p>
+						<form class="modal__footer-form" method="post">
+							<input type="text" name="course" value="Разработка Telegram ботов на Java" hidden>
+							<div class="col-12">
+								<label class="d-flex flex-column gap-2" for="name">Как вас зовут?
+									<input class="form-control mb-4 mt-2" type="text" name="name" id="name" placeholder="Введите ваше имя"
+										maxlength="100" required>
+								</label>
+								<label class="d-flex flex-column gap-2" for="age">Сколько вам лет?
+									<input class="form-control mb-4 mt-2" type="number" name="age" id="age"
+										placeholder="Введите ваш возраст" maxlength="10">
+								</label>
+								<p class="modal__footer-text lh-base ">Выберите любой удобный способ связи и заполните поле с контактом
+								</p>
+							</div>
+
+							<div
+								class="modal__footer-contacts col-12 d-flex flex-column d-lg-flex flex-lg-row gap-4 gap-lg-3 gap-xl-0">
+								<div class="col-12 col-lg-6 d-flex flex-column gap-4 ">
+									<div class="d-flex align-items-center gap-4">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/whatsApp.png" alt="Логотип WhatsApp" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="phone">WhatsApp</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="text" name="whatsApp" id="whatsApp"
+											placeholder="Введите номер или ссылку на профиль" maxlength="100">
+									</div>
+
+									<div class="d-flex align-items-center gap-4">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/tg.png" alt="Логотип Telegram" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="telegram">Telegram</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="text" name="telegram" id="telegram"
+											placeholder="Введите номер или ссылку на профиль" maxlength="100">
+									</div>
+								</div>
+
+								<div class="col-12 col-lg-6 d-flex flex-column gap-4 ">
+									<div class="d-flex align-items-center gap-4 align-self-xl-end">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/vk.png" alt="Логотип ВКонтакте" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="vk">ВКонтакте</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="text" name="vk" id="vk"
+											placeholder="Введите номер или ссылку на профиль" maxlength="100">
+									</div>
+
+									<div class="d-flex align-items-center gap-4 align-self-xl-end">
+										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
+											<img src="img/modalDescription/tel.png" alt="Логотип телефона" loading="lazy">
+											<label class="modal__footer-form-label d-flex flex-column align-items-center"
+												for="telephone">Телефон</label>
+										</div>
+										<input class="form-control modal__footer-form-input" type="tel" name="telephone" id="telephone"
+											placeholder="Введите номер телефона" maxlength="100">
+									</div>
+
+								</div>
+							</div>
+
+							<div class="form-floating col-12 d-flex flex-column gap-3">
+								<div>
+									<label for="floatingTextarea" class="lh-base">Ваш комментарий или вопрос (при необходимости)</label>
+								</div>
+								<div>
+									<textarea class="form-control" name="question" placeholder="Оставить комментарий"
+										id="floatingTextarea"></textarea>
+								</div>
+							</div>
+
+
+
+							<div class="modal__footer-btn-wrapper d-flex flex-column gap-3 pt-4">
+								<div class="form-check mb-3">
+
+									<label class="form-check-label d-flex align-items-center d-lg-flex align-items-lg-end">
+										<input class="modal__footer-check form-check-input d-flex align-self-start"
+											style="width: 20px;height: 20px;" type="checkbox" id="tgJavaCheck" checked required>
+										<label for="tgJavaCheck" class="d-inline-block px-3 lh-sm modal__footer-label-text">Отправляя
+											форму, вы соглашаетесь на <a href="assets/confidentiality.pdf" target="_blank">обработку
+												персональных данных
+											</a></label>
+									</label>
+								</div>
+								<button type="submit"
+									class="modal__footer-btn button btn btn-primary rounded-pill fw-medium px-4 py-3  d-flex align-items-center justify-content-center align-self-lg-start">
+									<label class="modal__footer-btn-text">Записаться на обучение</label>
+									<span class="modal__footer-loader spinner-border spinner-border ms-3 mb-2 d-none"
+										aria-hidden="true"></span>
+								</button>
+							</div>
+						</form>
+
+						<!-- Обертка для блокировки UI во время запроса -->
+						<div class="modal__footer-loader-wrapper d-none"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -2039,7 +2326,7 @@
 								</label>
 
 								<label class="d-flex flex-column gap-2" for="name">Выберите курс
-									<select name="course" class="form-select form-select-lg mb-4 mt-2">
+									<select name="course" class="form-select form-select-lg mb-4 mt-2" required>
 										<option selected>Выберите один из вариантов</option>
 										<option value="Разработка сайтов и веб-приложений">Разработка сайтов и веб-приложений</option>
 										<option value="Серверное программирование на Java">Серверное программирование на Java</option>
@@ -2234,20 +2521,19 @@
 		</div>
 	</div>
 	<!-- modals end -->
-
 	<!-- button -->
 	<div class="fixed">
   <button class="fixed__btn" id="btn-active">
   <img src="img/button/1.svg" alt="Картинка соц. сетей" class="fixed__img">
   </button>
 
-  <a href="https://t.me/amsmyslov" class="fixed__link tg">
+  <a href="https://t.me/amsmyslov" target="_blank"class="fixed__link tg">
     <img class="fixed__img" src="img/modal/tg.png" alt="Логотип Telegram">
   </a>
-  <a href="https://wa.me/79532819045" class="fixed__link whatsapp">
+  <a href="https://wa.me/79532819045" target="_blank" class="fixed__link whatsapp">
     <img class="fixed__img" src="img/modal/whatsApp.png" alt="Логотип WhatsApp">
   </a>
-  <a href="https://vk.me/itpark32_official" class="fixed__link vk ">
+  <a href="https://vk.me/itpark32_official" target="_blank" class="fixed__link vk ">
     <img class="fixed__img" src="img/modal/vk.png" alt="Логотип ВКонтакте">
   </a>
 
@@ -2261,7 +2547,7 @@
   <div class="fixed__tooltip">
     <p class="fixed__text">Здравствуйте! Задайте ваш вопрос в чате.</p>
   </div>
-	</div>
+  </div>
 
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.min.js"></script>
