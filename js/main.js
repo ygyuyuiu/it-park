@@ -226,77 +226,77 @@ document.querySelector(".modal-course").addEventListener("submit", (e) => {
 });
 
 //Открытие модального окна 
-// const modalSubmit = document.querySelector('.modal-submit')
+const modalSubmit = document.querySelector('.modal-submit')
 
-// function openModalFromHash() {
-//   const hash = window.location.hash
-//   if (hash) {
-//     const modalElement = document.querySelector(`[data-bs-target="${hash}"]`)
-//     if (modalElement) {
-//       const modalId = hash
-//       const modal = new bootstrap.Modal(document.querySelector(modalId))
-//       modal.show()
-//     }
-//   }
-// }
+function openModalFromHash() {
+  const hash = window.location.hash
+  if (hash) {
+    const modalElement = document.querySelector(`[data-bs-target="${hash}"]`)
+    if (modalElement) {
+      const modalId = hash
+      const modal = new bootstrap.Modal(document.querySelector(modalId))
+      modal.show()
+    }
+  }
+}
 
-// setTimeout(() => {
-//   if (modalSubmit) {
-//     const modal = new bootstrap.Modal(modalSubmit)
-//     modal.show()
-//   }
-// },30000)
+setTimeout(() => {
+  if (modalSubmit) {
+    const modal = new bootstrap.Modal(modalSubmit)
+    modal.show()
+  }
+}, 1000)
 
-// //Отправка формы
-// document.querySelector('.modal-submit').addEventListener('submit', e => {
-// 	e.preventDefault()
-// 	if (e.target.matches('.modal__footer-form')) {
-// 		e.target.querySelector('.modal__footer-alert')?.remove()
-// 		e.target.querySelector('.modal__footer-btn-text').textContent =
-// 			'Подождите...'
-// 		e.target.querySelector('.modal__footer-loader').classList.remove('d-none')
-// 		e.target.parentElement
-// 			.querySelector('.modal__footer-loader-wrapper')
-// 			?.classList.remove('d-none')
+//Отправка формы
+document.querySelector('.modal-submit').addEventListener('submit', e => {
+	e.preventDefault()
+	if (e.target.matches('.modal__footer-form')) {
+		e.target.querySelector('.modal__footer-alert')?.remove()
+		e.target.querySelector('.modal__footer-btn-text').textContent =
+			'Подождите...'
+		e.target.querySelector('.modal__footer-loader').classList.remove('d-none')
+		e.target.parentElement
+			.querySelector('.modal__footer-loader-wrapper')
+			?.classList.remove('d-none')
 
-// 		const formData = new FormData(e.target)
-// 		const data = Object.fromEntries(formData)
-// 		fetch('https://itpark32sys.ru/lk/api/contact', {
-// 			method: 'POST',
-// 			headers: {
-// 				'Content-Type': 'application/json',
-// 			},
-// 			body: JSON.stringify(data),
-// 		})
-// 			.then(response => {
-// 				if (!response.ok) throw new Error(response.status)
-// 				const courseModal = e.target.closest('.modal-submit')
-// 				const bootstrapModal = bootstrap.Modal.getInstance(courseModal)
-// 				bootstrapModal.hide()
+		const formData = new FormData(e.target)
+		const data = Object.fromEntries(formData)
+		fetch('https://itpark32sys.ru/lk/api/contact', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(data),
+		})
+			.then(response => {
+				if (!response.ok) throw new Error(response.status)
+				const courseModal = e.target.closest('.modal-submit')
+				const bootstrapModal = bootstrap.Modal.getInstance(courseModal)
+				bootstrapModal.hide()
 
-// 				const applicationModal = new bootstrap.Modal(
-// 					document.getElementById('thankYou')
-// 				)
-// 				applicationModal.show()
-// 			})
-// 			.catch(error => {
-// 				e.target.querySelector('.modal__footer-btn').insertAdjacentHTML(
-// 					'beforebegin',
-// 					`<div class="modal__footer-alert alert alert-danger mt-3 align-self-lg-start" role="alert">
-//            Упс... Произошла ошибка. Попробуйте еще раз
-//           </div>`
-// 				)
-// 			})
-// 			.finally(() => {
-// 				e.target.querySelector('.modal__footer-btn-text').textContent =
-// 					'Получить запись вебинара'
-// 				e.target.querySelector('.modal__footer-loader').classList.add('d-none')
-// 				e.target.parentElement
-// 					.querySelector('.modal__footer-loader-wrapper')
-// 					?.classList.add('d-none')
-// 			})
-// 	}
-// })
+				const applicationModal = new bootstrap.Modal(
+					document.getElementById('thankYou')
+				)
+				applicationModal.show()
+			})
+			.catch(error => {
+				e.target.querySelector('.modal__footer-btn').insertAdjacentHTML(
+					'beforebegin',
+					`<div class="modal__footer-alert alert alert-danger mt-3 align-self-lg-start" role="alert">
+           Упс... Произошла ошибка. Попробуйте еще раз
+          </div>`
+				)
+			})
+			.finally(() => {
+				e.target.querySelector('.modal__footer-btn-text').textContent =
+					'Получить запись вебинара'
+				e.target.querySelector('.modal__footer-loader').classList.add('d-none')
+				e.target.parentElement
+					.querySelector('.modal__footer-loader-wrapper')
+					?.classList.add('d-none')
+			})
+	}
+})
 
 // Очищаем форму при закрытии модального окна
 document

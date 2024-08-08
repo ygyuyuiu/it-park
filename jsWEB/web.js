@@ -260,7 +260,6 @@ $(document).ready(function (){
 			{
 				breakpoint: 576,
 				settings: {
-					arrows: false,
 					centerPadding: '22px',
 					slidesToShow: 1,
 					centerMode: false,
@@ -346,50 +345,64 @@ $(document).ready(function () {
   });
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // button
-const tooltip = document.querySelector('.fixed__tooltip')
-const numMess = document.querySelector('.fixed__num')
+// const tooltip = document.querySelector('.fixed__tooltip')
+// const numMess = document.querySelector('.fixed__num')
 
- setTimeout(() => {
-		tooltip.style.opacity = 1
-		numMess.style.opacity = 1
- }, 3000)
+//  setTimeout(() => {
+// 		tooltip.style.opacity = 1
+// 		numMess.style.opacity = 1
+//  }, 3000)
 
-const btnActive = document.querySelector('#btn-active')
-const btnClose = document.querySelector('#close')
-const links = document.querySelectorAll('.fixed__link')
+// const btnActive = document.querySelector('#btn-active')
+// const btnClose = document.querySelector('#close')
+// const links = document.querySelectorAll('.fixed__link')
 
-btnClose.addEventListener('click', () => {
-	if (btnClose) {
-		btnActive.style.display = 'block'
-		btnClose.style.display = 'none'
+// btnClose.addEventListener('click', () => {
+// 	if (btnClose) {
+// 		btnActive.style.display = 'block'
+// 		btnClose.style.display = 'none'
 
-		for (let i = 0; i < links.length; i++) {
-			links[0].style.cssText =
-				'transform: translate(0px); transition:all 200ms ease-out 300ms; visibility: hidden;'
-			links[1].style.cssText =
-				'transform: translate(0px); transition:all 200ms ease-out 200ms; visibility: hidden;'
-			links[2].style.cssText =
-				'transform: translate(0px); transition:all 200ms ease-out 100ms; visibility: hidden;'
-		}
-	}
-})
+// 		for (let i = 0; i < links.length; i++) {
+// 			links[0].style.cssText =
+// 				'transform: translate(0px); transition:all 200ms ease-out 300ms; visibility: hidden;'
+// 			links[1].style.cssText =
+// 				'transform: translate(0px); transition:all 200ms ease-out 200ms; visibility: hidden;'
+// 			links[2].style.cssText =
+// 				'transform: translate(0px); transition:all 200ms ease-out 100ms; visibility: hidden;'
+// 		}
+// 	}
+// })
 
-btnActive.addEventListener('click', () => {
-	if (btnActive) {
-		tooltip.style.opacity = 0
-		numMess.style.opacity = 0
-		btnActive.style.display = 'none'
-		btnClose.style.display = 'block'
+// btnActive.addEventListener('click', () => {
+// 	if (btnActive) {
+// 		tooltip.style.opacity = 0
+// 		numMess.style.opacity = 0
+// 		btnActive.style.display = 'none'
+// 		btnClose.style.display = 'block'
 
-		for (let i = 0; i < links.length; i++) {
-			links[0].style.cssText =
-				'transform: translate(-220px); transition:all 200ms ease-out 100ms; visibility:visible;'
-			links[1].style.cssText =
-				'transform: translate(-160px); transition:all 200ms ease-out 200ms; visibility:visible;'
-			links[2].style.cssText =
-				'transform: translate(-100px); transition:all 200ms ease-out 300ms; visibility:visible;'
-		}
-	}
-})
+// 		for (let i = 0; i < links.length; i++) {
+// 			links[0].style.cssText =
+// 				'transform: translate(-220px); transition:all 200ms ease-out 100ms; visibility:visible;'
+// 			links[1].style.cssText =
+// 				'transform: translate(-160px); transition:all 200ms ease-out 200ms; visibility:visible;'
+// 			links[2].style.cssText =
+// 				'transform: translate(-100px); transition:all 200ms ease-out 300ms; visibility:visible;'
+// 		}
+// 	}
+// })
 
