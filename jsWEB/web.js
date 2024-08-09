@@ -219,7 +219,7 @@ modal.addEventListener('click', event => {
 $(document).ready(function (){
  $('.slider__content').slick({
 		arrows: true,
-		dots: true,
+		// dots: true,
 		centerPadding: '0px',
 		slidesToShow: 3,
 		centerMode: true,
