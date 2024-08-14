@@ -1,60 +1,60 @@
 //header
 const TypeWriter = function (txtElement, words, wait = 3000) {
-	this.txtElement = txtElement
-	this.words = words
-	this.txt = ''
-	this.wordIndex = 0
-	this.wait = parseInt(wait, 10)
-	this.type()
-	this.isDeleting = false
-}
+  this.txtElement = txtElement;
+  this.words = words;
+  this.txt = "";
+  this.wordIndex = 0;
+  this.wait = parseInt(wait, 10);
+  this.type();
+  this.isDeleting = false;
+};
 
 TypeWriter.prototype.type = function () {
-	const current = this.wordIndex % this.words.length
-	const fullTxt = this.words[current]
-	if (this.isDeleting) {
-		this.txt = fullTxt.substring(0, this.txt.length - 1)
-	} else {
-		this.txt = fullTxt.substring(0, this.txt.length + 1)
-	}
+  const current = this.wordIndex % this.words.length;
+  const fullTxt = this.words[current];
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
 
-	this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`
-	let typeSpeed = 300
-	if (this.isDeleting) {
-		typeSpeed /= 2
-	}
-	if (!this.isDeleting && this.txt === fullTxt) {
-		typeSpeed = this.wait
-		this.isDeleting = true
-	} else if (this.isDeleting && this.txt === '') {
-		this.isDeleting = false
-		this.wordIndex++
-		typeSpeed = 500
-	}
-	setTimeout(() => this.type(), typeSpeed)
-}
+  this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+  let typeSpeed = 300;
+  if (this.isDeleting) {
+    typeSpeed /= 2;
+  }
+  if (!this.isDeleting && this.txt === fullTxt) {
+    typeSpeed = this.wait;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === "") {
+    this.isDeleting = false;
+    this.wordIndex++;
+    typeSpeed = 500;
+  }
+  setTimeout(() => this.type(), typeSpeed);
+};
 
-document.addEventListener('DOMContentLoaded', init)
+document.addEventListener("DOMContentLoaded", init);
 function init() {
-	const txtElement = document.querySelector('.header__nav-label')
-	const words = JSON.parse(txtElement.getAttribute('data-words'))
-	const wait = txtElement.getAttribute('data-wait')
-	new TypeWriter(txtElement, words, wait)
+  const txtElement = document.querySelector(".header__nav-label");
+  const words = JSON.parse(txtElement.getAttribute("data-words"));
+  const wait = txtElement.getAttribute("data-wait");
+  new TypeWriter(txtElement, words, wait);
 }
 
 //schools
-const modalSchool = document.getElementById('schools__modal')
-const sectionSchool = document.querySelector('.school')
-const modalContentSchool = document.querySelector('.schools__modal-content')
+const modalSchool = document.getElementById("schools__modal");
+const sectionSchool = document.querySelector(".school");
+const modalContentSchool = document.querySelector(".schools__modal-content");
 
-sectionSchool.addEventListener('click', (e) => {
-	if (e.target.classList.contains('schools__open-modal')) {
-		modal.classList.add('active')
-		if (e.target.classList.contains('schools__open-modal-video')) {
-			const url = e.target.dataset.videourl
-			modalContent.insertAdjacentHTML(
-				`afterbegin`,
-				`
+sectionSchool.addEventListener("click", (e) => {
+  if (e.target.classList.contains("schools__open-modal")) {
+    modal.classList.add("active");
+    if (e.target.classList.contains("schools__open-modal-video")) {
+      const url = e.target.dataset.videourl;
+      modalContent.insertAdjacentHTML(
+        `afterbegin`,
+        `
             <iframe
               id="youtube-video"
               src="${url}"
@@ -62,33 +62,32 @@ sectionSchool.addEventListener('click', (e) => {
               allowfullscreen
             ></iframe>
             `
-			)
-		} else if (e.target.classList.contains('schools__open-modal-image')) {
-			const url = e.target.dataset.imageurl
-			modalContent.insertAdjacentHTML(
-				`afterbegin`,
-				`
+      );
+    } else if (e.target.classList.contains("schools__open-modal-image")) {
+      const url = e.target.dataset.imageurl;
+      modalContent.insertAdjacentHTML(
+        `afterbegin`,
+        `
               <img src="${url}" />
             `
-			)
-		}
-	}
-})
+      );
+    }
+  }
+});
 
-modalSchool.addEventListener('click', (event) => {
-	if (
-		event.target === modal ||
-		event.target.classList.contains('schools__modal-close')
-	) {
-		modal.classList.remove('active')
-		modalContent.children[0].remove()
-	}
-})
-
+modalSchool.addEventListener("click", (event) => {
+  if (
+    event.target === modal ||
+    event.target.classList.contains("schools__modal-close")
+  ) {
+    modal.classList.remove("active");
+    modalContent.children[0].remove();
+  }
+});
 
 //specialty
 const modal = document.getElementById("specialtys__modal");
-const sectionSpecialty = document.querySelector('.specialty')
+const sectionSpecialty = document.querySelector(".specialty");
 const modalContent = document.querySelector(".specialtys__modal-content");
 
 sectionSpecialty.addEventListener("click", (e) => {
@@ -130,18 +129,20 @@ modal.addEventListener("click", (event) => {
 });
 
 //accordion
-const modalAccordion = document.getElementById('accordions__modal')
-const sectionAccordion = document.querySelector('.accordion')
-const modalContentAccordion = document.querySelector('.accordions__modal-content')
+const modalAccordion = document.getElementById("accordions__modal");
+const sectionAccordion = document.querySelector(".accordion");
+const modalContentAccordion = document.querySelector(
+  ".accordions__modal-content"
+);
 
-sectionAccordion.addEventListener('click', e => {
-	if (e.target.classList.contains('accordions__open-modal')) {
-		modal.classList.add('active')
-		if (e.target.classList.contains('accordions__open-modal-video')) {
-			const url = e.target.dataset.videourl
-			modalContent.insertAdjacentHTML(
-				`afterbegin`,
-				`
+sectionAccordion.addEventListener("click", (e) => {
+  if (e.target.classList.contains("accordions__open-modal")) {
+    modal.classList.add("active");
+    if (e.target.classList.contains("accordions__open-modal-video")) {
+      const url = e.target.dataset.videourl;
+      modalContent.insertAdjacentHTML(
+        `afterbegin`,
+        `
             <iframe
               id="youtube-video"
               src="${url}"
@@ -149,42 +150,42 @@ sectionAccordion.addEventListener('click', e => {
               allowfullscreen
             ></iframe>
             `
-			)
-		} else if (e.target.classList.contains('accordions__open-modal-image')) {
-			const url = e.target.dataset.imageurl
-			modalContent.insertAdjacentHTML(
-				`afterbegin`,
-				`
+      );
+    } else if (e.target.classList.contains("accordions__open-modal-image")) {
+      const url = e.target.dataset.imageurl;
+      modalContent.insertAdjacentHTML(
+        `afterbegin`,
+        `
               <img src="${url}" />
             `
-			)
-		}
-	}
-})
+      );
+    }
+  }
+});
 
-modal.addEventListener('click', event => {
-	if (
-		event.target === modal ||
-		event.target.classList.contains('accordions__modal-close')
-	) {
-		modal.classList.remove('active')
-		modalContent.children[0].remove()
-	}
-})
+modal.addEventListener("click", (event) => {
+  if (
+    event.target === modal ||
+    event.target.classList.contains("accordions__modal-close")
+  ) {
+    modal.classList.remove("active");
+    modalContent.children[0].remove();
+  }
+});
 
 //history
-const modalHistory = document.getElementById('histories__modal')
-const sectionHistory = document.querySelector('.history')
-const modalContentHistory = document.querySelector('.histories__modal-content')
+const modalHistory = document.getElementById("histories__modal");
+const sectionHistory = document.querySelector(".history");
+const modalContentHistory = document.querySelector(".histories__modal-content");
 
-sectionHistory.addEventListener('click', e => {
-	if (e.target.classList.contains('histories__open-modal')) {
-		modal.classList.add('active')
-		if (e.target.classList.contains('histories__open-modal-video')) {
-			const url = e.target.dataset.videourl
-			modalContent.insertAdjacentHTML(
-				`afterbegin`,
-				`
+sectionHistory.addEventListener("click", (e) => {
+  if (e.target.classList.contains("histories__open-modal")) {
+    modal.classList.add("active");
+    if (e.target.classList.contains("histories__open-modal-video")) {
+      const url = e.target.dataset.videourl;
+      modalContent.insertAdjacentHTML(
+        `afterbegin`,
+        `
             <iframe
               id="youtube-video"
               src="${url}"
@@ -192,98 +193,157 @@ sectionHistory.addEventListener('click', e => {
               allowfullscreen
             ></iframe>
             `
-			)
-		} else if (e.target.classList.contains('accordions__open-modal-image')) {
-			const url = e.target.dataset.imageurl
-			modalContent.insertAdjacentHTML(
-				`afterbegin`,
-				`
+      );
+    } else if (e.target.classList.contains("accordions__open-modal-image")) {
+      const url = e.target.dataset.imageurl;
+      modalContent.insertAdjacentHTML(
+        `afterbegin`,
+        `
               <img src="${url}" />
             `
-			)
-		}
-	}
-})
+      );
+    }
+  }
+});
 
-modal.addEventListener('click', event => {
-	if (
-		event.target === modal ||
-		event.target.classList.contains('histories__modal-close')
-	) {
-		modal.classList.remove('active')
-		modalContent.children[0].remove()
-	}
-})
+modal.addEventListener("click", (event) => {
+  if (
+    event.target === modal ||
+    event.target.classList.contains("histories__modal-close")
+  ) {
+    modal.classList.remove("active");
+    modalContent.children[0].remove();
+  }
+});
+
+document.querySelector("#chat__more-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  document
+    .querySelector(".chat__items")
+    .classList.toggle("chat__items_collapsed");
+  document.querySelector("#chat__more-btn").remove();
+});
+
+// Отправка формы курса
+document.querySelector("#productForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  e.target.querySelector(".modal__footer-alert")?.remove();
+  e.target.querySelector(".product__form-error")?.remove();
+  e.target.querySelector(".product__form-btn-text").textContent =
+    "Подождите...";
+  e.target
+    .querySelector(".product__form-btn-spinner")
+    .classList.remove("d-none");
+  e.target.parentElement
+    .querySelector(".product__form-loading-wrapper")
+    ?.classList.remove("d-none");
+
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData);
+  console.log(JSON.stringify(data));
+
+  fetch("https://itpark32sys.ru/lk/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => {
+      if (!response.ok)
+        throw new Error("Упс... Произошла ошибка. Попробуйте еще раз");
+      // Редирект на страницу thankyou.html
+      // window.location.href = "thankyou.html";
+    })
+    .catch((error) => {
+      e.target.querySelector(".product__form-btn").insertAdjacentHTML(
+        "beforebegin",
+        `<div class="text-danger text-center product__form-error">
+			${error.message}
+			</div>`
+      );
+    })
+    .finally(() => {
+      e.target.querySelector(".product__form-btn-text").textContent =
+        "Оставить заявку";
+      e.target
+        .querySelector(".product__form-btn-spinner")
+        .classList.add("d-none");
+      e.target
+        .querySelector(".product__form-loading-wrapper")
+        ?.classList.add("d-none");
+    });
+});
 
 // slider
-$(document).ready(function (){
- $('.slider__content').slick({
-		arrows: true,
-		// dots: true,
-		centerPadding: '0px',
-		slidesToShow: 3,
-		centerMode: true,
-		slidesToScroll: 1,
-		speed: 200,
-		arrows: true,
-		infinite: true,
-		initialSlide: 0,
-		draggable: false,
+// $(document).ready(function () {
+//   $(".slider__content").slick({
+//     arrows: true,
+//     // dots: true,
+//     centerPadding: "0px",
+//     slidesToShow: 3,
+//     centerMode: true,
+//     slidesToScroll: 1,
+//     speed: 200,
+//     arrows: true,
+//     infinite: true,
+//     initialSlide: 0,
+//     draggable: false,
 
-		responsive: [
-			{
-				breakpoint: 1400,
-				settings: {
-					slidesToShow: 3,
-				},
-			},
-			{
-				breakpoint: 1200,
-				settings: {
-					slidesToShow: 3,
-				},
-			},
-			{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 3,
-				},
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1,
-					centerMode: false,
-				},
-			},
-			{
-				breakpoint: 576,
-				settings: {
-					centerPadding: '22px',
-					slidesToShow: 1,
-					centerMode: false,
-				},
-			},
-		],
- })
-})
+//     responsive: [
+//       {
+//         breakpoint: 1400,
+//         settings: {
+//           slidesToShow: 3,
+//         },
+//       },
+//       {
+//         breakpoint: 1200,
+//         settings: {
+//           slidesToShow: 3,
+//         },
+//       },
+//       {
+//         breakpoint: 992,
+//         settings: {
+//           slidesToShow: 3,
+//         },
+//       },
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           slidesToShow: 2,
+//           slidesToScroll: 1,
+//           centerMode: false,
+//         },
+//       },
+//       {
+//         breakpoint: 576,
+//         settings: {
+//           centerPadding: "22px",
+//           slidesToShow: 1,
+//           centerMode: false,
+//         },
+//       },
+//     ],
+//   });
+// });
 
 // slider lesson
-$(document).ready(function (){
- $('.lesson__wrapper').slick({
-		arrows: true,
-		centerPadding: '0px',
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		speed: 500,
-		easing: 'easeOutElastic',
-		arrows: true,
-		infinite: true,
-		initialSlide: 0,
-		draggable: false,
- })
-})
+$(document).ready(function () {
+  $(".lesson__wrapper").slick({
+    arrows: true,
+    centerPadding: "10px",
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 500,
+    easing: "easeOutElastic",
+    arrows: true,
+    infinite: true,
+    initialSlide: 0,
+    draggable: false,
+  });
+});
 
 //slider testimonials
 $(document).ready(function () {
@@ -314,50 +374,67 @@ $(document).ready(function () {
   });
 });
 
-//teachers
+//slider__projects
 $(document).ready(function () {
-  $(".teachers__slider").slick({
-    arrows: false,
-    dots: true,
-    variableWidth: true,
-    adaptiveHeight: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    speed: 1500,
-    easing: "ease",
-    initialSlide: 0,
+  $(".slider__projects").slick({
+    centerMode: true,
+    centerPadding: "30px",
+    slidesToShow: 3, // Количество видимых слайдов
+    variableWidth: true, // Добавлено для поддержки ширины слайдов с отступами
+    arrows: true, // Включение стрелок
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+          arrows: true,
+          centerMode: true,
+          centerPadding: "20px",
+          slidesToShow: 1,
         },
       },
       {
-        breakpoint: 992,
+        breakpoint: 480,
         settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "40px",
           slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
     ],
   });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//teachers
+// $(document).ready(function () {
+//   $(".teachers__slider").slick({
+//     arrows: false,
+//     dots: true,
+//     variableWidth: true,
+//     adaptiveHeight: true,
+//     slidesToShow: 2,
+//     slidesToScroll: 1,
+//     speed: 1500,
+//     easing: "ease",
+//     initialSlide: 0,
+//     responsive: [
+//       {
+//         breakpoint: 1200,
+//         settings: {
+//           slidesToShow: 2,
+//           slidesToScroll: 1,
+//         },
+//       },
+//       {
+//         breakpoint: 992,
+//         settings: {
+//           slidesToShow: 1,
+//           slidesToScroll: 1,
+//         },
+//       },
+//     ],
+//   });
+// });
 
 // button
 // const tooltip = document.querySelector('.fixed__tooltip')
@@ -405,4 +482,3 @@ $(document).ready(function () {
 // 		}
 // 	}
 // })
-
