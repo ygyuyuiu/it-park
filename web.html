@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8" />
@@ -162,19 +162,19 @@
 
 				<ul class="navbar-nav mb-2 mb-lg-0 collapse navbar-collapse flex-grow-0 gap-4" id="navbarSupportedContent">
 					<li class="nav-item">
-						<a class="header__nav-link nav-link" href="#courses">Курсы</a>
+						<a class="header__nav-link nav-link" href="#description">О профессии</a>
 					</li>
 					<li class="nav-item">
-						<a class="header__nav-link nav-link" href="#about">О нас </a>
+						<a class="header__nav-link nav-link" href="#course">Для кого</a>
 					</li>
 					<li class="nav-item">
-						<a class="header__nav-link nav-link" href="#testimonials">Отзывы</a>
+						<a class="header__nav-link nav-link" href="#lesson">Формат</a>
 					</li>
 					<li class="nav-item">
-						<a class="header__nav-link nav-link" href="#teach">Наша команда</a>
+						<a class="header__nav-link nav-link" href="#accordion">Программа</a>
 					</li>
 					<li class="nav-item">
-						<a class="header__nav-link nav-link" href="#soc1al">Соцсети</a>
+						<a class="header__nav-link nav-link" href="#product">Стоимость</a>
 					</li>
 				</ul>
 				<div class="d-flex gap-1">
@@ -191,19 +191,19 @@
 						<div class="header__offcanvas-body offcanvas-body">
 							<ul class="navbar-nav align-items-center justify-content-center gap-3" id="navbarSupportedContent">
 								<li class="nav-item">
-									<a class="header__nav-menu-link nav-link" href="#courses">Курсы</a>
+									<a class="header__nav-menu-link nav-link" href="#description">О профессии</a>
 								</li>
 								<li class="nav-item">
-									<a class="header__nav-menu-link nav-link" href="#about">О нас</a>
+									<a class="header__nav-menu-link nav-link" href="#course">Для кого</a>
 								</li>
 								<li class="nav-item">
-									<a class="header__nav-menu-link nav-link" href="#testimonials">Отзывы</a>
+									<a class="header__nav-menu-link nav-link" href="#lesson">Формат</a>
 								</li>
 								<li class="nav-item">
-									<a class="header__nav-menu-link nav-link" href="#teach">Наша команда</a>
+									<a class="header__nav-menu-link nav-link" href="#accordion">Программа</a>
 								</li>
 								<li class="nav-item">
-									<a class="header__nav-menu-link nav-link" href="#soc1al">Соцсети</a>
+									<a class="header__nav-menu-link nav-link" href="#product">Стоимость</a>
 								</li>
 							</ul>
 						</div>
@@ -302,7 +302,7 @@
 	<section class="description">
 		<div class="container">
 			<div class="row d-xl-flex justify-content-xl-between">
-				<div class="col-12 col-xxl-6 description__wrapper">
+				<div class="col-12 col-xxl-6 description__wrapper" id="description">
 					<h3 class="description__title h3_new lh-sm "><span class="title-span">Разработка сайтов </span> - идеальный
 						вариант для тех, кто хочет быстро войти в IT!</h3>
 					<p class="description__text lh-sm">На курсе вы научитесь разрабатывать лендинги, многостраничные сайты,
@@ -346,17 +346,13 @@
 		<div class="container">
 			<div class="row d-flex justify-content-center d-xxl-flex justify-content-xl-between school__row">
 				<div
-					class="col-11 order-2 order-xxl-1 col-xxl-6 d-flex justify-content-center align-items-center school__img-wrapper school__video schools__open-modal schools__open-modal-video"
-					data-videourl="https://www.youtube.com/embed/9onnW39rtKY?si=ETtKhXYIyM4woAsa">
+					class="col-11 order-2 order-xxl-1 col-xxl-6 d-flex justify-content-center align-items-center school__img-wrapper school__video open-modal open-modal-video"
+					data-videourl="video/itpark.mp4">
 					<div class="school__img-wrapper">
 						<img src="imgWEB/school/comunity.png" class="school__img" alt="" />
 					</div>
 				</div>
-				<div id="schools__modal" class="hidden">
-					<div class="schools__modal-content ratio ratio-16x9">
-						<div class="schools__modal-close"></div>
-					</div>
-				</div>
+
 				<div class="col-12  order-1 order-xxl-2 col-xxl-6 school__wrapper">
 					<h3 class="school__title h3_new lh-sm "><span class="title-span">IT-ПАРК</span> – это крупное IT-комьюнити с
 						большой историей существования</h3>
@@ -386,7 +382,7 @@
 	<section class="course">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 course__header d-flex flex-column align-items-center justify-content-center">
+				<div class="col-12 course__header d-flex flex-column align-items-center justify-content-center" id="course">
 					<h2 class="course__title h2_new fw-bold lh-sm m-0">Для кого этот курс</h2>
 					<div class="decor"></div>
 				</div>
@@ -470,7 +466,7 @@
 					<h2 class="specialty__title fw-bold text-center lh-sm m-0">Особенности обучения</h2>
 					<div class="decor"></div>
 				</div>
-				<div class="col-12 col-xxl-6 specialty__wrapper">
+				<div class="col-12 col-xxl-6 specialty__wrapper px-0">
 					<ul class="specialty__list p-0 m-0 d-flex flex-column">
 						<li class="specialty__item d-flex">
 							<img class="specialty__img" src="imgWEB/specialty/1.svg" alt="Картинка декор">
@@ -511,60 +507,40 @@
 						занятия</h3>
 					<div class="specialty__videos-inner d-flex">
 						<div class="specialty__img-wrapper col-6">
-							<div class="specialty__video specialtys__open-modal specialtys__open-modal-video"
-								data-videourl="https://www.youtube.com/embed/RcZ_J0rUdLo?si=OTh-aJMqxciZ8bII">
-								<div class=" specialty__img-wrapper ">
-									<img src="imgWEB/specialty/1.png" class="col-12 rounded-4" alt="Фото с крупной IT-конференции" />
-								</div>
-							</div>
-						</div>
-						<div id="specialtys__modal" class="hidden">
-							<div class="specialtys__modal-content ratio ratio-16x9">
-								<div class="specialtys__modal-close">
+							<div class="specialty__video open-modal open-modal-video"
+								data-videourl="video/1.mp4">
+								<div class="history__img-wrapper">
+									<img src="imgWEB/specialty/1.png" class="col-12 rounded-4"
+									alt="Процесс обучения" />
 								</div>
 							</div>
 						</div>
 						<div class="specialty__img-wrapper col-6">
-							<div class="specialty__video specialtys__open-modal specialtys__open-modal-video"
-								data-videourl="https://www.youtube.com/embed/Jtvka5PpF08?si=TcJGInD6aZmQ4Nw9">
-								<div class=" specialty__img-wrapper ">
-									<img src="imgWEB/specialty/2.png" class="col-12 rounded-4" alt="Фото с крупной IT-конференции" />
-								</div>
-							</div>
-						</div>
-						<div id="specialtys__modal" class="hidden">
-							<div class="specialtys__modal-content ratio ratio-16x9">
-								<div class="specialtys__modal-close">
+							<div class="specialty__video open-modal open-modal-video"
+								data-videourl="video/2.mp4">
+								<div class="history__img-wrapper">
+									<img src="imgWEB/specialty/2.png" class="col-12 rounded-4"
+									alt="Процесс обучения" />
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="specialty__videos-inner d-flex">
 						<div class="specialty__img-wrapper col-6">
-							<div class="specialty__video specialtys__open-modal specialtys__open-modal-video"
-								data-videourl="https://www.youtube.com/embed/KIVMeYD0upo?si=Ol_ed4linxJGrceJ">
-								<div class=" specialty__img-wrapper ">
-									<img src="imgWEB/specialty/3.png" class="col-12 rounded-4" alt="Фото с крупной IT-конференции" />
-								</div>
-							</div>
-						</div>
-						<div id="specialtys__modal" class="hidden">
-							<div class="specialtys__modal-content ratio ratio-16x9">
-								<div class="specialtys__modal-close">
+							<div class="specialty__video open-modal open-modal-video"
+								data-videourl="video/3.mp4">
+								<div class="history__img-wrapper">
+									<img src="imgWEB/specialty/3.png" class="col-12 rounded-4"
+									alt="Процесс обучения" />
 								</div>
 							</div>
 						</div>
 						<div class="specialty__img-wrapper col-6">
-							<div class="specialty__video specialtys__open-modal specialtys__open-modal-video"
-								data-videourl="https://www.youtube.com/embed/hzHMEqscoCc?si=o7zVk3VSclA4oo3Q">
-								<div class=" specialty__img-wrapper ">
-									<img src="imgWEB/specialty/4.png" class="col-12 rounded-4" alt="Фото с крупной IT-конференции" />
-								</div>
-							</div>
-						</div>
-						<div id="specialtys__modal" class="hidden">
-							<div class="specialtys__modal-content ratio ratio-16x9">
-								<div class="specialtys__modal-close">
+							<div class="specialty__video open-modal open-modal-video"
+								data-videourl="video/4.mp4">
+								<div class="history__img-wrapper">
+									<img src="imgWEB/specialty/4.png" class="col-12 rounded-4"
+									alt="Процесс обучения" />
 								</div>
 							</div>
 						</div>
@@ -599,17 +575,12 @@
 			<div class="gradient-circle gradient-circle_grid"></div>
 			<div class="mt-4 d-flex justify-content-center">
 				<a href="" id="chat__more-btn"
-					class="link button btn btn-primary rounded-pill fw-semibold px-4 py-3 promo__link d-xxl-none">
-					Ещё ▼
+					class="link button btn btn-primary rounded-pill  px-4 py-3 promo__link d-xl-none">
+					Смотреть ещё <i class="fs-6">▼</i>
 				</a>
 			</div>
 		</div>
 	</section>
-
-
-
-
-
 
 	<section class="slider px-2">
 		<div class="container">
@@ -620,7 +591,8 @@
 							месяцев</span> обучения наши студенты уже самостоятельно разрабатывают такие сайты</h3>
 					<p class="slider__text text-start text-sm-center lh-sm mb-0">Видеообзоры и ссылки на проекты наших студентов
 						вы
-						можете посмотреть в нашей <a style="text-decoration: underline;" href="https://vk.com/video/playlist/-58525095_16" target="_blank">видеотеке
+						можете посмотреть в нашей <a style="text-decoration: underline;"
+							href="https://vk.com/video/playlist/-58525095_16" target="_blank">видеотеке
 							ВКонтакте</a></p>
 				</div>
 			</div>
@@ -638,11 +610,11 @@
 				<div><img src="imgWEB/slider/11.png" alt="Картинка сайта учеников IT-Парк"></div>
 				<div><img src="imgWEB/slider/12.png" alt="Картинка сайта учеников IT-Парк"></div>
 			</div>
+			<div class="gradient-circle gradient-circle_slider"></div>
+
 		</div>
 
 	</section>
-
-
 
 	<!-- <section class="slider">
 		<div class="container">
@@ -707,7 +679,7 @@
 	<section class="lesson">
 		<div class="container">
 			<div class="row d-flex justify-content-center align-items-center">
-				<div class="col-12 lesson__header d-flex flex-column align-items-center justify-content-center">
+				<div class="col-12 lesson__header d-flex flex-column align-items-center justify-content-center" id="lesson">
 					<h2 class="lesson__title h2_new fw-bold lh-sm m-0">Как проходит обучение</h2>
 					<div class="decor"></div>
 				</div>
@@ -816,7 +788,7 @@
 	<section class="accordion">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 accordion__header d-flex flex-column align-items-center justify-content-center">
+				<div class="col-12 accordion__header d-flex flex-column align-items-center justify-content-center" id="accordion">
 					<h2 class="accordion__title h2_new fw-bold lh-sm m-0">Программа обучения</h2>
 					<div class="decor">
 					</div>
@@ -838,7 +810,8 @@
 						<li class="accordion__item d-flex align-items-start">
 							<img src="imgWEB/accordion/decor.svg" alt="Картинка декор" class="accordion__decoration">
 							<div class="accordion__text-wrapper">
-								<p class="accordion__text m-0 lh-base">С полной версией программы вы можете ознакомиться по <a target="_blank" style="text-decoration: underline;"
+								<p class="accordion__text m-0 lh-base">С полной версией программы вы можете ознакомиться по <a
+										target="_blank" style="text-decoration: underline;"
 										href="https://docs.google.com/document/d/152LqW7gwkuSJZr6uJqYtCTh5btFiOcAfou5G4V9EqSA/edit">ссылке</a>
 								</p>
 							</div>
@@ -874,16 +847,10 @@
 								</ul>
 								<p class="accordion__body-text lh-base fw-bold mb-0">Посмотрите, какие проекты выполняют наши студенты
 									на этом модуле обучения</p>
-								<div
-									class="accordion__video accordions__open-modal accordions__open-modal-video col-12 col-lg-11 col-xl-9 col-xxl-8"
-									data-videourl="https://www.youtube.com/embed/7C_7W_t5ulo?si=KsJVWLWHpPTiOMYP">
-									<div class="accordion__img-wrapper">
+								<div class="accordion__video open-modal open-modal-video col-12 col-lg-11 col-xl-9 col-xxl-8"
+								data-videourl="video/acc1.mp4">
+									<div class="school__img-wrapper">
 										<img src="imgWEB/accordion/first-block.jpeg" class="accordion__img" alt="Заставка preview" />
-									</div>
-								</div>
-								<div id="accordions__modal" class="hidden">
-									<div class="accordions__modal-content ratio ratio-16x9">
-										<div class="accordions__modal-close"></div>
 									</div>
 								</div>
 							</div>
@@ -921,16 +888,10 @@
 								</ul>
 								<p class="accordion__body-text lh-base fw-bold mb-0">Посмотрите, какие проекты выполняют наши студенты
 									на этом модуле обучения</p>
-								<div
-									class="accordion__video accordions__open-modal accordions__open-modal-video col-12 col-lg-11 col-xl-9 col-xxl-8"
-									data-videourl="https://www.youtube.com/embed/XYPHf3OaYnE?si=cfr69N0wslrBVDsz">
-									<div class="accordion__img-wrapper">
+								<div class="accordion__video open-modal open-modal-video col-12 col-lg-11 col-xl-9 col-xxl-8"
+								data-videourl="video/acc2.mp4">
+									<div class="school__img-wrapper">
 										<img src="imgWEB/accordion/second-block.png" class="accordion__img" alt="Заставка preview" />
-									</div>
-								</div>
-								<div id="accordions__modal" class="hidden">
-									<div class="accordions__modal-content ratio ratio-16x9">
-										<div class="accordions__modal-close"></div>
 									</div>
 								</div>
 							</div>
@@ -966,16 +927,10 @@
 								</ul>
 								<p class="accordion__body-text lh-base fw-bold mb-0">Посмотрите, какие проекты выполняют наши студенты
 									на этом модуле обучения</p>
-								<div
-									class="accordion__video accordions__open-modal accordions__open-modal-video col-12 col-lg-11 col-xl-9 col-xxl-8"
-									data-videourl="https://www.youtube.com/embed/LkefMg-z4KA?si=a4zs7aNE0kmc3D_B">
-									<div class="accordion__img-wrapper">
+								<div class="accordion__video open-modal open-modal-video col-12 col-lg-11 col-xl-9 col-xxl-8"
+								data-videourl="video/acc3.mp4">
+									<div class="school__img-wrapper">
 										<img src="imgWEB/accordion/third-block.jpeg" class="accordion__img" alt="Заставка preview" />
-									</div>
-								</div>
-								<div id="accordions__modal" class="hidden">
-									<div class="accordions__modal-content ratio ratio-16x9">
-										<div class="accordions__modal-close"></div>
 									</div>
 								</div>
 							</div>
@@ -1012,51 +967,39 @@
 					<h3 class="history__title h3_new lh-sm lh-sm-base  mb-0"><span class="title-span">Истории учеников</span>
 						расскажут вам
 						о том, какой путь проходили наши студенты</h3>
-					<p class="history__text lh-sm">Посмотреть больше историй наших учеников вы можете в этой <a style="text-decoration: underline;"
-							href="https://vk.com/@itpark32-success-story-new" target="_blank">статье ВКонтакте</a></p>
+					<p class="history__text lh-sm">Посмотреть больше историй наших учеников вы можете в этой <a
+							style="text-decoration: underline;" href="https://vk.com/@itpark32-success-story-new"
+							target="_blank">статье ВКонтакте</a></p>
 				</div>
 				<div class="col-12 col-xxl-4 history__inner">
-					<div class="history__video histories__open-modal histories__open-modal-video p-0"
-						data-videourl="https://www.youtube.com/embed/2HHXZFf6E5s?si=ZmO5MeE4DZzQzFNv">
+					<div class="history__video open-modal open-modal-video p-0"
+						data-videourl="video/hist1.mp4">
 						<div class="history__img-wrapper">
 							<img src="imgWEB/history/1.png" class="history__img_radius-left"
 								alt="Заставка с онлайн встречи со студентои Егором Синицей" />
 						</div>
 					</div>
-					<div id="histories__modal" class="hidden">
-						<div class="histories__modal-content ratio ratio-16x9">
-							<div class="histories__modal-close"></div>
-						</div>
-					</div>
 				</div>
 				<div class="col-12 col-xxl-4 history__inner">
-					<div class="history__video histories__open-modal histories__open-modal-video p-0"
-						data-videourl=https://www.youtube.com/embed/_dSlS2T1kMA?si=KSBzZuMzdhq6iJsz">
+					<div class="history__video open-modal open-modal-video p-0"
+						data-videourl="video/hist2.mp4">
 						<div class="history__img-wrapper">
 							<img src="imgWEB/history/2.png" class="history__img"
-								alt="Заставка с онлайн встречи со студентоиАлександром Лемешовым" />
-						</div>
-					</div>
-					<div id="histories__modal" class="hidden">
-						<div class="histories__modal-content ratio ratio-16x9">
-							<div class="histories__modal-close"></div>
+								alt="Заставка с онлайн встречи со студентом Александром Лемешовым" />
 						</div>
 					</div>
 				</div>
 				<div class="col-12 col-xxl-4 history__inner">
-					<div class="history__video histories__open-modal histories__open-modal-video p-0"
-						data-videourl="https://www.youtube.com/embed/UFdk01X7540?si=AfW2SFn4BwInPUGR">
-						<div class="history__img-wrapper">
-							<img src="imgWEB/history/3.png" class="history__img_radius-right"
-								alt="Заставка с онлайн встречи со студентои Никитой Натишвили" />
-						</div>
-					</div>
-					<div id="histories__modal" class="hidden">
-						<div class="histories__modal-content ratio ratio-16x9">
-							<div class="histories__modal-close"></div>
+					<div class="history__video open-modal open-modal-video p-0" data-videourl="video/hist3.mp4">
+						<div class="school__img-wrapper">
+							<img src="imgWEB/history/3.jpg" class="history__img_radius-right" alt="Заставка с онлайн встречи со студентои Егором Нагорным" />
 						</div>
 					</div>
 				</div>
+
+				
+
+
 			</div>
 			<div class="gradient-circle gradient-circle_history"></div>
 		</div>
@@ -1068,8 +1011,9 @@
 				<div class="col-12 testimonials__header d-flex flex-column align-items-center justify-content-center">
 					<h2 class="testimonials__title h2_new lh-sm m-0">Отзывы об обучении</h2>
 					<div class="decor"></div>
-					<p class="testimonials__text text-center mb-0">Больше отзывов в нашей <a class="testimonials__link" style="text-decoration: underline;"
-							target="_blank" href="https://vk.com/topic-58525095_28834899?offset=40">группе ВКонтакте</a></p>
+					<p class="testimonials__text text-center mb-0">Больше отзывов в нашей <a class="testimonials__link"
+							style="text-decoration: underline;" target="_blank"
+							href="https://vk.com/topic-58525095_28834899?offset=40">группе ВКонтакте</a></p>
 				</div>
 			</div>
 			<div class="row testimonials__row d-flex justify-content-center">
@@ -1150,8 +1094,7 @@
 								<p class="teacher__item-text lh-base mb-0">Обладает <strong>огромным опытом за</strong> плечами (в
 									программирования - 8 лет, в преподавательской деятельности - 6 лет). За время своей преподавательской
 									деятельности успешно обучал как взрослых, так и детей. <strong>Большое количество</strong> <a
-										target="_blank" class="title-span" 
-										style="text-decoration: underline;"
+										target="_blank" class="title-span" style="text-decoration: underline;"
 										href="https://vk.com/topic-58525095_28834899?offset=40">благодарных отзывов</a> -
 									тому подтверждение</p>
 							</li>
@@ -1270,7 +1213,7 @@
 					</div>
 					<div class="gradient-circle gradient-circle_product-content-second"></div>
 				</div>
-				<div class="product__content-third px-0">
+				<div class="product__content-third px-0" id="product">
 					<div class="product__card-wrapper-second d-xxl-flex flex-xxl-row">
 						<div class="product__pay col-12 col-xxl-7">
 							<h3 class="product__pay-title h3_new lh-base">Стоимость недели обучения составляет <span
@@ -1477,18 +1420,18 @@
 
 				<div class="sos1al__soc1als d-flex align-items-center ">
 					<div class="sos1al__soc1al-item">
-						<a href="" target="_blank">
+						<a href="https://t.me/itpark32" target="_blank">
 							<img class="sos1al__soc1al-img" src="imgWEB/sos1al/tg.svg" alt="Ссылка на группу Telegram">
 						</a>
 					</div>
 
 					<div class="sos1al__soc1al-item">
-						<a href="" target="_blank">
+						<a href="https://www.youtube.com/@itpark32" target="_blank">
 							<img class="sos1al__soc1al-img" src="imgWEB/sos1al/youtube.svg" alt="Ссылка на YouTube">
 						</a>
 					</div>
 					<div class="sos1al__soc1al-item">
-						<a href="" target="_blank">
+						<a href="https://vk.com/itpark32" target="_blank">
 							<img class="sos1al__soc1al-img" src="imgWEB/sos1al/vk.svg" alt="Ссылка на ВКонтакте">
 						</a>
 					</div>
@@ -1591,19 +1534,12 @@
 		</div>
 	</footer>
 
-
-
-
-
-
-
-
 	<!-- modals start -->
 	<!-- Modal question-->
 	<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
 		tabindex="-1">
 		<div class="modal-dialog modal-dialog-centered ">
-			<div class="modal-content rounded-4 modal__content">
+			<div class="modal-content rounded-4 modal__content p-2">
 				<div class="modal-header modal__header d-flex align-items-start">
 					<p class="modal-title lh-base fw-bold modal__title" id="exampleModalToggleLabel">Остались вопросы или нужна
 						помощь с выбором курса?</p>
@@ -1636,7 +1572,7 @@
 						</div>
 						<div class="modal__image-inner d-flex flex-column ">
 							<a target="_blank" class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-								href="">
+								href="tel:+79532819045">
 								<img class="modal__img" src="imgWEB/product/phone.svg" alt="Логотип Телефон">
 								<span class="modal__span d-inline-block text-dark">Телефон</span>
 							</a>
@@ -1644,6 +1580,67 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="pay" aria-hidden="true" aria-labelledby="payLabel" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+			<div class="modal-content rounded-4 modal__content">
+				<div class="modal-header modal__header d-flex align-items-start">
+					<p class="modal-title lh-base fw-bold modal__title" id="payLabel">Способы оплаты</p>
+					<button type="button" class="btn-close modal__pay-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="modal__pay-text lh-base mb-4">Для оплаты занятий с помощью банковской карты на странице личного
+						кабинета необходимо нажать кнопку Пополнить баланс. Оплата происходит через ПАО СБЕРБАНК с
+						использованием
+						банковских карт следующих платёжных систем:</p>
+					<ul class=" d-flex flex-column align-items-start gap-1 lh-base">
+						<li style="list-style:disc;">МИР</li>
+						<li style="list-style:disc;">VISA International</li>
+						<li style="list-style:disc;">Mastercard Worldwide</li>
+					</ul>
+					<p class="modal__pay-text lh-base mb-0">Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены
+						на
+						платёжный шлюз ПАО СБЕРБАНК. Соединение с платёжным шлюзом и передача информации осуществляется в
+						защищённом
+						режиме с использованием протокола шифрования SSL. В случае если Ваш банк поддерживает технологию
+						безопасного
+						проведения интернет-платежей Verified By Visa, MasterCard SecureCode, MIR Accept, J-Secure для
+						проведения
+						платежа также может потребоваться ввод специального пароля. Настоящий сайт поддерживает 256-битное
+						шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ПАО СБЕРБАНК. Введённая
+						информация не будет предоставлена третьим лицам за исключением случаев, предусмотренных
+						законодательством
+						РФ. Проведение платежей по банковским картам осуществляется в строгом соответствии с требованиями
+						платёжных
+						систем МИР, Visa Int., MasterCard Europe Sprl, JCB.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal refund -->
+	<div class="modal fade" id="refund" aria-hidden="true" aria-labelledby="refundToggleLabel" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered ">
+			<div class="modal-content rounded-4 modal__content">
+				<div class="modal-header modal__header d-flex align-items-start">
+					<p class="modal-title lh-base fw-bold modal__title" id="refundLabel">Возврат денежных средств</p>
+					<button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="modal__pay-text lh-base">Возврат переведённых средств, производится на ваш банковский счёт в
+						течение
+						5-30 рабочих дней (срок зависит от банка, который выдал вашу банковскую карту).</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--  Modal video  -->
+	<div id="modal" class="hidden">
+		<div class="modal-video-content ratio ratio-16x9">
+			<div class="modal-close"></div>
 		</div>
 	</div>
 

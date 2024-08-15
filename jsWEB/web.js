@@ -42,180 +42,43 @@ function init() {
   new TypeWriter(txtElement, words, wait);
 }
 
-//schools
-const modalSchool = document.getElementById("schools__modal");
-const sectionSchool = document.querySelector(".school");
-const modalContentSchool = document.querySelector(".schools__modal-content");
-
-sectionSchool.addEventListener("click", (e) => {
-  if (e.target.classList.contains("schools__open-modal")) {
-    modal.classList.add("active");
-    if (e.target.classList.contains("schools__open-modal-video")) {
-      const url = e.target.dataset.videourl;
-      modalContent.insertAdjacentHTML(
-        `afterbegin`,
-        `
-            <iframe
-              id="youtube-video"
-              src="${url}"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            `
-      );
-    } else if (e.target.classList.contains("schools__open-modal-image")) {
-      const url = e.target.dataset.imageurl;
-      modalContent.insertAdjacentHTML(
-        `afterbegin`,
-        `
-              <img src="${url}" />
-            `
-      );
-    }
-  }
-});
-
-modalSchool.addEventListener("click", (event) => {
-  if (
-    event.target === modal ||
-    event.target.classList.contains("schools__modal-close")
-  ) {
-    modal.classList.remove("active");
-    modalContent.children[0].remove();
-  }
-});
-
-//specialty
-const modal = document.getElementById("specialtys__modal");
-const sectionSpecialty = document.querySelector(".specialty");
-const modalContent = document.querySelector(".specialtys__modal-content");
-
-sectionSpecialty.addEventListener("click", (e) => {
-  if (e.target.classList.contains("specialtys__open-modal")) {
-    modal.classList.add("active");
-    if (e.target.classList.contains("specialtys__open-modal-video")) {
-      const url = e.target.dataset.videourl;
-      modalContent.insertAdjacentHTML(
-        `afterbegin`,
-        `
-            <iframe
-              id="youtube-video"
-              src="${url}"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            `
-      );
-    } else if (e.target.classList.contains("specialtys__open-modal-image")) {
-      const url = e.target.dataset.imageurl;
-      modalContent.insertAdjacentHTML(
-        `afterbegin`,
-        `
-              <img src="${url}" />
-            `
-      );
-    }
-  }
-});
+/* Open modal video*/
+const modal = document.getElementById("modal");
+const modalContent = document.querySelector(".modal-video-content");
 
 modal.addEventListener("click", (event) => {
   if (
     event.target === modal ||
-    event.target.classList.contains("specialtys__modal-close")
+    event.target.classList.contains("modal-close")
   ) {
     modal.classList.remove("active");
     modalContent.children[0].remove();
   }
 });
 
-//accordion
-const modalAccordion = document.getElementById("accordions__modal");
-const sectionAccordion = document.querySelector(".accordion");
-const modalContentAccordion = document.querySelector(
-  ".accordions__modal-content"
-);
-
-sectionAccordion.addEventListener("click", (e) => {
-  if (e.target.classList.contains("accordions__open-modal")) {
+function openModalVideo(e) {
+  if (e.target.classList.contains("open-modal")) {
     modal.classList.add("active");
-    if (e.target.classList.contains("accordions__open-modal-video")) {
+    if (e.target.classList.contains("open-modal-video")) {
       const url = e.target.dataset.videourl;
+
       modalContent.insertAdjacentHTML(
         `afterbegin`,
         `
-            <iframe
-              id="youtube-video"
-              src="${url}"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            `
-      );
-    } else if (e.target.classList.contains("accordions__open-modal-image")) {
-      const url = e.target.dataset.imageurl;
-      modalContent.insertAdjacentHTML(
-        `afterbegin`,
-        `
-              <img src="${url}" />
+            <video id="info_row__video" preload="none" poster="" controls src="${url}" style="cursor:pointer" autoplay>
+            </video>
             `
       );
     }
   }
-});
+}
 
-modal.addEventListener("click", (event) => {
-  if (
-    event.target === modal ||
-    event.target.classList.contains("accordions__modal-close")
-  ) {
-    modal.classList.remove("active");
-    modalContent.children[0].remove();
-  }
-});
+document.querySelector(".school").addEventListener("click", openModalVideo);
+document.querySelector(".specialty").addEventListener("click", openModalVideo);
+document.querySelector(".accordion").addEventListener("click", openModalVideo);
+document.querySelector(".history").addEventListener("click", openModalVideo);
 
-//history
-const modalHistory = document.getElementById("histories__modal");
-const sectionHistory = document.querySelector(".history");
-const modalContentHistory = document.querySelector(".histories__modal-content");
-
-sectionHistory.addEventListener("click", (e) => {
-  if (e.target.classList.contains("histories__open-modal")) {
-    modal.classList.add("active");
-    if (e.target.classList.contains("histories__open-modal-video")) {
-      const url = e.target.dataset.videourl;
-      modalContent.insertAdjacentHTML(
-        `afterbegin`,
-        `
-            <iframe
-              id="youtube-video"
-              src="${url}"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            `
-      );
-    } else if (e.target.classList.contains("accordions__open-modal-image")) {
-      const url = e.target.dataset.imageurl;
-      modalContent.insertAdjacentHTML(
-        `afterbegin`,
-        `
-              <img src="${url}" />
-            `
-      );
-    }
-  }
-});
-
-modal.addEventListener("click", (event) => {
-  if (
-    event.target === modal ||
-    event.target.classList.contains("histories__modal-close")
-  ) {
-    modal.classList.remove("active");
-    modalContent.children[0].remove();
-  }
-});
-
+/* Open more chat screens*/
 document.querySelector("#chat__more-btn").addEventListener("click", (e) => {
   e.preventDefault();
   document
@@ -253,7 +116,7 @@ document.querySelector("#productForm").addEventListener("submit", (e) => {
       if (!response.ok)
         throw new Error("Упс... Произошла ошибка. Попробуйте еще раз");
       // Редирект на страницу thankyou.html
-      // window.location.href = "thankyou.html";
+      window.location.href = "thankyou.html";
     })
     .catch((error) => {
       e.target.querySelector(".product__form-btn").insertAdjacentHTML(
@@ -274,60 +137,6 @@ document.querySelector("#productForm").addEventListener("submit", (e) => {
         ?.classList.add("d-none");
     });
 });
-
-// slider
-// $(document).ready(function () {
-//   $(".slider__content").slick({
-//     arrows: true,
-//     // dots: true,
-//     centerPadding: "0px",
-//     slidesToShow: 3,
-//     centerMode: true,
-//     slidesToScroll: 1,
-//     speed: 200,
-//     arrows: true,
-//     infinite: true,
-//     initialSlide: 0,
-//     draggable: false,
-
-//     responsive: [
-//       {
-//         breakpoint: 1400,
-//         settings: {
-//           slidesToShow: 3,
-//         },
-//       },
-//       {
-//         breakpoint: 1200,
-//         settings: {
-//           slidesToShow: 3,
-//         },
-//       },
-//       {
-//         breakpoint: 992,
-//         settings: {
-//           slidesToShow: 3,
-//         },
-//       },
-//       {
-//         breakpoint: 768,
-//         settings: {
-//           slidesToShow: 2,
-//           slidesToScroll: 1,
-//           centerMode: false,
-//         },
-//       },
-//       {
-//         breakpoint: 576,
-//         settings: {
-//           centerPadding: "22px",
-//           slidesToShow: 1,
-//           centerMode: false,
-//         },
-//       },
-//     ],
-//   });
-// });
 
 // slider lesson
 $(document).ready(function () {
@@ -359,8 +168,9 @@ $(document).ready(function () {
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: true,
         },
       },
       {
@@ -404,81 +214,3 @@ $(document).ready(function () {
     ],
   });
 });
-
-//teachers
-// $(document).ready(function () {
-//   $(".teachers__slider").slick({
-//     arrows: false,
-//     dots: true,
-//     variableWidth: true,
-//     adaptiveHeight: true,
-//     slidesToShow: 2,
-//     slidesToScroll: 1,
-//     speed: 1500,
-//     easing: "ease",
-//     initialSlide: 0,
-//     responsive: [
-//       {
-//         breakpoint: 1200,
-//         settings: {
-//           slidesToShow: 2,
-//           slidesToScroll: 1,
-//         },
-//       },
-//       {
-//         breakpoint: 992,
-//         settings: {
-//           slidesToShow: 1,
-//           slidesToScroll: 1,
-//         },
-//       },
-//     ],
-//   });
-// });
-
-// button
-// const tooltip = document.querySelector('.fixed__tooltip')
-// const numMess = document.querySelector('.fixed__num')
-
-//  setTimeout(() => {
-// 		tooltip.style.opacity = 1
-// 		numMess.style.opacity = 1
-//  }, 3000)
-
-// const btnActive = document.querySelector('#btn-active')
-// const btnClose = document.querySelector('#close')
-// const links = document.querySelectorAll('.fixed__link')
-
-// btnClose.addEventListener('click', () => {
-// 	if (btnClose) {
-// 		btnActive.style.display = 'block'
-// 		btnClose.style.display = 'none'
-
-// 		for (let i = 0; i < links.length; i++) {
-// 			links[0].style.cssText =
-// 				'transform: translate(0px); transition:all 200ms ease-out 300ms; visibility: hidden;'
-// 			links[1].style.cssText =
-// 				'transform: translate(0px); transition:all 200ms ease-out 200ms; visibility: hidden;'
-// 			links[2].style.cssText =
-// 				'transform: translate(0px); transition:all 200ms ease-out 100ms; visibility: hidden;'
-// 		}
-// 	}
-// })
-
-// btnActive.addEventListener('click', () => {
-// 	if (btnActive) {
-// 		tooltip.style.opacity = 0
-// 		numMess.style.opacity = 0
-// 		btnActive.style.display = 'none'
-// 		btnClose.style.display = 'block'
-
-// 		for (let i = 0; i < links.length; i++) {
-// 			links[0].style.cssText =
-// 				'transform: translate(-220px); transition:all 200ms ease-out 100ms; visibility:visible;'
-// 			links[1].style.cssText =
-// 				'transform: translate(-160px); transition:all 200ms ease-out 200ms; visibility:visible;'
-// 			links[2].style.cssText =
-// 				'transform: translate(-100px); transition:all 200ms ease-out 300ms; visibility:visible;'
-// 		}
-// 	}
-// })
