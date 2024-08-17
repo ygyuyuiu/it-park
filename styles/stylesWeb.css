@@ -1963,10 +1963,6 @@ body {
   .history__title {
     max-width: 100%;
   }
-  .history__img {
-    max-width: 100%;
-    height: 100%;
-  }
   .history__img_radius-left {
     border-radius: 0;
   }
