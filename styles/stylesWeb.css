@@ -1539,21 +1539,20 @@ body {
 }
 
 /* button */
-.fixed {
+.fixed{
   position: fixed;
   bottom: 20px;
   right: 20px;
   display: flex;
   align-items: center;
   justify-content: end;
-  cursor: pointer;
 }
-.fixed__btn {
-  width: 70px;
-  height: 70px;
+.fixed__btn{
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background-color: #337eff;
-  padding: 15px;
+  background-color: #003cd2;
+  padding: 10px 5px 9px 7px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1562,10 +1561,6 @@ body {
   border: none;
   position: relative;
   cursor: pointer;
-}
-.fixed__btn img {
-  width: 40px;
-  height: 40px;
 }
 @keyframes animate {
   0% {
@@ -1580,90 +1575,56 @@ body {
       0 0 0 1.62667px rgba(51, 126, 255, 0.7);
   }
 }
-.fixed__social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.fixed__link {
-  position: absolute;
-  top: 13px;
-  right: 12px;
-  z-index: -1;
-  transition: 0.3s;
-}
-.fixed__num {
-  width: 27px;
-  height: 27px;
-  border-radius: 50%;
-  background-color: #eb5757;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  color: #fff;
-  position: absolute;
-  top: -8px;
-  right: -3px;
-  opacity: 0;
-}
-.fixed__tooltip {
-  background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
-  color: #202940;
-  padding: 10px 25px 10px 15px;
-  box-shadow: 1px 5px 8px 2px rgba(0, 0, 0, 0.2);
+.fixed__tooltip{
+  width: 163px;
+  max-height: 100px;
+  padding: 10px;
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
   position: absolute;
-  top: -80px;
-  right: 15px;
-  width: 200px;
-  user-select: none;
-  outline: none;
+  top: -70px;
+  right: 60px;
   opacity: 0;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: all 200ms ease-out;
 }
 .fixed__tooltip::after {
   content: "";
-  width: 0;
-  height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-top: 13px solid #f5f5f5;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0px 8px 12px 8px;
+  border-color: transparent transparent #ffffff transparent;
+  transform: rotate(0deg);
   position: absolute;
-  top: 63px;
-  right: 30px;
+  top: 88px;
+  right: -7px;
 }
-.fixed__text {
+.fixed__text{
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 9px;
+  margin-top: 0;
+}
+.fixed__list{
+  display: flex;
+  gap: 16px;
+  padding: 0;
   margin: 0;
-  font-size: 16px;
 }
-.close-wrapper {
-  width: 70px;
-  height: 70px;
+.fixed__close{
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  border: 2px solid #337eff;
-  background-color: #f6f7fb;
-  padding: 15px;
-  position: relative;
-  display: none;
+  background-color: #003cd2;
+  padding: 10px 8px 9px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
-.close {
-  width: 5px;
-  height: 45px;
-  border-radius: 5px;
-  background-color: #337eff;
-  position: absolute;
-}
-.close__first,
-.close__second {
-  top: 50%;
-  left: 50%;
-}
-.close__first {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-.close__second {
-  transform: translate(-50%, -50%) rotate(-45deg);
+.fixed__close-wrapper{
+  display: none;
 }
 
 /* Gradient */
@@ -2149,10 +2110,10 @@ body {
     max-width: 460px;
   }
   .lesson__desc {
-    height: 260px;
+    height: 310px;
   }
   .lesson__desc_h {
-    height: 240px;
+    height: 295px;
   }
   .questions__content {
     max-width: 100%;
@@ -2223,7 +2184,7 @@ body {
     height: 320px;
   }
   .lesson__desc_h {
-    height: 295px;
+    height: 305px;
   }
   .questions__img {
     bottom: 20px;
@@ -2497,10 +2458,10 @@ body {
     padding: 0 30px;
   }
   .lesson__desc {
-    height: 340px;
+    height: 370px;
   }
   .lesson__desc_h {
-    height: 325px;
+    height: 355px;
   }
   .questions__img {
     bottom: 20px;
@@ -2584,9 +2545,17 @@ body {
     left: 60%;
   }
   .lesson__desc {
-    height: 470px;
+    height: 430px;
   }
   .lesson__desc_h {
+    height: 420px;
+  }
+}
+@media screen and (max-width: 327px){
+   .lesson__desc {
     height: 460px;
+  }
+  .lesson__desc_h {
+    height: 450px;
   }
 }

@@ -214,3 +214,23 @@ $(document).ready(function () {
     ],
   });
 });
+
+// button
+const btn = document.querySelector('.fixed__btn')
+const tooltip = document.querySelector('.fixed__tooltip')
+const close = document.querySelector('.fixed__close-wrapper')
+
+btn.addEventListener('click', showTooltip)
+
+close.addEventListener('click', hideTooltip)
+
+function showTooltip() {
+	tooltip.style.opacity = 1
+	close.style.display = 'block'
+	btn.style.display = 'none'
+}
+function hideTooltip() {
+	tooltip.style.opacity = 0
+	close.style.display = 'none'
+	btn.style.display = 'flex'
+}
