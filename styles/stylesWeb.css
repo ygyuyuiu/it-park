@@ -1077,7 +1077,7 @@ body {
   border-radius: 32px 0 0 32px;
 }
 .history__img_radius-right {
-  height: 223px;
+  max-height: 223px;
   border-radius: 0 32px 32px 0;
 }
 .history__video {
@@ -1971,7 +1971,7 @@ body {
     border-radius: 0;
   }
   .history__img_radius-right {
-    height: 100%;
+    max-height: 100%;
     border-radius: 0;
   }
   .grid__wrapper {
