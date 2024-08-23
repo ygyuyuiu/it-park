@@ -841,7 +841,6 @@ body {
 .lesson__list {
   font-size: var(--font-size-for-button);
   max-width: 546px;
-  line-height: 1;
 }
 .lesson__item {
   margin-bottom: 10px;
@@ -1890,9 +1889,6 @@ body {
   .lesson__subtitle,
   .lesson__list {
     max-width: 100%;
-  }
-  .lesson__list{
-    line-height: normal;
   }
   /* .slider__wrapper .slick-arrow.slick-prev {
     left: 110px;
