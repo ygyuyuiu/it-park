@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description"
+		content="Онлайн-курс «Веб-разработка на React и TypeScript» от IT-ПАРК. Научитесь создавать современные веб-приложения с нуля, освоив React, TypeScript и Redux. Первое занятие бесплатно!">
+	<meta name="robots" content="index, follow">
+	<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="Веб-разработка на React и TypeScript» | IT-ПАРК – онлайн-школа программирования">
+	<meta property="og:description" content="Разработка веб-приложений на React, TypeScript и Redux">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://itpark32.ru/react.html">
+	<meta property="og:image" content="img/seo/og-image.png">
+	<meta property="og:site_name" content="IT-ПАРК">
+	<meta property="og:locale" content="ru_RU">
+
+	<!-- VK Meta Tags -->
+	<meta name="vk:image" content="img/seo/og-image.png">
+	<meta name="vk:title" content="Веб-разработка на React и TypeScript» | IT-ПАРК – онлайн-школа программирования">
+	<meta name="vk:description" content="Разработка веб-приложений на React, TypeScript и Redux">
+
+	<!-- Yandex Webmaster Meta Tags -->
+	<meta name="yandex-verification" content="f0473812b1d16812" />
+
+	<!-- Additional Meta Tags for Better SEO -->
+	<meta name="keywords"
+		content="React, TypeScript, курс по React, курс по TypeScript, обучение React, обучение TypeScript, React.js, TypeScript для начинающих, React и TypeScript">
+	<meta name="author" content="IT-ПАРК">
+
+	<!-- Регистрация и отправка sitemap в поисковые системы -->
+	<meta name="google-site-verification" content="wu6-yVG8fz7VI7NaKBkGfsIbVpC26wKfmaocd1CRiH0" />
+
+	<title>Курс «Веб-разработка на React и TypeScript» – онлайн-обучение с нуля</title>
+
+	<link rel="icon" href="img/titleIcon/keyboard.svg">
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+
+	<link rel="preload" href="font/gilroy/Gilroy-Heavy.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="font/gilroy/Gilroy-Extrabold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="font/gilroy/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="font/gilroy/Gilroy-Semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="font/gilroy/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="font/gilroy/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="font/gilroy/Gilroy-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="font/gilroy/Gilroy-Thin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="font/bebas/BebasNeueBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="font/bebas/BebasNeueRegular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="font/bebas/BebasNeueLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="font/bebas/BebasNeue-Thin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="font/bebas/BebasNeueBook.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles/react.css" />
+
+	<!-- Structured Data (JSON-LD) for Courses -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Course",
+			"name": "Веб-разработка на React и TypeScript",
+			"description": "Разработка веб-приложений на React, TypeScript и Redux.",
+			"provider": {
+				"@type": "Organization",
+				"name": "IT-ПАРК",
+				"url": "https://itpark32.ru/",
+				"logo": "https://itpark32.ru/img/titleIcon/keyboard.svg",
+				"sameAs": [
+					"https://vk.com/itpark32",
+					"https://t.me/itpark32",
+					"https://www.youtube.com/@itpark32"
+				]
+			},
+			"hasCourseInstance": {
+				"@type": "CourseInstance",
+				"courseMode": "Online",
+				"location": {
+					"@type": "VirtualLocation",
+					"url": "https://itpark32.ru/react.html"
+				}
+			}
+		}
+		</script>
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+	<header class="header">
+		<nav class="navbar navbar-expand-lg" id="navbar-example2">
+			<div class="container justify-content-between">
+				<a class="navbar-brand header__nav d-flex align-items-center gap-2" href="index.html">
+					<img class="header__nav-image" src="img/header/logo.svg" alt="Логотип IT-Парк" />
+					<label class="header__nav-label fw-bold d-inline-block" style="cursor: pointer;" data-wait="3000"
+						data-words="[&quot;IT-Парк&quot;]">
+						<span class="txt">IT-ПАРК</span>
+					</label>
+				</a>
+
+
+				<ul class="navbar-nav mb-2 mb-lg-0 collapse navbar-collapse flex-grow-0 gap-4" id="navbarSupportedContent">
+					<li class="nav-item">
+						<a class="header__nav-link nav-link" href="#profession">О профессии</a>
+					</li>
+					<li class="nav-item">
+						<a class="header__nav-link nav-link" href="#users">Для кого</a>
+					</li>
+					<li class="nav-item">
+						<a class="header__nav-link nav-link" href="#format">Формат</a>
+					</li>
+					<li class="nav-item">
+						<a class="header__nav-link nav-link" href="#program">Программа</a>
+					</li>
+					<li class="nav-item">
+						<a class="header__nav-link nav-link" href="#price">Стоимость</a>
+					</li>
+				</ul>
+
+				<div class="d-flex gap-1">
+					<button class="navbar-toggler order-1" type="button" data-bs-toggle="offcanvas"
+						data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="header__offcanvas-wrapper offcanvas offcanvas-end d-flex d-lg-none" tabindex="-1"
+						id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+						<div class="offcanvas-header">
+							<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+								aria-label="Close"></button>
+						</div>
+						<div class="header__offcanvas-body offcanvas-body">
+							<ul class="navbar-nav align-items-center justify-content-center gap-3" id="navbarSupportedContent">
+								<li class="nav-item">
+									<a data-bs-dismiss="offcanvas" id="profession-anchor" class="header__nav-menu-link nav-link">О
+										профессии</a>
+								</li>
+								<li class="nav-item">
+									<a data-bs-dismiss="offcanvas" id="users-anchor" class="header__nav-menu-link nav-link">Для кого
+										курс</a>
+								</li>
+								<!-- <li class="nav-item">
+									<a data-bs-dismiss="offcanvas" data-href="features" class="header__nav-menu-link nav-link">Формат
+										обучения</a>
+								</li>
+								<li class="nav-item">
+									<a data-bs-dismiss="offcanvas" data-href="reviews" class="header__nav-menu-link nav-link">Отзывы</a>
+								</li> -->
+								<li class="nav-item">
+									<a data-bs-dismiss="offcanvas" id="format-anchor" class="header__nav-menu-link nav-link">Формат</a>
+								</li>
+								<li class="nav-item">
+									<a data-bs-dismiss="offcanvas" id="program-anchor"
+										class="header__nav-menu-link nav-link">Программа</a>
+								</li>
+								<li class="nav-item">
+									<a data-bs-dismiss="offcanvas" id="price-anchor" class="header__nav-menu-link nav-link">Стоимость</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="me-2 d-flex gap-2">
+						<a href="https://itpark32sys.ru" class="text-decoration-none" target="_blank">
+							<img src="img/header/login.svg" alt="Иконка входа" />
+						</a>
+						<a href="#exampleModalToggle" data-bs-toggle="modal"
+							class="link btn d-none d-sm-flex rounded-pill btn-outline-primary align-items-center justify-content-center ">
+							Задать вопрос
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<section class="promo">
+		<div class="container">
+			<div class="row  align-items-center">
+				<div class="col-12 col-lg-7 col-xl-7 order-2 order-sm-1 promo__description">
+					<h1 class="promo__title h1_new fw-semibold text-center text-sm-start ">
+						Веб-разработка на React и TypeScript
+					</h1>
+					<div class="promo__desc">
+						<p class="promo__desc-text lh-base">С нуля научим разрабатывать современные веб-приложения, используя
+							TypeScript и React. Освоите управление состоянием с помощью Redux, интеграцию с внешними API, лучшие
+							практики тестирования и оптимизации кода</p>
+					</div>
+					<div class="promo__btn-wrapper d-flex flex-column d-sm-flex  flex-sm-row">
+						<a id="promo-register-anchor"
+							class="link button  btn btn-primary rounded-pill fw-semibold px-4 py-3 promo__link">
+							Записаться на курс
+						</a>
+						<a href="#exampleModalToggle" data-bs-toggle="modal"
+							class="link button  btn btn-outline-primary rounded-pill fw-semibold px-4 py-3 promo__link">
+							Нужна консультация
+						</a>
+					</div>
+				</div>
+				<div class="col-12 col-lg-4 order-1 order-sm-2  col-xl-5 ">
+					<div class="promo__img-wrapper ">
+						<img class="promo__img-frame d-none d-xl-block " src="img/promo/frame.svg" alt="Украшение промо" />
+						<div class="promo__img-absolute">
+							<img class="promo__img-man" src="imgREACT/promo/promo.jpeg" alt="Изображение программиста" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="start">
+		<div class="container">
+			<div class="row start__row rounded-5 ">
+				<div class="start__wrapper d-flex flex-column align-items-center d-md-flex flex-md-row justify-content-around">
+					<div class=" col-lg-6 start__inner d-flex flex-column  d-xl-flex flex-xl-row justify-content-xl-around">
+						<div class="start__inner-item d-flex ">
+							<img class="start__item-img" src="imgREACT/start/1.png" alt=" Картинка декор">
+							<div class="start__item-desc d-flex flex-column">
+								<h3 class="start__item-title h4_new fw-bold mb-0">Старт:</h3>
+								<span class="start__item-text">10 октября</span>
+							</div>
+						</div>
+						<div class="start__inner-item d-flex">
+							<img class="start__item-img" src="imgREACT/start/2.png" alt=" Картинка декор">
+							<div class="start__item-desc d-flex flex-column">
+								<h3 class="start__item-title h4_new fw-bold mb-0">Длительность:</h3>
+								<span class="start__item-text">6 месяцев</span>
+							</div>
+						</div>
+					</div>
+					<div class=" col-lg-6 start__inner d-flex flex-column  d-xl-flex flex-xl-row justify-content-xl-around ">
+						<div class="start__inner-item d-flex">
+							<img class="start__item-img" src="imgREACT/start/3.png" alt=" Картинка декор">
+							<div class="start__item-desc d-flex flex-column">
+								<h3 class="start__item-title h4_new fw-bold mb-0">Занятость:</h3>
+								<span class="start__item-text">6 ч. в неделю</span>
+							</div>
+						</div>
+						<div class="start__inner-item d-flex">
+							<img class="start__item-img" src="imgREACT/start/4.png" alt=" Картинка декор">
+							<div class="start__item-desc d-flex flex-column">
+								<h3 class="start__item-title h4_new fw-bold mb-0">Формат:</h3>
+								<span class="start__item-text">Онлайн</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="gradient-circle gradient-circle_start"></div>
+		</div>
+	</section>
+
+	<section class="description">
+		<div class="container">
+			<div class="row d-xl-flex justify-content-xl-between">
+
+
+
+				<div class="col-12 col-xxl-6 description__wrapper" id="profession">
+					<h3 class="description__title h3_new lh-sm "><span class="title-span">React и TypeScript </span> - самый
+						популярный и востребованный стек в современном фронтенде
+					</h3>
+					<p class="description__text lh-sm">На курсе вы освоите создание мощных и интерактивных веб-приложений.
+						Научитесь писать качественный и надежный код, проектировать приложения с использованием современных
+						архитектурных методологий. Получите навыки, которые востребованы в ведущих компаниях, таких как Яндекс,
+						ВКонтакте, Ozon, Сбер</p>
+					<ul class="description__list d-flex flex-column ps-0 mb-0">
+						<li class="description__item d-flex ">
+							<img src="imgREACT/description/1.svg" alt="Картинка декор" class="description__decor-img" />
+							<div class="description__item-desc d-flex flex-column ">
+								<h4 class="description__item-title  fw-bold mb-0">Профессиональное образование</h4>
+								<p class="description__item-text lh-sm mb-0">Мы обучаем вас профессии и готовим к трудоустройству в IT
+								</p>
+							</div>
+						</li>
+						<li class="description__item d-flex ">
+							<img src="imgREACT/description/2.svg" alt="Картинка декор" class="description__decor-img" />
+							<div class="description__item-desc d-flex flex-column ">
+								<h4 class="description__item-title h4 fw-bold mb-0">Гарантированный результат</h4>
+								<p class="description__item-text lh-sm mb-0">Каждый ученик, добросовестно работающий на занятиях и
+									выполняющий домашние задания, обязательно найдет работу в IT</p>
+							</div>
+						</li>
+						<li class="description__item d-flex ">
+							<img src="imgREACT/description/3.svg" alt="Картинка декор" class="description__decor-img" />
+							<div class="description__item-desc d-flex flex-column">
+								<h4 class="description__item-title h4 fw-bold mb-0">Обучение с нуля</h4>
+								<p class="description__item-text lh-sm mb-0">От вас требуется только уверенное владение компьютером и
+									работоспособность</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="col-12 col-xxl-6  description__img-wrapper d-xl-flex justify-xl-content align-items-xl-center ">
+					<img class="description__img" src="imgREACT/description/persons.jpg" alt="Изображение программистов">
+				</div>
+			</div>
+			<div class="gradient-circle gradient-circle_description"></div>
+		</div>
+	</section>
+
+	<section class="school">
+		<div class="container">
+			<div class="row d-flex justify-content-center d-xxl-flex justify-content-xl-between school__row">
+				<div
+					class="col-11 order-2 order-xxl-1 col-xxl-6 d-flex justify-content-center align-items-center school__img-wrapper school__video open-modal open-modal-video"
+					data-videourl="video/0.mp4">
+					<div class="school__img-wrapper">
+						<img src="imgREACT/school/comunity.png" class="school__img" alt="История IT-ПАРКа" />
+					</div>
+				</div>
+
+				<div class="col-12  order-1 order-xxl-2 col-xxl-6 school__wrapper">
+					<h3 class="school__title h3_new lh-sm "><span class="title-span">IT-ПАРК</span> – это крупное IT-комьюнити с
+						большой историей существования</h3>
+					<ul class="school__list d-flex flex-column mb-0 p-0">
+						<li class="school__item d-flex align-items-start">
+							<img src="imgREACT/school/1.svg" alt="Картинка декор" class="school__decor-img">
+							<p class="scholl__text lh-sm mb-0">За 10 лет мы <strong>обучили более 1000 студентов</strong>, которые
+								работают в ведущих IT-компаниях: Avito, Mail.ru Group, Ozon, Сбербанк, Тинькофф, VK и других </p>
+						</li>
+						<li class="school__item d-flex align-items-center">
+							<img src="imgREACT/school/2.svg" alt="Картинка декор" class="school__decor-img">
+							<p class="scholl__text lh-sm mb-0">Наши <strong>программы обучения визированы</strong> компаниями Сбер и
+								Ozon</p>
+						</li>
+						<li class="school__item d-flex align-items-center">
+							<img src="imgREACT/school/3.svg" alt="Картинка декор" class="school__decor-img">
+							<p class="scholl__text lh-sm mb-0">В штате <strong> опытные преподаватели</strong> с более чем 5-летним
+								стажем в IT</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="gradient-circle gradient-circle_school"></div>
+		</div>
+	</section>
+
+	<section class="course">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 course__header d-flex flex-column align-items-center justify-content-center" id="users">
+					<h2 class="course__title h2_new fw-bold lh-sm m-0">Для кого этот курс</h2>
+					<div class="decor"></div>
+				</div>
+
+				<div class=" course__wrapper d-flex flex-column">
+
+					<div class="course__wrapper-first d-flex flex-column d-xl-flex flex-xl-row">
+
+						<div class="course__inner-first col-12 col-xl-4">
+							<div class=" course__inner-item course__inner-item-first d-flex justify-content-between ">
+								<div>
+									<h3 class="course__subtitle-first h3_new lh-sm">16+</h3>
+									<p class="course__text-first lh-sm mb-0">Для старшеклассников, студентов и взрослых <b>(16+)</b> </p>
+								</div>
+								<div class="course__img-wrapper_abs">
+									<img class="course__img-first d-xl-none" src="imgREACT/course/1.svg" alt="Картинка декор">
+								</div>
+							</div>
+						</div>
+
+						<div class="course__inner-second col-12 col-xl-8">
+							<div
+								class=" course__inner-item course__inner-item-second d-flex align-items-center  d-sm-flex justify-content-between align-items-sm-start">
+								<div>
+									<div class="d-flex flex-column justify-content-start">
+										<h3 class="course__subtitle-second h3_new lh-sm">С базовым опытом</h3>
+										<p class="course__text-second lh-sm mb-0">Для тех, кто уже освоил верстку на <b> HTML, CSS</b> и
+											уверенно владеет <b>JavaScript</b></p>
+									</div>
+								</div>
+								<div class="course__img-wrapper-second d-flex align-items-center">
+									<img class="course__img-second" src="imgREACT/course/2.svg" alt="Картинка декор">
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="course__wrapper-second  d-flex flex-column d-xl-flex flex-xl-row">
+						<div class="course__inner-third col-12 col-xl-8">
+							<div
+								class=" course__inner-item course__inner-item-third d-flex align-items-center  d-sm-flex justify-content-between align-items-sm-start">
+								<div>
+									<div class="d-flex flex-column justify-content-start">
+										<h3 class="course__subtitle-third h3_new lh-sm">Будущие IT-специалисты</h3>
+										<p class="course__text-third lh-sm mb-0">Для тех, кто хочет освоить профессиональные технологии для
+											<b>создания современных веб-приложений</b>, наработать портфолио из реальных проектов и получить
+											опыт работы в команде
+										</p>
+									</div>
+								</div>
+								<div class="course__img-wrapper-third d-flex align-items-center">
+									<img class="course__img-third" src="imgREACT/course/3.svg" alt="Картинка декор">
+								</div>
+							</div>
+						</div>
+
+						<div class="course__inner-fourth col-12 col-xl-4">
+							<div class=" course__inner-item course__inner-item-fourth d-flex justify-content-between">
+								<div>
+									<h3 class="course__subtitle-fourth h3_new lh-sm">Самоучки</h3>
+									<p class="course__text-fourth lh-sm mb-0">Для тех, кто самостоятельно изучил основы и теперь хочет
+										<b>структурировать свои знания</b> и углубить их
+									</p>
+								</div>
+								<div class="course__img-wrapper_abs-second ">
+									<img class="course__img-fourth d-xl-none" src="imgREACT/course/4.svg" alt="Картинка декор">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="gradient-circle gradient-circle_course"></div>
+		</div>
+	</section>
+
+
+	<section class="specialty px-2" id="features">
+		<div class="container">
+			<div class="row specialty__row d-flex justify-content-between">
+				<div class="col-12 specialty__header d-flex flex-column align-items-center justify-content-center">
+					<h2 class="specialty__title fw-bold text-center lh-sm m-0">Особенности обучения</h2>
+					<div class="decor"></div>
+				</div>
+				<div class="col-12 col-xxl-6 specialty__wrapper px-0">
+					<ul class="specialty__list p-0 m-0 d-flex flex-column">
+						<li class="specialty__item d-flex">
+							<img class="specialty__img" src="imgREACT/specialty/1.svg" alt="Картинка декор">
+							<div class="specialty__text-wrapper d-flex flex-column gap-2">
+								<h4 class="specialty__item-title h4_new fw-bold lh-sm m-0">Сначала пробуете, потом решаете</h4>
+								<p class="specialty__item-description lh-sm mb-0">Все начинается с бесплатных пробных занятий. Вы
+									пробуете, оцениваете качество и сами решаете, подходит ли вам наше обучение </p>
+							</div>
+						</li>
+						<li class="specialty__item d-flex">
+							<img class="specialty__img" src="imgREACT/specialty/2.svg" alt="Картинка декор">
+							<div class="specialty__text-wrapper d-flex flex-column gap-2">
+								<h4 class="specialty__item-title h4_new fw-bold lh-sm m-0">Занятия проводим в Discord</h4>
+								<p class="specialty__item-description lh-sm mb-0">Живое общение с одногруппниками и преподавателем:
+									вместе пишем код, думаем над задачами, рассуждаем</p>
+							</div>
+						</li>
+						<li class="specialty__item d-flex">
+							<img class="specialty__img" src="imgREACT/specialty/3.svg" alt="Картинка декор">
+							<div class="specialty__text-wrapper d-flex flex-column gap-2">
+								<h4 class="specialty__item-title h4_new fw-bold lh-sm m-0">Даем доступную цену</h4>
+								<p class="specialty__item-description lh-sm mb-0">Никаких оплат сразу за весь курс. У нас понедельная
+									оплата занятий 1500 ₽/нед.</p>
+							</div>
+						</li>
+						<li class="specialty__item d-flex">
+							<img class="specialty__img" src="imgREACT/specialty/4.svg" alt="Картинка декор">
+							<div class="specialty__text-wrapper d-flex flex-column gap-2">
+								<h4 class="specialty__item-title h4_new fw-bold lh-sm m-0">Объясняем понятным языком</h4>
+								<p class="specialty__item-description lh-sm mb-0">У нас нет студентов, которые не понимают. Мы объясняем
+									материал понятным “человеческим” языком </p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="specialty__videos-wrapper d-flex flex-column col-12 col-xxl-6">
+					<h3 class="specialty__subtitle h3_new lh-sm col-12"><span class="title-span">Так</span> будут проходить ваши
+						занятия</h3>
+					<div class="specialty__videos-inner d-flex">
+						<div class="specialty__img-wrapper col-6">
+							<div class="specialty__video open-modal open-modal-video" data-videourl="videoREACT/4.mp4">
+								<div class="history__img-wrapper">
+									<img src="imgREACT/specialty/4.png" class="col-12 rounded-4" alt="Процесс обучения" />
+								</div>
+							</div>
+						</div>
+						<div class="specialty__img-wrapper col-6">
+							<div class="specialty__video open-modal open-modal-video" data-videourl="videoREACT/2.mp4">
+								<div class="history__img-wrapper">
+									<img src="imgREACT/specialty/2.png" class="col-12 rounded-4" alt="Процесс обучения" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="specialty__videos-inner d-flex">
+						<div class="specialty__img-wrapper col-6">
+							<div class="specialty__video open-modal open-modal-video" data-videourl="videoREACT/3.mp4">
+								<div class="history__img-wrapper">
+									<img src="imgREACT/specialty/3.png" class="col-12 rounded-4" alt="Процесс обучения" />
+								</div>
+							</div>
+						</div>
+						<div class="specialty__img-wrapper col-6">
+							<div class="specialty__video open-modal open-modal-video" data-videourl="videoREACT/1.mp4">
+								<div class="history__img-wrapper">
+									<img src="imgREACT/specialty/1.png" class="col-12 rounded-4" alt="Процесс обучения" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="gradient-circle gradient-circle_specialty"></div>
+		</div>
+	</section>
+
+	<section class="chat" id="reviews">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 grid__header-wrapper">
+					<h3 class="grid__title h3_new lh-sm mb-0">Вот что <span class="title-span">говорят наши студенты</span> об
+						обучении</h3>
+				</div>
+			</div>
+			<div class="chat__items chat__items_collapsed">
+				<img class="" src="imgREACT/grid/1.jpg" alt="Отзыв ученика IT-ПАРКа">
+				<img class="" src="imgREACT/grid/4.jpg" alt="Отзыв ученика IT-ПАРКа">
+				<img class="" src="imgREACT/grid/6.jpg" alt="Отзыв ученика IT-ПАРКа">
+				<img class="" src="imgREACT/grid/9.jpg" alt="Отзыв ученика IT-ПАРКа">
+				<img class="" src="imgREACT/grid/2.jpg" alt="Отзыв ученика IT-ПАРКа">
+				<img class="" src="imgREACT/grid/7.jpg" alt="Отзыв ученика IT-ПАРКа">
+				<img class="" src="imgREACT/grid/10.jpg" alt="Отзыв ученика IT-ПАРКа">
+				<img class="" src="imgREACT/grid/3.jpg" alt="Отзыв ученика IT-ПАРКа">
+				<img class="" src="imgREACT/grid/5.jpg" alt="Отзыв ученика IT-ПАРКа">
+				<img class="" src="imgREACT/grid/8.jpg" alt="Отзыв ученика IT-ПАРКа">
+				<img class="" src="imgREACT/grid/11.jpg" alt="Отзыв ученика IT-ПАРКа">
+			</div>
+			<div class="gradient-circle gradient-circle_grid"></div>
+			<div class="mt-4 d-flex justify-content-center">
+				<a href="" id="chat__more-btn"
+					class="link button btn btn-primary rounded-pill  px-4 py-3 promo__link d-xl-none">
+					Смотреть ещё<svg xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 24 24">
+						<path fill="currentColor" d="m7 10l5 5l5-5z" />
+					</svg>
+				</a>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="slider px-2">
+		<div class="container">
+			<div class="row">
+				<div class="slider__header d-flex flex-column justify-content-center align-items-center">
+					<h3 class="slider__title h3_new lh-sm lh-sm-base text-start text-sm-center"><span class="title-span">Всего
+							через пару
+							месяцев</span> обучения наши студенты уже самостоятельно разрабатывают такие веб-приложения</h3>
+					<p class="slider__text text-start text-sm-center lh-sm mb-0">Видеообзоры и ссылки на проекты наших студентов
+						вы
+						можете посмотреть в нашей <a style="text-decoration: underline;"
+							href="https://vk.com/video/playlist/-58525095_16" target="_blank">видеотеке
+							ВКонтакте</a></p>
+				</div>
+			</div>
+			<div class="slider__projects mt-2 mt-md-5">
+				<div><img src="imgREACT/slider/1.png" alt="Картинка сайта учеников IT-Парк"></div>
+				<div><img src="imgREACT/slider/2.png" alt="Картинка сайта учеников IT-Парк"></div>
+				<div><img src="imgREACT/slider/3.png" alt="Картинка сайта учеников IT-Парк"></div>
+				<div><img src="imgREACT/slider/4.png" alt="Картинка сайта учеников IT-Парк"></div>
+				<div><img src="imgREACT/slider/5.png" alt="Картинка сайта учеников IT-Парк"></div>
+				<div><img src="imgREACT/slider/6.png" alt="Картинка сайта учеников IT-Парк"></div>
+				<div><img src="imgREACT/slider/7.png" alt="Картинка сайта учеников IT-Парк"></div>
+				<div><img src="imgREACT/slider/8.png" alt="Картинка сайта учеников IT-Парк"></div>
+				<div><img src="imgREACT/slider/9.png" alt="Картинка сайта учеников IT-Парк"></div>
+				<div><img src="imgREACT/slider/10.png" alt="Картинка сайта учеников IT-Парк"></div>
+				<div><img src="imgREACT/slider/11.png" alt="Картинка сайта учеников IT-Парк"></div>
+				<div><img src="imgREACT/slider/12.png" alt="Картинка сайта учеников IT-Парк"></div>
+			</div>
+			<div class="gradient-circle gradient-circle_slider"></div>
+
+		</div>
+
+	</section>
+
+
+
+	<section class="lesson" id="format">
+		<div class="container">
+			<div class="row d-flex justify-content-center align-items-center">
+				<div class="col-12 lesson__header d-flex flex-column align-items-center justify-content-center">
+					<h2 class="lesson__title h2_new fw-bold lh-sm m-0">Как проходит обучение</h2>
+					<div class="decor"></div>
+				</div>
+				<div class="row d-flex justify-content-center">
+					<div class="lesson__wrapper">
+						<div class="lesson__content d-flex flex-column  d-xxl-flex flex-xxl-row justify-content-xxl-between">
+							<div class="lesson__img-wrapper d-flex justify-content-center align-items-center order-2 order-xxl-1">
+								<img class="lesson__img" src="imgREACT/lesson/1.png" alt="Картинка с онлайн занятия в Discord">
+							</div>
+							<div class="lesson__desc order-1 order-xxl-2">
+								<span class="lesson__span">.01</span>
+								<h3 class="lesson__subtitle h3_new lh-sm mb-0">Онлайн-занятия через Discord</h3>
+								<ul class="lesson__list mb-0 lh-sm">
+									<li class="lesson__item list" style="list-style-type: disc;">Это НЕ трансляция с чатом и «немыми»
+										собеседниками</li>
+									<li class="lesson__item" style="list-style-type: disc;">У нас живое общение с одногруппниками и
+										преподавателем</li>
+									<li class="lesson__item" style="list-style-type: disc;">Вы вместе обсуждаете задачи, предлагаете
+										решения, задаете вопросы и получаете ответы в реальном времени</li>
+									<li class="lesson__item" style="list-style-type: disc;">Все занятия сохраняем в записи</li>
+								</ul>
+							</div>
+						</div>
+						<div class="lesson__content-second d-flex flex-column  d-xxl-flex flex-xxl-row justify-content-xxl-between">
+							<div class="lesson__img-wrapper d-flex justify-content-center align-items-center order-2 order-xxl-1">
+								<img class="lesson__img" src="imgREACT/lesson/2.png" alt="Картинка по выполнению задач">
+							</div>
+							<div class="lesson__desc order-1 order-xxl-2">
+								<span class="lesson__span_second">.02</span>
+								<h3 class="lesson__subtitle h3_new lh-base mb-0">Домашние задания и индивидуальные проекты</h3>
+								<ul class="lesson__list mb-0 lh-sm">
+									<li class="lesson__item " style="list-style-type: disc;">Решаете домашние задания, закрепляя
+										полученный с уроков опыт </li>
+									<li class="lesson__item" style="list-style-type: disc;">Выполняете индивидуальные проекты, формирующие
+										ваше портфолио для последующего трудоустройства</li>
+									<li class="lesson__item" style="list-style-type: disc;">Все задачи и проекты максимально приближены к
+										реальным бизнес-задачам</li>
+								</ul>
+							</div>
+						</div>
+						<div class="lesson__content-third d-flex flex-column  d-xxl-flex flex-xxl-row justify-content-xxl-between">
+							<div class="lesson__img-wrapper d-flex justify-content-center align-items-center order-2 order-xxl-1">
+								<img class="lesson__img" src="imgREACT/lesson/3.png" alt="Картинка разбора теории на уроке">
+							</div>
+							<div class="lesson__desc order-1 order-xxl-2">
+								<span class="lesson__span_third">.03</span>
+								<h3 class="lesson__subtitle h3_new lh-sm mb-0">Лекционно-практический видеоматериал</h3>
+								<ul class="lesson__list mb-0 lh-sm">
+									<li class="lesson__item list" style="list-style-type: disc;">Видеоуроки для самостоятельного изучения,
+										состоящие на 20% из теории и на 80% из практики</li>
+									<li class="lesson__item" style="list-style-type: disc;">Дают вам базу программирования</li>
+									<li class="lesson__item" style="list-style-type: disc;">Учат вас самостоятельно решать базовые задачи
+										и реализовывать типовые проекты</li>
+								</ul>
+							</div>
+						</div>
+						<div class="lesson__content-fourth d-flex flex-column  d-xxl-flex flex-xxl-row justify-content-xxl-between">
+							<div class="lesson__img-wrapper d-flex justify-content-center align-items-center order-2 order-xxl-1">
+								<img class="lesson__img" src="imgREACT/lesson/4.png" alt="Картинка чата поддержки">
+							</div>
+							<div class="lesson__desc_h order-1 order-xxl-2">
+								<span class="lesson__span_fourth">.04</span>
+								<h3 class="lesson__subtitle h3_new lh-sm mb-0">Помощь и поддержка 24/7</h3>
+								<ul class="lesson__list mb-0 lh-sm">
+									<li class="lesson__item list" style="list-style-type: disc;">Для каждой группы создается закрытый чат,
+										где вы можете общаться с одногруппниками и преподавателем</li>
+									<li class="lesson__item" style="list-style-type: disc;">Задача чата - обеспечить постоянную поддержку
+										и возможность задавать вопросы в любое время</li>
+									<li class="lesson__item" style="list-style-type: disc;">Здесь мы размещаем все учебные и
+										дополнительные развивающие материалы</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="gradient-circle gradient-circle_lesson"></div>
+		</div>
+	</section>
+
+	<section class="questions px-2">
+		<div class="container">
+			<div class="row questions__row  d-flex flex-row justify-content-between">
+				<div class="questions__content d-flex flex-column">
+					<h2 class="questions__title lh-sm lh-sm-base m-0">А можно мне сначала попробовать?</h2>
+					<ul class="questions__list d-flex flex-column mb-0">
+						<li class="questions__item lh-sm" style="list-style-type: disc;">Конечно! Перед стартом курса мы проведем
+							бесплатное пробное занятие для всх желающих</li>
+						<li class="questions__item lh-sm" style="list-style-type: disc;">Это полноценный урок, где вы лично сможете
+							оценить качество обучения, формат занятий и задать все интересующие вопросы</li>
+						<li class="questions__item lh-sm" style="list-style-type: disc;">Если вам понравится, то сможете продолжить
+							обучение на нашем курсе</li>
+					</ul>
+					<a id="questions-register-anchor"
+						class="questions__button link btn d-sm-flex rounded-pill btn-primary align-items-center justify-content-center fw-semibold lh-sm">Записаться
+						на пробное занятие</a>
+				</div>
+				<div class="questions__img-wrapper   col-4 col-xl-3">
+					<img class="questions__img" src="imgREACT/questions/quas.png" alt="Картинка декор">
+				</div>
+			</div>
+			<div class="gradient-circle gradient-circle_questions"></div>
+		</div>
+	</section>
+
+	<section class="accordion" id="program">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 accordion__header d-flex flex-column align-items-center justify-content-center">
+					<h2 class="accordion__title h2_new fw-bold lh-sm m-0">Программа обучения</h2>
+					<div class="decor">
+					</div>
+					<ul class="accordion__list d-flex flex-column p-0">
+						<li class="accordion__item d-flex align-items-start">
+							<img src="imgREACT/accordion/decor.svg" alt="Картинка декор" class="accordion__decoration mt-1">
+							<div class="accordion__text-wrapper-first">
+								<p class="accordion__text m-0 lh-base">На курсе последовательно изучаются все ключевые технологии,
+									неоходимые для успешного освоения профессии. Сначала осваиваем React и его экосистему. Затем изучаем
+									TypeScript для написания качественного и надежного кода. После этого осваиваем тестирование и
+									оптимизацию производительности веб-приложений</p>
+							</div>
+						</li>
+						<li class="accordion__item d-flex align-items-start">
+							<img src="imgREACT/accordion/decor.svg" alt="Картинка декор" class="accordion__decoration">
+							<div class="accordion__text-wrapper">
+								<p class="accordion__text lh-base m-0">Программа обучения разработана в соответствии с требованиями
+									IT-рынка</p>
+							</div>
+						</li>
+						<li class="accordion__item d-flex align-items-start">
+							<img src="imgREACT/accordion/decor.svg" alt="Картинка декор" class="accordion__decoration">
+							<div class="accordion__text-wrapper">
+								<p class="accordion__text m-0 lh-base">С полной версией программы вы можете ознакомиться по <a
+										target="_blank" style="text-decoration: underline;"
+										href="https://docs.google.com/document/d/1FgFCr2Swx0_c9RVMhM8ahCkxcjyAYJElgisdNK6C0vc">ссылке</a>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row accordion__row">
+				<div class="accordion accordion__wrapper" id="accordionPanelsStayOpenExample">
+					<div class="accordion-item accordion__list-item accordion__list-item_first">
+						<h2 class="accordion-header accordion__header">
+							<button class="accordion-button accordion__button d-flex" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+								aria-controls="panelsStayOpen-collapseOne">
+								<img class="accordion__item-img" src="imgREACT/accordion/1.svg" alt="Картинка декор">
+								<div class="accordion__item-text-wrapper d-flex flex-column">
+									<h4 class="accordion__item-title h4_new fw-bold lh-sm m-0">«React и его экосистема»</h4>
+								</div>
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+							<div class="accordion-body accordion__body d-flex flex-column">
+								<p class="accordion__body-text lh-base fw-bold mb-0">Чему вы научитесь:</p>
+								<ul class="accordion__body-list ps-3 mb-0 d-flex flex-column">
+									<li class="accordion__body-item lh-base" style="list-style-type: disc;">Разрабатывать современные и
+										интерактивные веб-приложения с использованием React, одного из самых популярных фреймворков в мире
+										фронтенд-разработки</li>
+									<li class="accordion__body-item lh-base" style="list-style-type: disc;">Освоите создание компонентов,
+										работу с JSX и управление состоянием приложения через React Hooks и Context API</li>
+									<li class="accordion__body-item lh-base" style="list-style-type: disc;">Узнаете, как эффективно
+										использовать экосистему React: подключать библиотеки для маршрутизации (React Router), управлять
+										состоянием (Redux)</li>
+									<li class="accordion__body-item lh-base" style="list-style-type: disc;">Научитесь организовывать и
+										оптимизировать код, строить масштабируемую архитектуру приложений и применять лучшие практики
+										разработки</li>
+									<li class="accordion__body-item lh-base" style="list-style-type: disc;">Узнаете, как Интегрировать
+										сторонние API и
+										сервисы, а также подключать различные плагины для расширения функциональности вашего приложения</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item accordion__list-item accordion__list-item_second">
+						<h2 class="accordion-header">
+							<button class="accordion-button accordion__button d-flex collapsed" type="button"
+								data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseTwo">
+								<img class="accordion__item-img" src="imgREACT/accordion/2.svg" alt="Картинка декор">
+								<div class="accordion__item-text-wrapper d-flex flex-column">
+									<h4 class="accordion__item-title h4_new fw-bolder lh-sm m-0">«TypeScript»</h4>
+									</p>
+								</div>
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+							<div class="accordion-body accordion__body d-flex flex-column">
+								<p class="accordion__body-text lh-base fw-bold mb-0">Чему вы научитесь:</p>
+								<ul class="accordion__body-list ps-3 mb-0 d-flex flex-column">
+									<li class="accordion__body-item lh-base" style="list-style-type: disc;">Освоите TypeScript и поймете,
+										как он расширяет возможности JavaScript, добавляя строгую типизацию и улучшая стабильность кода</li>
+									<li class="accordion__body-item lh-base" style="list-style-type: disc;">Научитесь писать
+										типобезопасный код, который помогает предотвратить ошибки на этапе разработки и упростить процесс
+										отладки</li>
+									<li class="accordion__body-item lh-base" style="list-style-type: disc;">Разберетесь с ключевыми
+										концепциями TypeScript, такими как интерфейсы, типы, дженерики и декораторы, и узнаете, как их
+										эффективно использовать в реальных проектах</li>
+									<li class="accordion__body-item lh-base" style="list-style-type: disc;">Узнаете, как интегрировать
+										TypeScript в существующие проекты на JavaScript, а также как использовать его вместе с фреймворками
+										и библиотеками, включая React</li>
+									<li class="accordion__body-item lh-base" style="list-style-type: disc;">Получите практические навыки
+										написания сложных типовых систем и работы с различными инструментами, такими как линтеры и
+										компиляторы, для автоматизации и оптимизации разработки</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item accordion__list-item accordion__list-item_third">
+						<h2 class="accordion-header">
+							<button class="accordion-button accordion__button d-flex collapsed" type="button"
+								data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseThree">
+								<img class="accordion__item-img" src="imgREACT/accordion/3.svg" alt="Картинка декор">
+								<div class="accordion__item-text-wrapper d-flex flex-column">
+									<h4 class="accordion__item-title h4_new fw-bolder lh-sm m-0">«Тестирование и оптимизация
+										производительности»</h4>
+								</div>
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+							<div class="accordion-body accordion__body d-flex flex-column">
+								<p class="accordion__body-text lh-base fw-bold mb-0">Чему вы научитесь:</p>
+								<ul class="accordion__body-list ps-3 mb-0 d-flex flex-column">
+									<li class="accordion__body-item lh-base" style="list-style-type: disc;">Освоите тестирование
+										веб-приложений, используя инструменты, такие как Jest и React Testing Library</li>
+									<li class="accordion__body-item lh-base" style="list-style-type: disc;">Узнаете, как писать тесты,
+										которые гарантируют надежность и стабильность кода, предотвращают ошибки и облегчают процесс отладки
+									</li>
+									<li class="accordion__body-item lh-base" style="list-style-type: disc;">Изучите стратегии оптимизации
+										производительности, такие как код-сплиттинг, ленивая загрузка компонентов и кэширование, чтобы
+										ускорить загрузку и повысить отклик веб-приложений</li>
+									<li class="accordion__body-item lh-base" style="list-style-type: disc;">Узнаете, как внедрять и
+										контролировать метрики производительности, такие как время загрузки, время до первого байта и другие
+										показатели, которые важны для обеспечения лучшего пользовательского опыта</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-5">
+				<h3 class="h3_new lh-sm lh-sm-base text-start text-center mb-4"><span class="title-span">Возможности</span>,
+					которые
+					открывает React и TypeScript</h3>
+				<div
+					class="accordion__video open-modal open-modal-video w-100 col-12 col-lg-11 col-xl-9 col-xxl-8 d-flex justify-content-center"
+					data-videourl="videoREACT/acc-react.mp4">
+					<div class="">
+						<img src="imgREACT/accordion/react.png" class="accordion__img" alt="Заставка preview" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="certificate px-2">
+		<div class="container ">
+			<div class="row certificate__row d-flex justify-content-center">
+				<div
+					class="certificate__header d-flex text-light flex-column justify-content-center col-12 col-lg-8 col-xl-9 p-0">
+					<h2 class="certificate__title h2_new m-0">Сертификат</h2>
+					<p class="certificate__text  lh-sm lh-base mb-0">
+						В случае успешного освоения программы обучения вы сможете получить сертификат, подтверждающий вашу
+						квалификацию Веб-разработчик на React и TypeScript»
+					</p>
+				</div>
+				<div class="certificate__img-wrapper d-flex justify-content-center col-12 col-lg-4 col-xl-3 p-0">
+					<img class="certificate__img" src="imgREACT/certificate/1.png" alt="Картинка сертификата IT-Парка">
+				</div>
+			</div>
+			<div class="gradient-circle gradient-circle_certificate"></div>
+		</div>
+	</section>
+
+	<section class="history">
+		<div class="container">
+			<div class="row history__row d-flex ">
+				<div class="col-12 history__header d-flex flex-column align-items-start justify-content-start">
+					<h3 class="history__title h3_new lh-sm lh-sm-base  mb-0"><span class="title-span">Истории учеников</span>
+						расскажут вам
+						о том, какой путь проходили наши студенты</h3>
+					<p class="history__text lh-sm">Посмотреть больше историй наших учеников вы можете в этой <a
+							style="text-decoration: underline;" href="https://vk.com/@itpark32-success-story-new"
+							target="_blank">статье ВКонтакте</a></p>
+				</div>
+				<div class="col-12 col-xxl-4 history__inner">
+					<div class="history__video open-modal open-modal-video p-0" data-videourl="video/hist1.mp4">
+						<div class="history__img-wrapper">
+							<img src="imgREACT/history/1.jpg" class="history__img_radius-left"
+								alt="Заставка с онлайн встречи со студентои Егором Синицей" />
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-xxl-4 history__inner">
+					<div class="history__video open-modal open-modal-video p-0" data-videourl="video/hist2.mp4">
+						<div class="history__img-wrapper">
+							<img src="imgREACT/history/2.png" class="history__img"
+								alt="Заставка с онлайн встречи со студентом Александром Лемешовым" />
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-xxl-4 history__inner">
+					<div class="history__video open-modal open-modal-video p-0" data-videourl="video/hist3.mp4">
+						<div class="school__img-wrapper">
+							<img src="imgREACT/history/3.jpg" class="history__img_radius-right"
+								alt="Заставка с онлайн встречи со студентои Егором Нагорным" />
+						</div>
+					</div>
+				</div>
+
+
+
+
+			</div>
+			<div class="gradient-circle gradient-circle_history"></div>
+		</div>
+	</section>
+
+	<section class="testimonials px-2 px-sm-0">
+		<div class="container">
+			<div class="row  d-flex justify-content-center">
+				<div class="col-12 testimonials__header d-flex flex-column align-items-center justify-content-center">
+					<h2 class="testimonials__title h2_new lh-sm m-0">Отзывы об обучении</h2>
+					<div class="decor"></div>
+					<p class="testimonials__text text-center mb-0">Больше отзывов в нашей <a class="testimonials__link"
+							style="text-decoration: underline;" target="_blank"
+							href="https://vk.com/topic-58525095_28834899?offset=40">группе ВКонтакте</a></p>
+				</div>
+			</div>
+			<div class="row testimonials__row d-flex justify-content-center">
+				<div class="testimonials__slider ">
+					<div class="testimonials__slider-item">
+						<img class="testimonials__slider-img rounded-5" src="img/testimonials/1.jpg"
+							alt="Отзыв студента об обучении в IT-ПАРКе">
+					</div>
+					<div class="testimonials__slider-item">
+						<img class="testimonials__slider-img rounded-5" src="img/testimonials/2.jpg"
+							alt="Отзыв студента об обучении в IT-ПАРКе">
+					</div>
+					<div class="testimonials__slider-item">
+						<img class="testimonials__slider-img rounded-5" src="img/testimonials/3.jpg"
+							alt="Отзыв студента об обучении в IT-ПАРКе">
+					</div>
+					<div class="testimonials__slider-item">
+						<img class="testimonials__slider-img rounded-5" src="img/testimonials/4.jpg"
+							alt="Отзыв студента об обучении в IT-ПАРКе">
+					</div>
+					<div class="testimonials__slider-item">
+						<img class="testimonials__slider-img rounded-5" src="img/testimonials/5.jpg"
+							alt="Отзыв студента об обучении в IT-ПАРКе">
+					</div>
+					<div class="testimonials__slider-item">
+						<img class="testimonials__slider-img rounded-5" src="img/testimonials/6.jpg"
+							alt="Отзыв студента об обучении в IT-ПАРКе">
+					</div>
+					<div class="testimonials__slider-item">
+						<img class="testimonials__slider-img rounded-5" src="img/testimonials/7.jpg"
+							alt="Отзыв студента об обучении в IT-ПАРКе">
+					</div>
+					<div class="testimonials__slider-item">
+						<img class="testimonials__slider-img rounded-5" src="img/testimonials/8.jpg"
+							alt="Отзыв студента об обучении в IT-ПАРКе">
+					</div>
+					<div class="testimonials__slider-item">
+						<img class="testimonials__slider-img rounded-5" src="img/testimonials/9.jpg"
+							alt="Отзыв студента об обучении в IT-ПАРКе">
+					</div>
+					<div class="testimonials__slider-item">
+						<img class="testimonials__slider-img rounded-5" src="img/testimonials/10.jpg"
+							alt="Отзыв студента об обучении в IT-ПАРКе">
+					</div>
+					<div class="testimonials__slider-item">
+						<img class="testimonials__slider-img rounded-5" src="img/testimonials/11.jpg"
+							alt="Отзыв студента об обучении в IT-ПАРКе">
+					</div>
+				</div>
+			</div>
+			<div class="gradient-circle gradient-circle_testimonials"></div>
+		</div>
+	</section>
+
+	<section class="teacher px-2 px-sm-0">
+		<div class="container">
+			<div class="row teacher__row">
+				<div class="col-12 teacher__header d-flex flex-column align-items-center justify-content-center">
+					<h2 class="teacher__title h2_new   lh-sm m-0">О преподавателе</h2>
+					<div class="decor"></div>
+				</div>
+				<div class="col-12 teacher__content d-flex flex-column d-xl-flex flex-xl-row justify-content-xl-between">
+					<div class="teacher__description d-flex flex-column col-12 col-xl-6">
+						<span class="teacher__span h3_new d-block">Сергей Тимофеев</span>
+						<ul class="teacher__list d-flex p-0 flex-column  mb-0 lh-sm">
+							<li class="teacher__item d-flex">
+								<img class="teacher__item-img" src="imgREACT/teacher/sqare.svg" alt="Картинка декор">
+								<p class="teacher__item-text lh-base mb-0"><strong>Сотрудник, веб-разработчик и преподаватель</strong>
+									направления Web в школе программирования IT-ПАРК</p>
+							</li>
+							<li class="teacher__item d-flex">
+								<img class="teacher__item-img" src="imgREACT/teacher/sqare.svg" alt="Картинка декор">
+								<p class="teacher__item-text lh-base mb-0">Имеет <strong>два высших</strong> образования и ученую
+									степень <strong>кандидата наук</strong></p>
+							</li>
+							<li class="teacher__item d-flex">
+								<img class="teacher__item-img" src="imgREACT/teacher/sqare.svg" alt="Картинка декор">
+								<p class="teacher__item-text lh-base mb-0">Обладает <strong>огромным опытом за</strong> плечами (в
+									программирования - 8 лет, в преподавательской деятельности - 6 лет). За время своей преподавательской
+									деятельности успешно обучал как взрослых, так и детей. <strong>Большое количество</strong> <a
+										target="_blank" class="title-span" style="text-decoration: underline;"
+										href="https://vk.com/topic-58525095_28834899?offset=40">благодарных отзывов</a> -
+									тому подтверждение</p>
+							</li>
+							<li class="teacher__item d-flex">
+								<img class="teacher__item-img" src="imgREACT/teacher/sqare.svg" alt="Картинка декор">
+								<p class="teacher__item-text lh-base mb-0">Поэтому можно с уверенностью сказать, что Сергей точно знает,
+									как донести <strong>сложные вещи простым языком</strong> до своих учеников и помочь им добиться успеха
+									в IT</p>
+							</li>
+							<li class="teacher__item d-flex">
+								<img class="teacher__item-img" src="imgREACT/teacher/sqare.svg" alt="Картинка декор">
+								<p class="teacher__item-text lh-base mb-0">В коммерческой разработке <strong>специализируется
+										на</strong> создании многостраничных сайтов, лендингов, интернет-магазинов и веб-приложений. Имеет
+									опыт управления командой разработчиков и выполнения менеджерских задач</p>
+							</li>
+							<li class="teacher__item d-flex">
+								<img class="teacher__item-img" src="imgREACT/teacher/sqare.svg" alt="Картинка декор">
+								<p class="teacher__item-text lh-base mb-0"> <strong>Ключевые навыки:</strong> HTML, CSS, JavaScript,
+									TypeScript, React, PHP</p>
+							</li>
+
+						</ul>
+					</div>
+
+					<div
+						class="teacher__img-wrapper d-flex justify-content-center d-xl-flex align-items-xl-center col-12 col-xl-5">
+						<img class="teacher__img" src="imgREACT/teacher/sergei.jpeg" alt="Картинка преподавателя Сергея Тимофеева">
+					</div>
+				</div>
+			</div>
+			<div class="gradient-circle gradient-circle_teacher"></div>
+		</div>
+	</section>
+
+	<section class="product px-2 px-sm-0">
+		<div class="container">
+			<div class="row product__row">
+				<div class="product__content-first text-light">
+					<h3 class="product__title h3_new d-block lh-base">Cначала попробуйте обучение бесплатно!</h3>
+					<ul class="product__list d-flex flex-column ps-3">
+						<li class="product__item lh-base" style="list-style-type: disc;">Перед стартом курса мы проведем бесплатное
+							пробное занятие</li>
+						<li class="product__item lh-base" style="list-style-type: disc;">Вы сможете оценить качество обучения,
+							формат занятий и получить ответы на все интересующие вопросы</li>
+						<li class="product__item lh-base" style="list-style-type: disc;">Если вам понравится, то сможете продолжить
+							обучение на нашем курсе</li>
+					</ul>
+
+					<div class=" product__card-wrapper d-flex flex-column   d-xxl-flex flex-xxl-row justify-content-xxl-between">
+						<div class=" card product__card d-flex flex-column justify-content-center align-items-center">
+							<img class="product__card-img-first" src="imgREACT/product/1-card.svg" class="card-img-top"
+								alt="Картинка декор">
+							<div class="card-body product__card-body p-0 text-center">
+								<h4 class="card-title product__card-title h4_new lh-base ">Полное обучение с нуля</h4>
+								<p class="card-text product__card-text lh-base">Мы научим вас всем необходимым навыкам для успешного
+									старта в IT</p>
+							</div>
+						</div>
+
+						<div class="card product__card d-flex flex-column justify-content-center align-items-center">
+							<img class="product__card-img-second" src="imgREACT/product/2-card.svg" class="card-img-top"
+								alt="Картинка декор">
+							<div class="card-body product__card-body p-0 text-center">
+								<h4 class="card-title product__card-title h4_new lh-base ">Опытные преподаватели</h4>
+								<p class="card-text product__card-text lh-base">Наши преподаватели точно знают, как преподнести материал
+									простым и понятным языком</p>
+							</div>
+						</div>
+
+						<div class="card product__card d-flex flex-column justify-content-center align-items-center">
+							<img class="product__card-img-third" src="imgREACT/product/3-card.svg" class="card-img-top"
+								alt="Картинка декор">
+							<div class="card-body product__card-body p-0 text-center">
+								<h4 class="card-title product__card-title h4_new lh-base ">Подготовка к трудоустройству</h4>
+								<p class="card-text product__card-text lh-base">Доведем вас до результата и подготовим к трудоустройству
+									в IT</p>
+							</div>
+						</div>
+					</div>
+					<div class="gradient-circle gradient-circle_product-content-first"></div>
+				</div>
+				<div class="product__content-second text-light">
+					<h3 class="product__title h3_new lh-base ps-3">Все максимально просто и комфортно для вас!</h3>
+					<ul class="product__list d-flex flex-column ps-3">
+						<li class="product__item lh-base" style="list-style-type: disc;">Мы руководствуемся принципом, что
+							образование должно быть не только качественным, но и доступным</li>
+						<li class="product__item lh-base" style="list-style-type: disc;">Поэтому мы держим адекватные цены и НИКОГДА
+							не просим оплатить весь курс сразу, взять кредит или рассрочку</li>
+					</ul>
+
+					<div class="product__card-wrapper d-flex flex-column  d-xxl-flex flex-xxl-row justify-content-xxl-between">
+						<div class="card product__card d-flex flex-column justify-content-center align-items-center">
+							<img src="imgREACT/product/4-card.svg" class="card-img-top product__card-img-fourth" alt="Картинка декор">
+							<div class="card-body product__card-body p-0 text-center">
+								<h4 class="card-title product__card-title_color h4_new lh-base ">Не нужно оплачивать весь курс</h4>
+								<p class="card-text product__card-text_color lh-base">Нет необходимости брать рассрочку или кредит на
+									обучение</p>
+							</div>
+						</div>
+						<div class="card product__card d-flex flex-column justify-content-center align-items-center">
+							<img src="imgREACT/product/5-card.svg" class="card-img-top product__card-img-fifth" alt="Картинка декор">
+							<div class="card-body product__card-body p-0 text-center">
+								<h4 class="card-title product__card-title_color h4_new lh-base ">Вы всегда свободны в выборе</h4>
+								<p class="card-text product__card-text_color lh-base">В любой момент вы можете покинуть курс без лишних
+									вопросов и обязательств</p>
+							</div>
+						</div>
+						<div class="card product__card d-flex flex-column justify-content-center align-items-center">
+							<img src="imgREACT/product/6-card.svg" class="card-img-top product__card-img-sixth" alt="Картинка декор">
+							<div class="card-body product__card-body p-0 text-center">
+								<h4 class="card-title product__card-title_color h4_new lh-base ">Понедельная оплата занятий</h4>
+								<p class="card-text product__card-text_color lh-base">Адекватная стоимость обучения с оплатой по неделям
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="gradient-circle gradient-circle_product-content-second"></div>
+				</div>
+				<div class="product__content-third px-0" id="price">
+					<div class="product__card-wrapper-second d-xxl-flex flex-xxl-row">
+						<div class="product__pay col-12 col-xxl-7">
+							<h3 class="product__pay-title h3_new lh-base">Стоимость недели обучения составляет <span
+									class="title-span">1500₽</span> </h3>
+							<p class="product__pay-text lh-base"> Что входит в неделю обучения:</p>
+							<ul class="product__pay-list d-flex flex-column p-0 mb-R">
+								<li class="product__pay-item lh-base d-flex align-items-start">
+									<img class="product__pay-img" src="imgREACT/product/1.svg" alt="Картинка декор">
+									<div class="product__text-wrapper d-flex flex-column">
+										<h4 class="product__text-title lh-sm lh-sm-base mb-0 fw-bold">Онлайн-занятие через Discord</h4>
+										<p class="product__text-desc mb-0">Лайвкодинг, живое общение с преподавателем и одногруппниками</p>
+									</div>
+								</li>
+								<li class="product__pay-item lh-base d-flex align-items-start">
+									<img class="product__pay-img" src="imgREACT/product/2.svg" alt="Картинка декор">
+									<div class="product__text-wrapper d-flex flex-column">
+										<h4 class="product__text-title lh-sm lh-sm-base mb-0 fw-bold">Индивидуальные проекты и домашние
+											задания
+										</h4>
+										<p class="product__text-desc mb-0">По которым мы оцениваем уровень вашего прогресса и освоения
+											материала</p>
+									</div>
+								</li>
+								<li class="product__pay-item lh-base d-flex align-items-start">
+									<img class="product__pay-img" src="imgREACT/product/3.svg" alt="Картинка декор">
+									<div class="product__text-wrapper d-flex flex-column">
+										<h4 class="product__text-title lh-sm lh-sm-base mb-0 fw-bold">Лекционно-практические видеоматериалы
+										</h4>
+										<p class="product__text-desc mb-0">80% практики и реальные задачи, на которых вы осваиваете базу
+											программирования</p>
+									</div>
+								</li>
+								<li class="product__pay-item lh-base d-flex align-items-start">
+									<img class="product__pay-img" src="imgREACT/product/4.svg" alt="Картинка декор">
+									<div class="product__text-wrapper d-flex flex-column">
+										<h4 class="product__text-title  lh-sm lh-sm-base mb-0 fw-bold">Помощь и поддержка</h4>
+										<p class="product__text-desc mb-0">Круглосуточная поддержка 24/7 по любым вопросам</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<form class="product__application d-flex flex-column text-light" id="productForm">
+							<h3 class="product__application-title lh-sm lh-sm-base mb-0">Оставить заявку на пробное занятие
+							</h3>
+							<input type="text" name="course" value="Веб-разработка на React и TypeScript" hidden>
+							<p class="product__application-text lh-sm lh-sm-base mb-0">Выберите удобный способ связи:</p>
+							<div class="btn-group d-flex" role="group" aria-label="Basic radio toggle button group">
+								<input type="radio" class="btn-check" name="messenger" id="btnRadio1" autocomplete="off"
+									value="ВКонтакте" checked>
+								<label class="product__application-lable btn btn-outline-primary rounded-0 text-white"
+									for="btnRadio1">ВКонтакте</label>
+								<input type="radio" class="btn-check" name="messenger" id="btnRadio2" autocomplete="off"
+									value="Telegram">
+								<label class="product__application-lable btn btn-outline-primary text-white"
+									for="btnRadio2">Telegram</label>
+								<input type="radio" class="btn-check" name="messenger" id="btnRadio3" autocomplete="off"
+									value="Whatsapp">
+								<label class="product__application-lable btn btn-outline-primary text-white"
+									for="btnRadio3">Whatsapp</label>
+								<input type="radio" class="btn-check" name="messenger" id="btnRadio4" autocomplete="off"
+									value="Телефон">
+								<label class="product__application-lable btn btn-outline-primary rounded-0 text-white"
+									for="btnRadio4">Телефон</label>
+							</div>
+							<p class="product__application-text lh-sm lh-sm-base mb-0">Заполните контактные данные:</p>
+							<div class="product__form d-flex flex-column">
+								<div class="mb-0">
+									<input type="text" class="form-control product__form-input" id="userName" aria-describedby="textHelp"
+										placeholder="Ваше имя" name="name" required>
+								</div>
+								<div class="mb-0">
+									<input type="text" class="form-control product__form-input" id="userPhone"
+										placeholder="Введите номер или ссылку на профиль" name="contact" required>
+								</div>
+								<div class="mb-0">
+									<input type="text" class="form-control product__form-input" id="userComment"
+										placeholder="Комментарий (при необходимости)" name="comment" maxlength="1000">
+								</div>
+								<div class="mb-0 form-check form__check  d-flex align-items-start">
+									<input type="checkbox" class="form-check-input bg-transparent rounded-0" id="exampleCheck1" checked
+										required>
+									<label class="form-check-label product__form-label_font lh-base fw-medium" for="exampleCheck1">Даю
+										согласие на <a style="text-decoration: underline;" target="_blank"
+											href="assets/confidentiality.pdf"> обработку персональных данных</a></label>
+								</div>
+								<button type="submit" class="btn btn-primary product__form-btn fw-semibold border-0">
+
+									<label role="button" class="product__form-btn-text">Оставить заявку</label>
+									<span class="product__form-btn-spinner spinner-border spinner-border ms-3 align-middle d-none"
+										aria-hidden="true"></span>
+								</button>
+							</div>
+							<div
+								class="product__sos1al d-flex flex-column align-items-center d-sm-flex flex-sm-row  justify-content-sm-center">
+								<p class="product__sos1al-text lh-sm lh-sm-base mb-0">Или напишите нам в: </p>
+								<div class="product__sos1al-links d-flex">
+									<a target="_blank" href="https://t.me/amsmyslov" class="product__sos1al-link">
+										<img class="product__sos1al-img" src="imgREACT/product/tg.svg" alt="Картинка соц.сети Telegram">
+									</a>
+									<a target="_blank" href="https://wa.me/79532819045" class="product__sos1al-link">
+										<img class="product__sos1al-img" src="imgREACT/product/whaysApp.svg"
+											alt="Картинка соц.сети WhatsApp">
+									</a>
+									<a target="_blank" href="https://vk.me/itpark32_official" class="product__sos1al-link">
+										<img class="product__sos1al-img" src="imgREACT/product/vk.svg" alt="Картинка соц.сети ">
+									</a>
+								</div>
+							</div>
+							<!-- Обертка для блокировки UI во время запроса -->
+							<div class="product__form-loading-wrapper d-none"></div>
+						</form>
+					</div>
+					<div class="gradient-circle gradient-circle_product-content-third"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="result px-2 px-sm-0">
+		<div class="container">
+			<div class="row">
+				<div class="result__header d-flex flex-column">
+					<h3 class="result__title lh-sm lh-sm-base mb-0">Посмотрите,<span class="title-span"> какие результаты вас
+							ждут</span> после обучения на курсе</h3>
+				</div>
+			</div>
+			<div class="row result__row">
+				<div class="result__wrapper ps-0 pe-0">
+					<div class="result__title-wrapper d-flex align-items-center">
+						<img class="result__img rounded-circle " src="imgREACT/result/man.png" alt="Картинка программиста">
+						<div class="result__title-desc d-flex flex-column">
+							<p class="result__subtitle lh-sm mb-0">Иван Иванов</p>
+							<div class="result__desc-subtitle d-flex align-items-start  d-md-flex align-items-md-center">
+								<img src="imgREACT/result/sqare.svg" class="result__img_square" alt="Картинка декор">
+								<p class="result__desc-text_fz lh-base mb-0"><b>Профессия:</b> Веб-разработчик на React и TypeScript</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="result__desc-wrapper d-flex flex-column">
+					<div class="result__desc-inner d-flex align-items-start">
+						<img class="result__img_square" src="imgREACT/result/sqare.svg" alt="Картинка декор">
+						<p class="result__desc-text lh-base mb-0"><b>Вы изучили такие технологии: </b> TypeScript, React, JSX, Redux
+							Toolkit, Context API, React Router, Hooks, Webpack + Vite, Jest, React Testing Library, Code Splitting,
+							Lazy Loading, CSS Modules, React/ReduxTK Query, ESLint, Prettier</p>
+					</div>
+					<div class="result__desc-inner d-flex align-items-start">
+						<img class="result__img_square" src="imgREACT/result/sqare.svg" alt="Картинка декор">
+						<p class="result__desc-text lh-base mb-0"><b>Обрели навыки:</b> работы в команде, разработки и
+							архитектурного построения современных веб-приложений на React и TypeScript, управления состоянием с
+							помощью Redux Toolkit и Context API, использования передовых инструментов тестирования, таких как Jest и
+							React Testing Library, оптимизации производительности приложений с применением Code Splitting и Lazy
+							Loading, интеграции внешних API, обеспечения безопасности и поддержания качественного кода с помощью
+							TypeScript, деплоя приложений</p>
+					</div>
+					<div class="result__desc-inner d-flex align-items-start">
+						<img class="result__img_square" src="imgREACT/result/sqare.svg" class="" alt="Картинка декор">
+						<p class="result__desc-text lh-base mb-0"><b>У вас в портфолио:</b> целый ряд совместных и индивидуальных
+							проектов, максимально приближенных к реальным бизнес-задачам, а также фирменный сертификат, подтверждающий
+							успешное освоение программы обучения</p>
+					</div>
+
+					<div class="result__desc-inner">
+						<div class="result__desc-inner d-flex align-items-start">
+							<img class="result__img_square" src="imgREACT/result/sqare.svg" alt="Картинка декор">
+							<p class="result__desc-text lh-base mb-0"><strong>На рынке труда вы можете претендовать на вакансию:
+								</strong></p>
+						</div>
+						<ul class="result__desc-list ps-4  mb-0">
+							<li class="result__desc-item lh-base mb-0" style="list-style: disc;">React/TypeScript разработчик
+								(130-180к/₽)</li>
+						</ul>
+					</div>
+					<div class="result__desc-inner d-flex align-items-start">
+						<img class="result__img_square" src="imgREACT/result/sqare.svg" alt="Картинка декор">
+						<p class="result__desc-text lh-base mb-0"><b>А еще вы узнали:</b> как правильно составить успешное резюме,
+							как общаться и презентовать себя на всех этапах собеседования, как подготовиться к интервью и что
+							необходимо знать, как и где искать работу, как получать больше откликов, как проходить через фильтры
+							hr-специалистов и многое другое.</p>
+					</div>
+				</div>
+			</div>
+			<div class="gradient-circle gradient-circle_result"></div>
+		</div>
+	</section>
+
+	<section class="sos1al px-2 px-sm-0">
+		<div class="container">
+			<div class="row sos1al__row  d-flex flex-row justify-content-between">
+				<div class="sos1al__content d-flex flex-column">
+					<h2 class="sos1al__title lh-sm mb-0">Присоединяйтесь к нам в соцсетях</h2>
+					<p class="sos1al__text lh-sm lh-sm-base mb-0">Здесь вы найдете полезные материалы, советы и рекомендации по
+						выбору технологий и карьерному росту, истории и достижения учеников, информацию о наших событиях и
+						конференциях</p>
+				</div>
+
+				<div class="sos1al__soc1als d-flex align-items-center ">
+					<div class="sos1al__soc1al-item">
+						<a href="https://t.me/itpark32" target="_blank">
+							<img class="sos1al__soc1al-img" src="imgREACT/sos1al/tg.svg" alt="Ссылка на группу Telegram">
+						</a>
+					</div>
+
+					<div class="sos1al__soc1al-item">
+						<a href="https://www.youtube.com/@itpark32" target="_blank">
+							<img class="sos1al__soc1al-img" src="imgREACT/sos1al/youtube.svg" alt="Ссылка на YouTube">
+						</a>
+					</div>
+					<div class="sos1al__soc1al-item">
+						<a href="https://vk.com/itpark32" target="_blank">
+							<img class="sos1al__soc1al-img" src="imgREACT/sos1al/vk.svg" alt="Ссылка на ВКонтакте">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row d-flex flex-column  d-md-flex flex-md-row gap-4 gap-md-0 ">
+				<div class="col-12 col-md-4 col-lg-3  d-flex flex-column align-items-center">
+					<div class="footer__logo-wrapper d-flex gap-3 ">
+						<a href="index.html">
+							<img class="footer__logo" src="img/header/logo.svg" alt="Логотип IT-ПАРК" />
+							<div class="footer__title  d-flex flex-column mb-3">
+								<span class="footer__title-text d-inline-block fw-bold">IТ-ПАРК</span>
+						</a>
+						<span class="footer__text d-inline-block lh-sm">Образовательный онлайн-проект для начинающих
+							программистов</span>
+					</div>
+				</div>
+				<div class="row footer__span-wrapper footer_gray d-flex flex-column gap-2 text-center text-md-start ">
+					<span class="footer__span d-inline-block">ИП Смыслов Алексей Михайлович</span>
+					<span class="footer__span d-inline-block">ОГРНИП: 318325600036243</span>
+					<span class="footer__span d-inline-block">ИНН: 325502986267</span>
+					<span class="footer__span d-inline-block">Дата присвоения ОГРНИП: 06.07.2018</span>
+				</div>
+			</div>
+			<div class="col d-none d-lg-flex justify-content-center ">
+				<ul class="footer__list d-flex flex-column gap-2">
+					<li class="footer__item footer_gray">Навигация</li>
+					<li class="footer__item"><a href="#profession" class="footer__link">О профессии</a>
+					</li>
+					<li class="footer__item"><a class="footer__link" href="#users">Для кого</a>
+					</li>
+					<li class="footer__item"><a class="footer__link" href="#format">Формат</a>
+					</li>
+					<li class="footer__item"><a class="footer__link" href="#program">Программа</a>
+					</li>
+					<li class="footer__item"><a class="footer__link" href="#price">Стоимость</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-12 col-md-4 col-lg-3">
+				<ul
+					class="footer__list d-md-flex flex-column gap-2 align-items-md-start d-flex align-items-center mb-md-0 mb-4 ps-0">
+					<li class="footer__item footer_gray">Связаться с нами</li>
+					<li class="footer__item "><a href="tel:+79532819045" target="_blank" class="footer__link footer__tel">+7 (953)
+							281-90-45</a>
+					</li>
+					<li class="footer__item"><a href="mailto:itpark.team@yandex.ru" target="_blank"
+							class="footer__link d-inline-block mb-2 footer__mail">itpark.team@yandex.ru</a>
+					</li>
+					<li class="footer__item footer_gray mt-3">Или написать в мессенджерах</li>
+					<li class="footer__item d-flex gap-3">
+						<a href="https://t.me/amsmyslov" target="_blank" class="footer__link">
+							<img src="img/footer/social/telegram.svg" alt="Иконка Telegram" />
+						</a>
+						<a href="https://wa.me/79532819045" target="_blank" class="footer__link">
+							<img src="img/footer/social/whatsApp.svg" alt="Иконка WhatsApp" />
+						</a>
+						<a href="https://vk.me/itpark32_official" target="_blank" class="footer__link">
+							<img src="img/footer/social/vk.svg" alt="Иконка VK" />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class=" col-12 col-md-4 col-lg-3  text-md-end">
+				<ul
+					class="footer__list d-flex flex-column align-items-center gap-2  d-md-flex align-items-md-end   d-xxl-flex align-items-xxl-start  ps-0">
+					<li class="footer__item footer_gray">Информация</li>
+					<li class="footer__item"><a href="assets/confidentiality.pdf" target="_blank" class="footer__link-w">Политика
+							конфиденциальности</a></li>
+					<li class="footer__item"><a href="#pay" data-bs-toggle="modal" class="footer__link">Способы оплаты</a></li>
+					<li class="footer__item"><a href="#refund" data-bs-toggle="modal" class="footer__link">Возврат денежных
+							средств</a></li>
+
+					<li class="footer__item mt-3">
+						<div class="footer__frame d-flex align-items-center justify-content-center gap-2  text-md-start px-3">
+							<img class="footer__img " src="img/footer/pay/verefication.svg" alt="Иконка безопасной передачи данных" />
+							<span class="footer__span footer_gray d-inline-block">Безопасная <br> передача данных</span>
+						</div>
+					</li>
+					<li class="footer__item d-flex justify-content-between gap-4 mt-3">
+						<img src="img/footer/pay/visa.svg" alt="Иконка Visa" />
+						<img src="img/footer/pay/mastercard.svg" alt="Иконка MasterCard" />
+						<img src="img/footer/pay/mir.svg" alt="Иконка Мир" />
+					</li>
+				</ul>
+			</div>
+			<div class="row">
+				<div class="footer__rights-reserved footer_gray text-center">
+					<span class="footer__site-dev-text d-block mb-2"><svg class="footer__site-dev-icon"
+							xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+							<path fill="#FFA500"
+								d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m-9 3h2v2h-2zm0 3h2v2h-2zM8 8h2v2H8zm0 3h2v2H8zm-1 2H5v-2h2zm0-3H5V8h2zm9 7H8v-2h8zm0-4h-2v-2h2zm0-3h-2V8h2zm3 3h-2v-2h2zm0-3h-2V8h2z" />
+						</svg> Сайт разработан командой IT-ПАРКа</span>
+					<span class="footer__rights-reserved-text d-block ">© 2012-2024 IТ-ПАРК. Все права защищены.</span>
+				</div>
+			</div>
+		</div>
+		</div>
+	</footer>
+
+	<!-- modals start -->
+	<!-- Modal question-->
+	<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+		tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered ">
+			<div class="modal-content rounded-4 modal__content p-2">
+				<div class="modal-header modal__header d-flex align-items-start">
+					<p class="modal-title lh-base fw-bold modal__title" id="exampleModalToggleLabel">Остались вопросы или нужна
+						помощь с выбором курса?</p>
+					<button type="button" class="btn-close modal__close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body modal__body">
+					<p class="modal__text lh-base mb-4">Выберите любой удобный мессенджер и Вы сможете напрямую связаться с
+						руководителем школы, и уточнить все интересующие вопросы</p>
+					<div class="modal__image-wrapper d-flex gap-2 gap-sm-3 mb-2">
+						<div class="modal__image-inner d-flex flex-column ">
+							<a target="_blank" href="https://wa.me/79532819045"
+								class="modal__link d-flex flex-column align-items-center justify-content-center gap-2">
+								<img class="modal__img" src="imgREACT/product/whaysApp.svg" alt="Логотип WhatsApp">
+								<span class=" modal__span d-inline-block  text-dark">WhatsApp</span>
+							</a>
+						</div>
+						<div class="modal__image-inner d-flex flex-column ">
+							<a target="_blank" class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
+								href="https://vk.me/itpark32_official">
+								<img class="modal__img" src="imgREACT/product/vk.svg" alt="Логотип ВКонтакте">
+								<span class="modal__span d-inline-block  text-dark">ВКонтакте</span>
+							</a>
+						</div>
+						<div class="modal__image-inner d-flex flex-column ">
+							<a target="_blank" class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
+								href=" https://t.me/amsmyslov">
+								<img class="modal__img" src="imgREACT/product/tg.svg" alt="Логотип Telegram">
+								<span class="modal__span d-inline-block  text-dark">Telegram</span>
+							</a>
+						</div>
+						<div class="modal__image-inner d-flex flex-column ">
+							<a target="_blank" class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
+								href="tel:+79532819045">
+								<img class="modal__img" src="imgREACT/product/phone.svg" alt="Логотип Телефон">
+								<span class="modal__span d-inline-block text-dark">Телефон</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="pay" aria-hidden="true" aria-labelledby="payLabel" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+			<div class="modal-content rounded-4 modal__content">
+				<div class="modal-header modal__header d-flex align-items-start">
+					<p class="modal-title lh-base fw-bold modal__title" id="payLabel">Способы оплаты</p>
+					<button type="button" class="btn-close modal__pay-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="modal__pay-text lh-base mb-4">Для оплаты занятий с помощью банковской карты на странице личного
+						кабинета необходимо нажать кнопку Пополнить баланс. Оплата происходит через ПАО СБЕРБАНК с
+						использованием
+						банковских карт следующих платёжных систем:</p>
+					<ul class=" d-flex flex-column align-items-start gap-1 lh-base">
+						<li style="list-style:disc;">МИР</li>
+						<li style="list-style:disc;">VISA International</li>
+						<li style="list-style:disc;">Mastercard Worldwide</li>
+					</ul>
+					<p class="modal__pay-text lh-base mb-0">Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены
+						на
+						платёжный шлюз ПАО СБЕРБАНК. Соединение с платёжным шлюзом и передача информации осуществляется в
+						защищённом
+						режиме с использованием протокола шифрования SSL. В случае если Ваш банк поддерживает технологию
+						безопасного
+						проведения интернет-платежей Verified By Visa, MasterCard SecureCode, MIR Accept, J-Secure для
+						проведения
+						платежа также может потребоваться ввод специального пароля. Настоящий сайт поддерживает 256-битное
+						шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ПАО СБЕРБАНК. Введённая
+						информация не будет предоставлена третьим лицам за исключением случаев, предусмотренных
+						законодательством
+						РФ. Проведение платежей по банковским картам осуществляется в строгом соответствии с требованиями
+						платёжных
+						систем МИР, Visa Int., MasterCard Europe Sprl, JCB.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal refund -->
+	<div class="modal fade" id="refund" aria-hidden="true" aria-labelledby="refundToggleLabel" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered ">
+			<div class="modal-content rounded-4 modal__content">
+				<div class="modal-header modal__header d-flex align-items-start">
+					<p class="modal-title lh-base fw-bold modal__title" id="refundLabel">Возврат денежных средств</p>
+					<button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="modal__pay-text lh-base">Возврат переведённых средств, производится на ваш банковский счёт в
+						течение
+						5-30 рабочих дней (срок зависит от банка, который выдал вашу банковскую карту).</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--  Modal video  -->
+	<div id="modal" class="hidden">
+		<div class="modal-video-content ratio ratio-16x9">
+			<div class="modal-close"></div>
+		</div>
+	</div>
+
+	<!-- button -->
+	<div class="fixed">
+		<button class="fixed__btn">
+			<img src="img/share/message.svg" alt="Картинка соц. сетей" class="fixed__img">
+		</button>
+
+		<div class="fixed__tooltip">
+			<p class="fixed__text"><strong>Есть вопрос?</strong><br>Задайте его в чате</p>
+
+			<div class="fixed__sos1al">
+				<ul class="fixed__list" style="list-style: none;">
+					<li class="fixed__item">
+						<a href="https://t.me/amsmyslov" target="_blank" class="fixed__link">
+							<img class="fixed__img" src="img/share/tg.svg" alt="Логотип Telegram">
+						</a>
+					</li>
+					<li class="fixed__item">
+						<a href="https://wa.me/79532819045" target="_blank" class="fixed__link">
+							<img class="fixed__img" src="img/share/whatsup.svg" alt="Логотип WhatsApp">
+						</a>
+					</li>
+					<li class="fixed__item">
+						<a href="https://vk.me/itpark32_official" target="_blank" class="fixed__link">
+							<img class="fixed__img" src="img/share/vk.svg" alt="Логотип ВКонтакте">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="fixed__close-wrapper">
+			<img src="img/share/close.svg" class="fixed__close" alt="Картинка закрытия кнопки">
+		</div>
+	</div>
+
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/react.js"></script>
+</body>
+
+</html>

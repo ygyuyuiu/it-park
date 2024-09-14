@@ -103,20 +103,20 @@ document.querySelector("#productForm").addEventListener("submit", (e) => {
 
   const formData = new FormData(e.target);
   const data = Object.fromEntries(formData);
-  console.log(JSON.stringify(data));
 
-  fetch("https://itpark32sys.ru/lk/api/contact/new", {
-    method: "POST",
+  fetch("https://jsonplaceholder.typicode.com/todos/1", {
+    method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(data),
   })
     .then((response) => {
       if (!response.ok)
         throw new Error("Упс... Произошла ошибка. Попробуйте еще раз");
+
+      //При отправке формы отстукиваем в ЯМ
       // Редирект на страницу thankyou.html
-      window.location.href = "thankyou.html";
+      window.location.href = "thankyou-web.html";
     })
     .catch((error) => {
       e.target.querySelector(".product__form-btn").insertAdjacentHTML(

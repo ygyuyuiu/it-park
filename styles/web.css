@@ -3,91 +3,78 @@
   src: url(../font/gilroy/Gilroy-Heavy.woff2) format("woff2");
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
   src: url(../font/gilroy/Gilroy-Extrabold.woff2) format("woff2");
   font-weight: 800;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
   src: url(../font/gilroy/Gilroy-Bold.woff2) format("woff2");
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
   src: url(../font/gilroy/Gilroy-Semibold.woff2) format("woff2");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
   src: url(../font/gilroy/Gilroy-Medium.woff2) format("woff2");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
   src: url(../font/gilroy/Gilroy-Regular.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
   src: url(../font/gilroy/Gilroy-Light.woff2) format("woff2");
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
   src: url(../font/gilroy/Gilroy-Thin.woff2) format("woff2");
   font-weight: 100;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Bebas Neue";
   src: url(../font/bebas/BebasNeueBold.woff2) format("woff2");
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Bebas Neue";
   src: url(../font/bebas/BebasNeueRegular.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Bebas Neue";
   src: url(../font/bebas/BebasNeueLight.woff2) format("woff2");
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Bebas Neue";
   src: url(../font/bebas/BebasNeue-Thin.woff2) format("woff2");
   font-weight: 100;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Bebas Neue";
   src: url(../font/bebas/BebasNeueBook.woff2) format("woff2");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 
 * {
@@ -1295,7 +1282,7 @@ body {
   font-size: clamp(12px, 10.6087px + 0.4348vi, 16px);
 }
 .product__form-input {
-  padding: 21px 23px;
+  padding: 15px 23px;
   font-size: clamp(14px, 12.6087px + 0.4348vi, 18px);
   border-radius: 10px;
 }
@@ -2355,7 +2342,7 @@ body {
     height: 50px;
   }
   .product__form-input {
-    padding: 19px 23px;
+    padding: 13px 23px;
   }
   .result__img {
     width: 69px;

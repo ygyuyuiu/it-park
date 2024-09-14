@@ -128,12 +128,8 @@ sectionEvents.addEventListener("click", (e) => {
       modalContent.insertAdjacentHTML(
         `afterbegin`,
         `
-            <iframe
-              id="youtube-video"
-              src="${url}"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
+            <video id="info_row__video" preload="none" poster="" controls src="${url}" style="cursor:pointer" autoplay>
+            </video>
             `
       );
     } else if (e.target.classList.contains("event__open-modal-image")) {
@@ -174,221 +170,114 @@ offcanvasModal.addEventListener("click", (e) => {
   }
 });
 
-// Отправка формы курса
-document.querySelector(".modal-course").addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (e.target.matches(".modal__footer-form")) {
-    e.target.querySelector(".modal__footer-alert")?.remove();
-    e.target.querySelector(".modal__footer-btn-text").textContent =
-      "Подождите...";
-    e.target.querySelector(".modal__footer-loader").classList.remove("d-none");
-    e.target.parentElement
-      .querySelector(".modal__footer-loader-wrapper")
-      ?.classList.remove("d-none");
-
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData);
-    fetch("https://itpark32sys.ru/lk/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => {
-        if (!response.ok) throw new Error(response.status);
-        const courseModal = e.target.closest(".modal-course");
-        const bootstrapModal = bootstrap.Modal.getInstance(courseModal);
-        bootstrapModal.hide();
-
-        const applicationModal = new bootstrap.Modal(
-          document.getElementById("thankYou")
-        );
-        applicationModal.show();
-      })
-      .catch((error) => {
-        e.target.querySelector(".modal__footer-btn").insertAdjacentHTML(
-          "beforebegin",
-          `<div class="modal__footer-alert alert alert-danger mt-3 align-self-lg-start" role="alert">
-           Упс... Произошла ошибка. Попробуйте еще раз
-          </div>`
-        );
-      })
-      .finally(() => {
-        e.target.querySelector(".modal__footer-btn-text").textContent =
-          "Записаться на обучение";
-        e.target.querySelector(".modal__footer-loader").classList.add("d-none");
-        e.target.parentElement
-          .querySelector(".modal__footer-loader-wrapper")
-          ?.classList.add("d-none");
-      });
-  }
-});
-
-//Открытие модального окна 
-const modalSubmit = document.querySelector('.modal-submit')
-
-function openModalFromHash() {
-  const hash = window.location.hash
-  if (hash) {
-    const modalElement = document.querySelector(`[data-bs-target="${hash}"]`)
-    if (modalElement) {
-      const modalId = hash
-      const modal = new bootstrap.Modal(document.querySelector(modalId))
-      modal.show()
-    }
-  }
-}
-
+// появление модального окна "Узнайте какая профессия"
+const modalSubmit = document.querySelector(".modal-submit");
 setTimeout(() => {
   if (modalSubmit) {
-    const modal = new bootstrap.Modal(modalSubmit)
-    modal.show()
+    const modal = new bootstrap.Modal(modalSubmit);
+    modal.show();
   }
-}, 1000)
+}, 15000); //7000 15000
 
-//Отправка формы
-document.querySelector('.modal-submit').addEventListener('submit', e => {
-	e.preventDefault()
-	if (e.target.matches('.modal__footer-form')) {
-		e.target.querySelector('.modal__footer-alert')?.remove()
-		e.target.querySelector('.modal__footer-btn-text').textContent =
-			'Подождите...'
-		e.target.querySelector('.modal__footer-loader').classList.remove('d-none')
-		e.target.parentElement
-			.querySelector('.modal__footer-loader-wrapper')
-			?.classList.remove('d-none')
+//Отправка формы вебинар
+document.querySelector("#webinarForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  e.target.querySelector(".modal__footer-alert")?.remove();
+  e.target.querySelector(".product__form-error")?.remove();
+  e.target.querySelector(".product__form-btn-text").textContent =
+    "Подождите...";
+  e.target
+    .querySelector(".product__form-btn-spinner")
+    .classList.remove("d-none");
+  e.target.parentElement
+    .querySelector(".product__form-loading-wrapper")
+    ?.classList.remove("d-none");
 
-		const formData = new FormData(e.target)
-		const data = Object.fromEntries(formData)
-		fetch('https://itpark32sys.ru/lk/api/contact', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(data),
-		})
-			.then(response => {
-				if (!response.ok) throw new Error(response.status)
-				const courseModal = e.target.closest('.modal-submit')
-				const bootstrapModal = bootstrap.Modal.getInstance(courseModal)
-				bootstrapModal.hide()
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData);
 
-				const applicationModal = new bootstrap.Modal(
-					document.getElementById('thankYou')
-				)
-				applicationModal.show()
-			})
-			.catch(error => {
-				e.target.querySelector('.modal__footer-btn').insertAdjacentHTML(
-					'beforebegin',
-					`<div class="modal__footer-alert alert alert-danger mt-3 align-self-lg-start" role="alert">
-           Упс... Произошла ошибка. Попробуйте еще раз
-          </div>`
-				)
-			})
-			.finally(() => {
-				e.target.querySelector('.modal__footer-btn-text').textContent =
-					'Получить запись вебинара'
-				e.target.querySelector('.modal__footer-loader').classList.add('d-none')
-				e.target.parentElement
-					.querySelector('.modal__footer-loader-wrapper')
-					?.classList.add('d-none')
-			})
-	}
-})
+  fetch("https://jsonplaceholder.typicode.com/todos/1", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => {
+      if (!response.ok)
+        throw new Error("Упс... Произошла ошибка. Попробуйте еще раз");
 
-// Очищаем форму при закрытии модального окна
-document
-  .querySelector(".modal-course-wrapper")
-  .addEventListener("hidden.bs.modal", (e) => {
-    if (e.target.matches(".modal-course")) {
-      e.target.querySelector(".modal__footer-alert")?.remove();
-      const form = e.target.querySelector(".modal__footer-form");
-      form.reset();
-    }
-    // Очистить хеш из урла при закрытии модального окна
-    history.pushState(
-      null,
-      null,
-      window.location.pathname + window.location.search
-    );
-  });
+      const courseModal = e.target.closest(".modal-submit");
+      const bootstrapModal = bootstrap.Modal.getInstance(courseModal);
+      bootstrapModal.hide();
 
-// Подставление якорей в урл при открытии модального окна
-document.addEventListener("DOMContentLoaded", function () {
-  function openModalFromHash() {
-    const hash = window.location.hash;
-    if (hash) {
-      const modalElement = document.querySelector(`[data-bs-target="${hash}"]`);
-      if (modalElement) {
-        const modalId = hash;
-        const modal = new bootstrap.Modal(document.querySelector(modalId));
-        modal.show();
-      }
-    }
-  }
-
-  // Открытие модального окна при загрузке страницы, если есть хеш
-  openModalFromHash();
-
-  // Открытие модального окна при изменении хеша
-  window.addEventListener("hashchange", openModalFromHash);
-
-  // Обработчик кликов для ссылок, которые открывают модальные окна
-  document
-    .querySelectorAll('a[data-bs-toggle="modal"]')
-    .forEach(function (modalLink) {
-      modalLink.addEventListener("click", function () {
-        const targetHash = this.getAttribute("href");
-        history.pushState(null, null, targetHash);
-      });
+      const applicationModal = new bootstrap.Modal(
+        document.getElementById("thankYou")
+      );
+      applicationModal.show();
+    })
+    .catch((error) => {
+      e.target.querySelector(".product__form-btn").insertAdjacentHTML(
+        "beforebegin",
+        `<div class="text-danger text-center product__form-error">
+			${error.message}
+			</div>`
+      );
+    })
+    .finally(() => {
+      e.target.querySelector(".product__form-btn-text").textContent =
+        "Получить запись вебинара";
+      e.target
+        .querySelector(".product__form-btn-spinner")
+        .classList.add("d-none");
+      e.target
+        .querySelector(".product__form-loading-wrapper")
+        ?.classList.add("d-none");
     });
 });
 
 // button
-const tooltip = document.querySelector('.fixed__tooltip')
-const numMess = document.querySelector('.fixed__num')
+const tooltip = document.querySelector(".fixed__tooltip");
+const numMess = document.querySelector(".fixed__num");
 
- setTimeout(() => {
-		tooltip.style.opacity = 1
-		numMess.style.opacity = 1
- }, 3000)
+setTimeout(() => {
+  tooltip.style.opacity = 1;
+  numMess.style.opacity = 1;
+}, 3000);
 
-const btnActive = document.querySelector('#btn-active')
-const btnClose = document.querySelector('#close')
-const links = document.querySelectorAll('.fixed__link')
+const btnActive = document.querySelector("#btn-active");
+const btnClose = document.querySelector("#close");
+const links = document.querySelectorAll(".fixed__link");
 
-btnClose.addEventListener('click', () => {
-	if (btnClose) {
-		btnActive.style.display = 'block'
-		btnClose.style.display = 'none'
+btnClose.addEventListener("click", () => {
+  if (btnClose) {
+    btnActive.style.display = "block";
+    btnClose.style.display = "none";
 
-		for (let i = 0; i < links.length; i++) {
-			links[0].style.cssText =
-				'transform: translate(0px); transition:all 200ms ease-out 300ms; visibility: hidden;'
-			links[1].style.cssText =
-				'transform: translate(0px); transition:all 200ms ease-out 200ms; visibility: hidden;'
-			links[2].style.cssText =
-				'transform: translate(0px); transition:all 200ms ease-out 100ms; visibility: hidden;'
-		}
-	}
-})
+    for (let i = 0; i < links.length; i++) {
+      links[0].style.cssText =
+        "transform: translate(0px); transition:all 200ms ease-out 300ms; visibility: hidden;";
+      links[1].style.cssText =
+        "transform: translate(0px); transition:all 200ms ease-out 200ms; visibility: hidden;";
+      links[2].style.cssText =
+        "transform: translate(0px); transition:all 200ms ease-out 100ms; visibility: hidden;";
+    }
+  }
+});
 
-btnActive.addEventListener('click', () => {
-	if (btnActive) {
-		tooltip.style.opacity = 0
-		numMess.style.opacity = 0
-		btnActive.style.display = 'none'
-		btnClose.style.display = 'block'
+btnActive.addEventListener("click", () => {
+  if (btnActive) {
+    tooltip.style.opacity = 0;
+    numMess.style.opacity = 0;
+    btnActive.style.display = "none";
+    btnClose.style.display = "block";
 
-		for (let i = 0; i < links.length; i++) {
-			links[0].style.cssText =
-				'transform: translate(-220px); transition:all 200ms ease-out 100ms; visibility:visible;'
-			links[1].style.cssText =
-				'transform: translate(-160px); transition:all 200ms ease-out 200ms; visibility:visible;'
-			links[2].style.cssText =
-				'transform: translate(-100px); transition:all 200ms ease-out 300ms; visibility:visible;'
-		}
-	}
-})
+    for (let i = 0; i < links.length; i++) {
+      links[0].style.cssText =
+        "transform: translate(-220px); transition:all 200ms ease-out 100ms; visibility:visible;";
+      links[1].style.cssText =
+        "transform: translate(-160px); transition:all 200ms ease-out 200ms; visibility:visible;";
+      links[2].style.cssText =
+        "transform: translate(-100px); transition:all 200ms ease-out 300ms; visibility:visible;";
+    }
+  }
+});

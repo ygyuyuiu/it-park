@@ -36,7 +36,6 @@
 
 	<title>IT-ПАРК – онлайн-школа программирования | курсы IT с нуля</title>
 
-	<link rel="canonical" href="https://itpark32.ru/">
 	<link rel="icon" href="img/titleIcon/keyboard.svg">
 	<link rel="stylesheet" href="styles/bootstrap.min.css">
 
@@ -76,42 +75,66 @@
 				"availableLanguage": "Russian"
 			},
 			"course": [
-				{
-					"@type": "Course",
-					"name": "Разработка сайтов и веб-приложений",
-					"description": "Полный курс обучения с нуля для тех, кто только начинает свой путь в IT. Разработка сайтов и веб-приложений на HTML, CSS, JavaScript, PHP, React, TypeScript, Laravel.",
-					"provider": {
-						"@type": "Organization",
-						"name": "IT-ПАРК",
-					}
-				},
-				{
-					"@type": "Course",
-					"name": "Серверное программирование на Java",
-					"description": "Разработка приложений для сервера, компьютеров и мобильных устройств на Java.",
-					"provider": {
-						"@type": "Organization",
-						"name": "IT-ПАРК",
-					}
-				},
-				{
-					"@type": "Course",
-					"name": "Фронтенд-разработчик",
-					"description": "Разработка сайтов и веб-приложений на HTML, CSS, JavaScript, TypeScript, React, Redux.",
-					"provider": {
-						"@type": "Organization",
-						"name": "IT-ПАРК",
-					}
-				},
-				{
-					"@type": "Course",
-					"name": "React/TypeScript разработчик",
-					"description": "Разработка сайтов и веб-приложений на TypeScript и React",
-					"provider": {
-						"@type": "Organization",
-						"name": "IT-ПАРК",
-					}
-				},
+			{
+				"@type": "Course",
+				"@id": "https://itpark32.ru/web.html",
+				"name": "Разработка сайтов и веб-приложений",
+				"description": "Fullstack-разработка сайтов на HTML, CSS, JavaScript, PHP, React, Laravel.",
+				"provider": {
+					"@type": "Organization",
+					"name": "IT-ПАРК"
+				}
+			},
+			{
+				"@type": "Course",
+				"@id": "https://itpark32.ru/java.html",
+				"name": "Разработка серверных приложений на Java",
+				"description": "Backend-разработка на Java, PostgreSQL, Hibernate, Spring Boot.",
+				"provider": {
+					"@type": "Organization",
+					"name": "IT-ПАРК"
+				}
+			},
+			{
+				"@type": "Course",
+				"@id": "https://itpark32.ru/frontend.html",
+				"name": "Frontend-разработка",
+				"description": "Разработка сайтов и веб-приложений на HTML, CSS, JavaScript, TypeScript, React.",
+				"provider": {
+					"@type": "Organization",
+					"name": "IT-ПАРК"
+				}
+			},
+			{
+				"@type": "Course",
+				"@id": "https://itpark32.ru/react.html",
+				"name": "Веб-разработка на React и TypeScript",
+				"description": "Разработка веб-приложений на React, TypeScript и Redux.",
+				"provider": {
+					"@type": "Organization",
+					"name": "IT-ПАРК"
+				}
+			},
+			{
+				"@type": "Course",
+				"@id": "https://itpark32.ru/tg-bots.html",
+				"name": "Разработка Telegram ботов на Java",
+				"description": "Разработка чат-ботов на Java, PostgreSQL, Hibernate.",
+				"provider": {
+					"@type": "Organization",
+					"name": "IT-ПАРК"
+				}
+			},
+			{
+				"@type": "Course",
+				"@id": "https://itpark32.ru/spring.html",
+				"name": "Backend-разработка на Java Spring Boot",
+				"description": "Разработка веб-приложений и микросервисов на Spring Boot.",
+				"provider": {
+					"@type": "Organization",
+					"name": "IT-ПАРК"
+				}
+			}
 			],
 			"founder": {
 				"@type": "Person",
@@ -125,27 +148,7 @@
 		}
 		</script>
 
-	<!-- Yandex.Metrika counter -->
-	<script type="text/javascript">
-		(function (m, e, t, r, i, k, a) {
-			m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-			m[i].l = 1 * new Date();
-			for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
-			k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-		})
-			(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-		ym(97692281, "init", {
-			clickmap: true,
-			trackLinks: true,
-			accurateTrackBounce: true,
-			webvisor: true
-		});
-	</script>
-	<noscript>
-		<div><img src="https://mc.yandex.ru/watch/97692281" style="position:absolute; left:-9999px;" alt="" /></div>
-	</noscript>
-	<!-- /Yandex.Metrika counter -->
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -165,7 +168,7 @@
 						<a class="header__nav-link nav-link" href="#courses">Курсы</a>
 					</li>
 					<li class="nav-item">
-						<a class="header__nav-link nav-link" href="#about">О нас </a>
+						<a class="header__nav-link nav-link" href="#about">О нас</a>
 					</li>
 					<li class="nav-item">
 						<a class="header__nav-link nav-link" href="#testimonials">Отзывы</a>
@@ -230,16 +233,21 @@
 					<h1 class="promo__title h1 fw-bold mb-3 ">
 						Освойте профессию программиста с нуля за 12 месяцев
 					</h1>
-					<ol class="promo__list lh-base ">
-						<li class="promo__list-item">Выберите свой курс</li>
+					<ul class="promo__list lh-base">
 						<li class="promo__list-item">
-							Запишитесь на бесплатное пробное занятие
+							Обучаем профессии и готовим к трудоустройству в IT
 						</li>
 						<li class="promo__list-item">
-							Начните обучение по выбранной IT-специальности
+							В штате сильные преподаватели (5+ лет стажа в IT)
 						</li>
-					</ol>
-					<div class="promo__btn-wrapper d-flex flex-column gap-4 d-sm-flex  flex-sm-row gap-lg-5">
+						<li class="promo__list-item">
+							Понедельная оплата занятий (1500 ₽/нед.)
+						</li>
+						<li class="promo__list-item">
+							Объясняем максимально понятным каждому языком
+						</li>
+					</ul>
+					<div class="promo__btn-wrapper d-flex flex-column gap-4 d-sm-flex  flex-sm-row">
 						<a href="#courses" class="link button  btn btn-primary rounded-pill fw-medium px-4 py-3">
 							Выбрать курс
 						</a>
@@ -251,7 +259,9 @@
 					<div
 						class="promo__img-hidden d-flex align-items-center justify-content-start gap-3 rounded-4 py-2 px-2 mt-4 d-xl-none d-block ">
 						<img class="promo__img-title" src="img/promo/avatar.png" alt="Выпускники IT-ПАРКа" />
-						<p class="promo__img-hidden-text mb-0 lh-base">Более 1000 выпускников нашли работу по специальности</p>
+						<p class="promo__img-hidden-text mb-0 lh-base">
+							Более 1000 выпускников нашли работу по специальности
+						</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-xl-5">
@@ -263,7 +273,9 @@
 						<div
 							class="promo__img-absolute-title d-flex align-items-center justify-content-start gap-2 rounded-4 py-2 px-2 d-none d-xl-flex">
 							<img class="promo__img-title" src="img/promo/avatar.png" alt="Выпускники IT-ПАРКа" />
-							<p class="promo__img-title-text mb-0">Более 1000 выпускников нашли работу по специальности </p>
+							<p class="promo__img-title-text mb-0">
+								Более 1000 выпускников нашли работу по специальности
+							</p>
 						</div>
 					</div>
 				</div>
@@ -271,176 +283,167 @@
 		</div>
 	</section>
 
-	<section class="set">
+	<section class="cards" id="courses">
 		<div class="container">
-			<div class="row justify-content-center">
-				<h2 class="h2 fw-bold pb-3 mb-2 text-start text-center">Актуальные наборы</h2>
-			</div>
-
-			<div class="row">
-				<div class="set__slider">
-					<div class="card border-0 rounded-5 set__card-slider d-flex flex-column gap-3">
-						<div class="card-body d-flex flex-column  d-xl-flex flex-xl-row justify-content-xl-between gap-3 set__body">
-							<div class="card-text set__card-text col-12 col-lg-12 col-xl-8 col-xxl-7">
-								<h4 class="card-title lh-base fw-semibold set__title">Хотите понять, какая профессия вам больше
-									подходит?</h4>
-								<p class="card-text lh-base">Приглашаем на бесплатные пробные занятия по курсам
-									«Разработка сайтов и веб-приложений» и «Серверное программирование на Java», которые пройдут <b>с 17
-										по 31 августа 2024 г .</b></p>
-								<p class="card-text lh-base">Подробности и запись на бесплатные занятия на курс
-									«Разработка сайтов и веб-приложений» по <a href="#webCourse" data-bs-toggle="modal" target="_blank"
-										class="d-inline-block">ссылке</a></p>
-								<p class="card-text lh-base">Подробности и запись на бесплатные занятия на курс
-									«Серверное программирование на Java» по <a href="#javaCourse" data-bs-toggle="modal" target="_blank"
-										class="d-inline-block">ссылке</a></p>
-							</div>
-							<div class="set__img-wrapper d-block d-xl-flex align-self-center col-8 col-sm-6 col-md-4 col-xl-3">
-								<img src="img/sale/first-slide/label.png" class="set__img" alt="Изображение языков программирования">
-							</div>
-						</div>
-					</div>
-
-
-
-					<div class="card border-0 rounded-5  set__card-slider">
-						<div
-							class="card-body d-flex flex-column  d-xl-flex flex-xl-row justify-content-xl-between gap-3 set__body-second">
-							<div class="card-text set__card-text col-12 col-lg-12 col-xl-8  col-xxl-7">
-								<h4 class="card-title lh-base fw-semibold set__title">А что если я уже умею немного программировать?
-								</h4>
-								<p class="card-text lh-base">Если у вас уже есть базовые знания, вы можете
-									присоединиться к курсам в любой удобный момент. Учитывая ваш уровень знаний, мы предложим подходящий
-									вариант.</p>
-								<p class="card-text lh-base">Подробности о курсе «Разработка сайтов и
-									веб-приложений» и запись на бесплатную диагностику ваших знаний по <a href="#webCourse"
-										data-bs-toggle="modal" target="_blank" class="d-inline-block">ссылке</a></p>
-								<p class="card-text lh-base">Подробности о курсе «Серверное программирование на
-									Java» и запись на бесплатную диагностику ваших знаний по <a href="#javaCourse" data-bs-toggle="modal"
-										target="_blank" class="d-inline-block">ссылке</a></p>
-							</div>
-							<div
-								class="set__img-wrapper d-block d-xl-flex align-self-center col-6 col-sm-5 col-md-4 col-xl-3 col-xxl-2">
-								<img src="img/sale/second-slide/man.png" class="set__img" alt="Изображение Джона Траволты">
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-	<section class="card1 px-sm-4 px-md-5" id="courses">
-		<div class="container-xxl px-0">
 			<div class="d-flex flex-column gap-4">
 				<h2 class="cards__title h2 fw-bold pb-3 mb-2">Выберите свой курс</h2>
-				<p class="cards__desc lh-base pb-3 mb-2">Мы предлагаем качественное и современное образование в сфере IT, целью
+				<p class="cards__desc lh-base pb-3 mb-2">Мы предлагаем качественное и современное онлайн-образование в сфере IT,
+					целью
 					которого является профессиональное освоение выбранной вами специальности. Программа обучения подходит для
-					каждого. Единственное, что от вас требуется – это уверенное владение компьютером и работоспособность.</p>
+					каждого. Единственное, что от вас требуется – это уверенное владение компьютером и работоспособность</p>
 
+				<div class="row">
+					<div class="col-12 d-flex flex-column d-lg-flex flex-xl-row  cards__wrapper justify-content-between">
 
-				<div class="row card1__row flex-column text-light ">
-					<h3 class="card1__title h3 fw-semibold mb-2 pb-3">Для начинающих</h3>
-					<p class="card1__text fw-medium lh-base">Полный курс обучения с нуля для тех, кто только начинает свой путь в
-						IT
-					</p>
-
-
-					<div class="row cards__row d-flex align-items-center justify-content-between  p-0">
-						<div class="col-sm-12 col-lg-6 col-xxl-6 mb-3 mb-md-4">
-							<div class="card border-0 cards__wrapper ">
-								<div
-									class="card-body cards__content cards__content_bg-first d-flex flex-column align-items-start gap-3">
-									<img class="cards__img d-none d-sm-block  d-lg-none d-xl-block" src="img/cards/top__block/card-1.svg"
-										alt="Иконка веб-разработки">
-									<span class="cards__span rounded-4 px-3">Направление: <strong>Web</strong> </span>
-									<h4 class="card-title h4 fw-bold cards__subtitle">
-										Разработка сайтов и веб-приложений (16+)
-									</h4>
-									<p class="card-text card__text lh-base">
-										Разработка сайтов и веб-приложений на HTML, CSS, JS, PHP,
-										React, Laravel
-									</p>
-									<a href="web" target="_blank"
-										class="link button btn btn-primary rounded-pill fw-medium px-4 py-3 link">
-										Подробнее
-										<span class="card__arrow">&rarr;</span>
-									</a>
-								</div>
+						<div class="card  border-0 cards__content cards__content_bg-first mb-0">
+							<div class="card-body cards__body cards__body_first d-flex flex-column">
+								<span class="cards__span">
+									Направление:
+									<strong>
+										Web
+									</strong>
+								</span>
+								<h4 class="card-title h4 fw-bold cards__subtitle lh-sm lh-sm-base">
+									Разработка сайтов и веб-приложений <br>(16+)
+								</h4>
+								<p class="card-text cards__text lh-sm lh-sm-base">
+									Fullstack-разработка сайтов на HTML, CSS, JavaScript, PHP, React, Laravel
+								</p>
+								<a href="web.html" target="_blank"
+									class="link button btn btn-primary rounded-pill fw-medium px-4 py-3 link align-self-start">
+									Подробнее
+									<span class="cards__arrow">
+										&rarr;
+									</span>
+								</a>
 							</div>
 						</div>
-						<div class="col-sm-12 col-lg-6  col-xxl-6 mb-3 mb-md-4 ">
-							<div class="card border-0 cards__wrapper">
-								<div
-									class="card-body cards__content cards__content_bg-second d-flex flex-column align-items-start gap-3">
-									<img class="cards__img  d-none d-sm-block  d-lg-none d-xl-block" src="img/cards/top__block/card-2.svg"
-										alt="Иконка Java">
-									<span class="cards__span rounded-4 px-3">Направление: <strong>Java</strong></span>
-									<h4 class="card-title h4 fw-bold cards__subtitle">
-										Серверное программирование на Java (16+)
-									</h4>
-									<p class="card-text card__text lh-base">
-										Разработка приложений для сервера, компьютеров и мобильных
-										устройств
-									</p>
-									<a href="java.html" 
-										class="link button btn btn-primary rounded-pill fw-medium px-4 py-3 link"
-										target="_blank">Подробнее
-										<span class="card__arrow">&rarr;</span></a>
-								</div>
+
+						<div class="card border-0 cards__content cards__content_bg-second m-0">
+							<div class="card-body cards__body cards__body_second d-flex flex-column">
+								<span class="cards__span">
+									Направление:
+									<strong>
+										Web
+									</strong>
+								</span>
+								<h4 class="card-title h4 fw-bold cards__subtitle lh-sm lh-sm-base">
+									Frontend-разработка <br>(16+)
+								</h4>
+								<p class="card-text cards__text lh-sm lh-sm-base">
+									Разработка сайтов и веб-приложений на HTML, CSS, JavaScript, TypeScript, React
+								</p>
+								<a href="frontend.html" target="_blank" class="link button btn btn-primary rounded-pill fw-medium px-4 py-3 link
+									align-self-start">
+									Подробнее
+									<span class="cards__arrow">
+										&rarr;
+									</span>
+								</a>
 							</div>
 						</div>
+
+						<div class="card border-0 cards__content cards__content_bg-third mb-0">
+							<div class="card-body cards__body cards__body_third d-flex flex-column">
+								<span class="cards__span">
+									Направление:
+									<strong>
+										Web
+									</strong>
+								</span>
+								<h4 class="card-title h4 fw-bold cards__subtitle_w lh-sm lh-sm-base">
+									Веб-разработка на React и TypeScript (16+)
+								</h4>
+								<p class="card-text cards__text lh-sm lh-sm-base">
+									Разработка веб-приложений на React, TypeScript и Redux
+								</p>
+								<a href="react.html" target="_blank"
+									class="link button btn btn-primary rounded-pill fw-medium px-4 py-3 link align-self-start">
+									Подробнее
+									<span class="cards__arrow">
+										&rarr;
+									</span>
+								</a>
+							</div>
+						</div>
+
+
+
 					</div>
 				</div>
 
-				<div class="row card1__row flex-column text-light">
-					<h3 class="card1__title h3 fw-semibold mb-2 pb-3">Для продолжающих</h3>
-					<p class="card1__text fw-medium lh-base">Полный курс обучения для тех, кто уже обладает базовыми навыками и
-						готов продолжить свой путь</p>
+				<div class="row">
+					<div class="col-12 d-flex flex-column d-lg-flex flex-xl-row  cards__wrapper">
 
-					<div class="row cards__row d-flex align-items-center justify-content-between p-0">
-						<div class="col-sm-12 col-lg-6 col-xxl-6 mb-3 mb-md-4 ">
-							<div class="card border-0 cards__wrapper">
-								<div
-									class="card-body cards__content cards__content_bg-tenth d-flex flex-column align-items-start gap-3">
-									<img class="cards__img d-none d-sm-block  d-lg-none d-xl-block" src="img/cards/new__block/atom.svg"
-										alt="Иконка фронтенд-разработки">
-									<span class="cards__span rounded-4 px-3">Направление: <strong>Web</strong> </span>
-									<h4 class="card-title  h4 fw-bold  cards__subtitle-first">
-										Фронтенд-разработка на JavaScript и React (16+)
-									</h4>
-									<p class="card-text card__text lh-base">
-										Разработка сайтов и веб-приложений на JavaScript, TypeScript, React, Redux
-									</p>
-									<a href="#frontendCourse" data-bs-toggle="modal"
-										class="link button btn btn-primary rounded-pill fw-medium px-4 py-3 link"
-										data-bs-target="#frontendCourse">
-										Подробнее
-										<span class="card__arrow">&rarr;</span>
-									</a>
-								</div>
+						<div class="card  border-0 cards__content cards__content_bg-fourth">
+							<div class="card-body cards__body cards__body_fourth d-flex flex-column">
+								<span class="cards__span">
+									Направление:
+									<strong>
+										Java
+									</strong>
+								</span>
+								<h4 class="card-title h4 fw-bold cards__subtitle lh-sm lh-sm-base">
+									Разработка серверных приложений на Java (16+)
+								</h4>
+								<p class="card-text cards__text lh-sm lh-sm-base">
+									Backend-разработка на Java, PostgreSQL, Hibernate, Spring boot
+								</p>
+								<a href="java.html" target="_blank"
+									class="link button btn btn-primary rounded-pill fw-medium px-4 py-3 link align-self-start">
+									Подробнее
+									<span class="cards__arrow">
+										&rarr;
+									</span>
+								</a>
 							</div>
 						</div>
 
-						<div class="col-sm-12 col-lg-6  col-xxl-6 mb-3 mb-md-4 ">
-							<div class="card border-0 cards__wrapper">
-								<div
-									class="card-body cards__content cards__content_bg-eleventh d-flex flex-column align-items-start gap-3">
-									<img class="cards__img  d-none d-sm-block  d-lg-none d-xl-block"
-										src="img/cards/new__block/airplane.svg" alt="Иконка разработки Telegram ботов">
-									<span class="cards__span rounded-4 px-3">Направление: <strong>Java</strong></span>
-									<h4 class="card-title h4 lh-sm fw-bold cards__subtitle-second">
-										Разработка Telegram ботов на Java (16+)
-									</h4>
-									<p class="card-text card__text lh-base">
-										Разработка Telegram ботов с использованием баз данных на Java
-									</p>
-									<a href="#tgJavaCourse" data-bs-toggle="modal"
-										class="link button btn btn-primary rounded-pill fw-medium px-4 py-3 link "
-										data-bs-target="#tgJavaCourse">Подробнее
-										<span class="card__arrow">&rarr;</span></a>
-								</div>
+						<div class="card border-0 cards__content cards__content_bg-fifth">
+							<div class="card-body cards__body cards__body_fifth d-flex flex-column">
+								<span class="cards__span">
+									Направление:
+									<strong>
+										Java
+									</strong>
+								</span>
+								<h4 class="card-title h4 fw-bold cards__subtitle lh-sm lh-sm-base">
+									Разработка Telegram ботов на Java <br>(16+)
+								</h4>
+								<p class="card-text cards__text lh-sm lh-sm-base">
+									Разработка чат-ботов на Java, PostgreSQL, Hibernate
+								</p>
+								<a href="tg-bots.html" target="_blank" class="link button btn btn-primary rounded-pill fw-medium px-4 py-3 link
+									align-self-start">
+									Подробнее
+									<span class="cards__arrow">
+										&rarr;
+									</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="card border-0 cards__content cards__content_bg-sixth ">
+							<div class="card-body cards__body cards__body_sixth d-flex flex-column">
+								<span class="cards__span">
+									Направление:
+									<strong>
+										Java
+									</strong>
+								</span>
+								<h4 class="card-title h4 fw-bold cards__subtitle_w lh-sm lh-sm-base">
+									Backend-разработка на Java Spring Boot (16+)
+								</h4>
+								<p class="card-text cards__text lh-sm lh-sm-base">
+									Разработка веб-приложений и микросервисов на Spring Boot
+								</p>
+								<a href="spring.html" target="_blank"
+									class="link button btn btn-primary rounded-pill fw-medium px-4 py-3 link align-self-start">
+									Подробнее
+									<span class="cards__arrow">
+										&rarr;
+									</span>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -456,7 +459,7 @@
 					IT-ПАРК – это крупное IT-комьюнити с большой историей существования. Мы создаем атмосферу поддержки и
 					понимания, где каждый может поделиться своими идеями и получить обратную связь
 				</p>
-				<img class="about__img" src="img/about/about.jpg" alt="О школе программирования IT-ПАРК" loading="lazy" />
+				<img class="about__img" src="img/about/about.jpg" alt="О школе программирования IT-ПАРК" />
 			</div>
 		</div>
 	</section>
@@ -478,7 +481,7 @@
 					<div class="row g-0">
 						<div class="col-md-4 d-flex justify-content-start align-self-start mt-3  d-flex justify-content-md-center">
 							<img src="img/history/alexandr.jpg" class="img-fluid rounded-5 history__img"
-								alt="Александр Лемешов - выпускник IT-ПАРКа, работающий в немецкой фирме" loading="lazy" />
+								alt="Александр Лемешов - выпускник IT-ПАРКа, работающий в немецкой фирме" />
 						</div>
 						<div class="col-md-8">
 							<div class="card-body history__content ms-md-3">
@@ -507,7 +510,7 @@
 					<div class="row g-0">
 						<div class="col-md-4  d-flex justify-content-start align-self-start mt-3  d-flex justify-content-md-center">
 							<img src="img/history/nikita.jpg" class="img-fluid rounded-5 history__img"
-								alt="Никита Лагутин - выпускник IT-ПАРКа, работающий в российской компании ВКонтакте" loading="lazy" />
+								alt="Никита Лагутин - выпускник IT-ПАРКа, работающий в российской компании ВКонтакте" />
 						</div>
 						<div class="col-md-8 col-xxl-">
 							<div class="card-body history__content ms-md-3">
@@ -533,7 +536,7 @@
 					<div class="row g-0">
 						<div class="col-md-4 d-flex justify-content-start align-self-start mt-3  d-flex justify-content-md-center">
 							<img src="img/history/egor.jpg" class="img-fluid rounded-5 history__img"
-								alt="Егор Синица - выпускник IT-ПАРКа, работающий в российской компании Ozon" loading="lazy" />
+								alt="Егор Синица - выпускник IT-ПАРКа, работающий в российской компании Ozon" />
 						</div>
 						<div class="col-md-8">
 							<div class="card-body history__content ms-md-3">
@@ -559,7 +562,7 @@
 					<div class="row g-0">
 						<div class="col-md-4 d-flex justify-content-start align-self-start mt-3  d-flex justify-content-md-center">
 							<img src="img/history/max.jpg" class="img-fluid rounded-5 history__img"
-								alt="Максим Малаев - выпускник IT-ПАРКа, работающий в российской компании ВКонтакте" loading="lazy" />
+								alt="Максим Малаев - выпускник IT-ПАРКа, работающий в российской компании ВКонтакте" />
 						</div>
 						<div class="col-md-8">
 							<div class="card-body history__content ms-md-3">
@@ -587,8 +590,7 @@
 					<div class="row g-0">
 						<div class="col-md-4 dd-flex justify-content-start align-self-start mt-3  d-flex justify-content-md-center">
 							<img src="img/history/dima.jpg" class="img-fluid rounded-5 history__img"
-								alt="Дмитрий Катунин - выпускник IT-ПАРКа, работающий в крупной американской компании фулстек-разработчиком"
-								loading="lazy" />
+								alt="Дмитрий Катунин - выпускник IT-ПАРКа, работающий в крупной американской компании фулстек-разработчиком" />
 						</div>
 						<div class="col-md-8">
 							<div class="card-body history__content ms-md-3">
@@ -610,7 +612,7 @@
 					<div class="row g-0">
 						<div class="col-md-4 d-flex justify-content-start align-self-start mt-3  d-flex justify-content-md-center">
 							<img src="img/history/vlad.jpg" class="img-fluid rounded-5 history__img"
-								alt="Владислав Суханов - выпускник IT-ПАРКа, работающий на Кипре бэкенд-разработчиком" loading="lazy" />
+								alt="Владислав Суханов - выпускник IT-ПАРКа, работающий на Кипре бэкенд-разработчиком" />
 						</div>
 						<div class="col-md-8">
 							<div class="card-body history__content ms-md-3">
@@ -645,9 +647,9 @@
 			</div>
 			<div class="row">
 				<div class="col-12 col-xl-12 col-xxl-6 mb-3 events__video event__open-modal event__open-modal-video"
-					data-videourl="https://www.youtube.com/embed/Oh0eVyadC0Y?si=2ggkf8IGbx7_dSn5">
+					data-videourl="videoINFO/event.mp4">
 					<div class=" events__img-wrapper">
-						<img src="img/events/left_block/girls.jpg" class="col-12  events__video_radius"
+						<img src="img/events/left_block/1.png" class="col-12  events__video_radius"
 							alt="Фото с крупной IT-конференции" />
 					</div>
 
@@ -722,8 +724,8 @@
 			</div>
 			<div
 				class="row d-flex  align-items-center justify-content-between d-lg-flex flex-lg-row justify-content-lg-center align-items-lg-center">
-				<img class="col-12 col-lg-6 advantages__img  rounded-5 " src="img/advantages/students-programmer.png"
-					alt="Программисты на занятиях" loading="lazy" />
+				<img class="col-12 col-lg-6 advantages__img  rounded-5 " src="img/advantages/students-programmer.jpg"
+					alt="Программисты на занятиях" />
 				<div class=" col-lg-6  advantages__content bg-white rounded-5 mt-4 mt-xl-0">
 					<h4 class="advantages__subtitle h4 fw-bold mb-5">Наши курсы помогут вам:</h4>
 					<ul class="advantages__list d-flex flex-column">
@@ -864,9 +866,8 @@
 						Выберите понравившийся курс, попробуйте его бесплатно и решите сами, подходит ли он вам.
 					</p>
 					<div class="col-12  help__btn-wrapper d-flex flex-column gap-4 d-md-flex flex-md-row gap-md-5">
-						<a href="#demoLessonModalForm" data-bs-toggle="modal"
-							class="link button btn btn-primary rounded-pill fw-medium px-4 py-3">
-							Записаться на пробное занятие
+						<a href="#courses" class="link button btn btn-primary rounded-pill fw-medium px-4 py-3">
+							Выбрать курс
 						</a>
 						<a href="#exampleModalToggle" data-bs-toggle="modal"
 							class="link button btn btn-outline-primary rounded-pill fw-medium px-4 py-3">
@@ -875,8 +876,7 @@
 					</div>
 				</div>
 				<div class=" col-md-3 d-md-none d-lg-block  d-flex justify-content-center">
-					<img src="img/help/comp.png" class="help__img" alt="Бесплатное пробное занятие по выбранному IT-курсу"
-						loading="lazy" />
+					<img src="img/help/comp.png" class="help__img" alt="Бесплатное пробное занятие по выбранному IT-курсу" />
 				</div>
 			</div>
 		</div>
@@ -1031,13 +1031,13 @@
 							событий!</p>
 						<div class="soc1al__media-icons d-flex  gap-3 pb-4 pb-lg-0">
 							<a href="https://t.me/itpark32" target="_blank" class="soc1al__media-icon">
-								<img src="img/soc1al/left_block/tg.png" alt="Иконка Telegram" loading="lazy">
+								<img src="img/soc1al/left_block/tg.png" alt="Иконка Telegram">
 							</a>
 							<a href="https://vk.com/itpark32 " target="_blank" class="soc1al__media-icon">
-								<img src="img/soc1al/left_block/vk.png" alt="Иконка VK" loading="lazy">
+								<img src="img/soc1al/left_block/vk.png" alt="Иконка VK">
 							</a>
 							<a href="https://www.youtube.com/@itpark32" target="_blank" class="soc1al__media-icon">
-								<img src="img/soc1al/left_block/youtube.png" alt="Иконка YouTube" loading="lazy">
+								<img src="img/soc1al/left_block/youtube.png" alt="Иконка YouTube">
 							</a>
 						</div>
 					</div>
@@ -1050,14 +1050,14 @@
 								<div class="card-body">
 									<p class="card-text soc1al__text lh-sm">Полезные материалы, советы и рекомендации по выбору технологий
 										и карьерному росту</p>
-									<img src="img/soc1al/left_block/list.svg" alt="Иконка списка" loading="lazy">
+									<img src="img/soc1al/left_block/list.svg" alt="Иконка списка">
 								</div>
 							</div>
 							<div class="card soc1al__card border-0 rounded-5">
 								<div class="card-body">
 									<p class="card-text soc1al__text lh-sm mb-5">Истории о наших учениках и их достижениях в
 										программировании и мире IT</p>
-									<img src="img/soc1al/left_block/graph.svg" alt="Иконка графика" loading="lazy">
+									<img src="img/soc1al/left_block/graph.svg" alt="Иконка графика">
 								</div>
 							</div>
 						</div>
@@ -1066,14 +1066,14 @@
 								<div class="card-body">
 									<p class="card-text soc1al__text lh-sm mb-5">Полезные дискуссии и обсуждения с другими энтузиастами
 										программирования</p>
-									<img src="img/soc1al/left_block/talk.svg" alt="Иконка разговора" loading="lazy">
+									<img src="img/soc1al/left_block/talk.svg" alt="Иконка разговора">
 								</div>
 							</div>
 							<div class="card soc1al__card border-0 rounded-5">
 								<div class="card-body ">
 									<p class="card-text soc1al__text lh-sm mb-5">Информацию о наших событиях и конференциях, связанную с
 										программированием</p>
-									<img src="img/soc1al/left_block/message.svg" alt="Иконка сообщения" loading="lazy">
+									<img src="img/soc1al/left_block/message.svg" alt="Иконка сообщения">
 								</div>
 							</div>
 						</div>
@@ -1099,7 +1099,7 @@
 						class="link button btn btn-outline-primary rounded-pill fw-medium px-4 py-3">Задать вопрос</a>
 				</div>
 				<div class="col-md-12 col-lg-4 text-center ">
-					<img src="img/questions/comp.png" class="questions__img d-inline-block" alt="Задать вопрос" loading="lazy" />
+					<img src="img/questions/comp.png" class="questions__img d-inline-block" alt="Задать вопрос" />
 				</div>
 			</div>
 		</div>
@@ -1112,7 +1112,7 @@
 				<div class="col-12 col-md-4 col-lg-3  d-flex flex-column align-items-center">
 					<div class="footer__logo-wrapper d-flex gap-3 ">
 						<a href="index.html">
-							<img class="footer__logo" src="img/header/logo.svg" alt="Логотип IT-ПАРК" loading="lazy" />
+							<img class="footer__logo" src="img/header/logo.svg" alt="Логотип IT-ПАРК" />
 							<div class="footer__title  d-flex flex-column mb-3">
 								<span class="footer__title-text d-inline-block fw-bold">IТ-ПАРК</span>
 						</a>
@@ -1150,22 +1150,22 @@
 				<ul
 					class="footer__list d-md-flex flex-column gap-2 align-items-md-start d-flex align-items-center mb-md-0 mb-4 ps-0">
 					<li class="footer__item footer_gray">Связаться с нами</li>
-					<li class="footer__item"><a href="tel:+79532819045" target="_blank" class="footer__link">+7 (953)
+					<li class="footer__item"><a href="tel:+79532819045" target="_blank" class="footer__link footer__tel">+7 (953)
 							281-90-45</a>
 					</li>
 					<li class="footer__item"><a href="mailto:itpark.team@yandex.ru" target="_blank"
-							class="footer__link d-inline-block mb-2">itpark.team@yandex.ru</a>
+							class="footer__link d-inline-block mb-2 footer__mail">itpark.team@yandex.ru</a>
 					</li>
 					<li class="footer__item footer_gray mt-3">Или написать в мессенджерах</li>
 					<li class="footer__item d-flex gap-3">
-						<a href="https://t.me/itpark32" target="_blank" class="footer__link">
-							<img src="img/footer/social/telegram.svg" alt="Иконка Telegram" loading="lazy" />
+						<a href="https://t.me/amsmyslov" target="_blank" class="footer__link">
+							<img src="img/footer/social/telegram.svg" alt="Иконка Telegram" />
 						</a>
 						<a href="https://wa.me/79532819045" target="_blank" class="footer__link">
-							<img src="img/footer/social/whatsApp.svg" alt="Иконка WhatsApp" loading="lazy" />
+							<img src="img/footer/social/whatsApp.svg" alt="Иконка WhatsApp" />
 						</a>
-						<a href="https://vk.com/itpark32" target="_blank" class="footer__link">
-							<img src="img/footer/social/vk.svg" alt="Иконка VK" loading="lazy" />
+						<a href="https://vk.me/itpark32_official" target="_blank" class="footer__link">
+							<img src="img/footer/social/vk.svg" alt="Иконка VK" />
 						</a>
 					</li>
 				</ul>
@@ -1183,23 +1183,27 @@
 
 					<li class="footer__item mt-3">
 						<div class="footer__frame d-flex align-items-center justify-content-center gap-2  text-md-start px-3">
-							<img class="footer__img " src="img/footer/pay/verefication.svg" alt="Иконка безопасной передачи данных"
-								loading="lazy" />
+							<img class="footer__img " src="img/footer/pay/verefication.svg" alt="Иконка безопасной передачи данных" />
 							<span class="footer__span footer_gray d-inline-block">Безопасная <br> передача данных</span>
 						</div>
 					</li>
 
 					<li class="footer__item d-flex justify-content-between gap-4 mt-3">
-						<img src="img/footer/pay/visa.svg" alt="Иконка Visa" loading="lazy" />
-						<img src="img/footer/pay/mastercard.svg" alt="Иконка MasterCard" loading="lazy" />
-						<img src="img/footer/pay/mir.svg" alt="Иконка Мир" loading="lazy" />
+						<img src="img/footer/pay/visa.svg" alt="Иконка Visa" />
+						<img src="img/footer/pay/mastercard.svg" alt="Иконка MasterCard" />
+						<img src="img/footer/pay/mir.svg" alt="Иконка Мир" />
 					</li>
 				</ul>
 			</div>
 
 			<div class="row">
 				<div class="footer__rights-reserved footer_gray text-center">
-					<span class="footer__rights-reserved-text d-block ">© 2016-2024 IТ-ПАРК. Все права защищены.</span>
+					<span class="footer__site-dev-text d-block mb-2"><svg class="footer__site-dev-icon"
+							xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+							<path fill="#FFA500"
+								d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m-9 3h2v2h-2zm0 3h2v2h-2zM8 8h2v2H8zm0 3h2v2H8zm-1 2H5v-2h2zm0-3H5V8h2zm9 7H8v-2h8zm0-4h-2v-2h2zm0-3h-2V8h2zm3 3h-2v-2h2zm0-3h-2V8h2z" />
+						</svg> Сайт разработан командой IT-ПАРКа</span>
+					<span class="footer__rights-reserved-text d-block ">© 2012-2024 IТ-ПАРК. Все права защищены.</span>
 				</div>
 			</div>
 		</div>
@@ -1226,22 +1230,29 @@
 						<div class="modal__image-inner d-flex flex-column ">
 							<a target="_blank" href="https://wa.me/79532819045"
 								class="modal__link d-flex flex-column align-items-center justify-content-center gap-2">
-								<img class="modal__img" src="img/modal/whatsApp.png" alt="Логотип WhatsApp">
-								<span class=" modal__span d-inline-block">WhatsApp</span>
+								<img class="modal__img" src="img/modal/whaysApp.svg" alt="Логотип WhatsApp">
+								<span class=" modal__span d-inline-block text-dark">WhatsApp</span>
 							</a>
 						</div>
 						<div class="modal__image-inner d-flex flex-column ">
 							<a target="_blank" class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
 								href="https://vk.me/itpark32_official">
-								<img class="modal__img" src="img/modal/vk.png" alt="Логотип ВКонтакте">
-								<span class="modal__span d-inline-block">ВКонтакте</span>
+								<img class="modal__img" src="img/modal/vk.svg" alt="Логотип ВКонтакте">
+								<span class="modal__span d-inline-block text-dark">ВКонтакте</span>
 							</a>
 						</div>
 						<div class="modal__image-inner d-flex flex-column ">
 							<a target="_blank" class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
 								href=" https://t.me/amsmyslov">
-								<img class="modal__img" src="img/modal/tg.png" alt="Логотип Telegram">
-								<span class="modal__span d-inline-block">Telegram</span>
+								<img class="modal__img" src="img/modal/tg.svg" alt="Логотип Telegram">
+								<span class="modal__span d-inline-block text-dark">Telegram</span>
+							</a>
+						</div>
+						<div class="modal__image-inner d-flex flex-column ">
+							<a target="_blank" class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
+								href="tel:+79532819045">
+								<img class="modal__img" src="img/modal/phone.svg" alt="Логотип Телефон">
+								<span class="modal__span d-inline-block text-dark">Телефон</span>
 							</a>
 						</div>
 					</div>
@@ -1250,897 +1261,8 @@
 		</div>
 	</div>
 
-	<!-- starts modal-course-wrapper - обертка для очистки форм а также для удаления хещей из урла при закрытии модалок -->
-	<div class="modal-course-wrapper">
-		<!-- Modal description - разработка сайтов и веб-приложений-->
-		<div class="modal fade" id="webCourse" tabindex="-1" aria-labelledby="webCourseLabel" aria-hidden="true">
-			<div class="modal-dialog modal-xl">
-				<div class="modal-content modal__content-description rounded-5">
-					<div class="modal-header modal__header-description">
-						<h1 class="modal-title modal__header-title lh-base fw-bold pb-3" id="webCourseLabel">
-							Онлайн-курс «Разработка сайтов и веб-приложений»</h1>
-						<button type="button" class="btn-close modal__close-description" data-bs-dismiss="modal"
-							aria-label="Close"></button>
 
-					</div>
-					<div class="modal-body modal__body-description">
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Описание курса</h2>
-							<p class="modal__body-description-text lh-base mb-0">С нуля вы освоите профессию Fullstack
-								веб-разработчик.
-								Мы
-								научим вас верстать адаптивные сайты на HTML, CSS, разрабатывать современные веб-приложения с
-								использованием JavaScript, TypeScript и React, а также писать серверную часть на PHP, Laravel.</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Какие начальные знания требуются</h2>
-							<p class="modal__body-description-text lh-base mb-0">Обучение ведём с полного нуля. Единственное, что от
-								вас
-								требуется – это уверенное владение компьютером и работоспособность. Остальному мы вас научим.
-							</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Продолжительность обучения</h2>
-							<p class="modal__body-description-text lh-base mb-0">14 месяцев</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Старт курса</h2>
-							<p class="modal__body-description-text lh-base mb-0">1 сентября 2024 г.</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Можно ли присоединиться с середины курса?</h2>
-							<p class="modal__body-description-text lh-base mb-0">Да. Если у вас уже имеются базовые знания по
-								программе
-								курса, вы можете присоединиться позже. Оставляйте заявку на обучение в форме ниже, мы с вами свяжемся,
-								продиагностируем ваш уровень знаний и предложим подходящий вариант</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Формат обучения</h2>
-							<ul class="modal__body-list modal__body-description-text d-flex flex-column gap-2 ps-0"
-								style="margin-bottom: 0;">
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">1. Полноценное онлайн-занятие</h3>
-									<p class="lh-base">В конце недели мы проводим 2х-часовое онлайн-занятие в Discord. Это НЕ трансляция с
-										чатом и «немыми» собеседниками. Наши занятия - это полноценное живое общение в режиме реального
-										времени с одногруппникам и преподавателем. Вы вместе рассуждаете над поставленной задачей, вместе ее
-										решаете, предлагая свои варианты и обосновывая их, задаете интересующие вопросы и получаете
-										развернутые ответы на понятном человеческом языке. Все онлайн-встречи сохраняем в записи.</p>
-								</li>
-								<li class="modal__body-item pt-2">
-									<h3 class="d-inline-block mb-1">2. Лекционно-практический видеоматериал</h3>
-									<p class=" lh-base">В начале каждой новой недели выдаем 3х-часовые
-										видеоуроки на самостоятельное изучение базовой части. Это полноценные видеоуроки, состоящие на
-										20% из необходимой
-										теории и на 80% из практики.</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">3. Домашние задания и индивидуальные проекты</h3>
-									<p class="lh-base"> В течение недели вы прорешиваете заданное домашнее задание, закрепляя полученный
-										из уроков опыт. После освоения нового языка или технологии программирования вы выполняете
-										индивидуальный проект, представляющий собой реальное бизнес-приложение, интегрирующее в себе весь
-										полученный опыт по изученной технологии</p>
-								</li>
-
-
-								<li class="modal__body-item ">
-									<h3 class="d-inline-block mb-1">4. Круглосуточная поддержка 24/7</h3>
-									<p class="lh-base">Для каждой группы учащихся создается закрытый чат ВКонтакте, в котором вы всегда
-										имеете доступ к общению с одногруппниками и преподавателем. В этом чате мы размещаем все учебные
-										материалы, дополнительные материалы для расширения кругозора, а также видео-записи с онлайн-занятий.
-									</p>
-								</li>
-							</ul>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Программа обучения</h2>
-							<p class="modal__body-description-text lh-base mb-0">С полной версией программы обучения вы можете
-								ознакомиться
-								по ссылке <a target="_blank" class="d-inline-block"
-									href="https://docs.google.com/document/d/152LqW7gwkuSJZr6uJqYtCTh5btFiOcAfou5G4V9EqSA/edit#heading=h.8ncq0jv16ty5">Программа
-									обучения</a></p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Результаты по окончании обучения</h2>
-							<ul class="modal__body-list d-flex flex-column gap-2 p-2" style="margin-bottom: 0;">
-								<li class="modal__body-item pt-2">
-									<h3 class="d-inline-block mb-1">1. Вы освоили профессию:</h3>
-									<p class="lh-base">Fullstack-разработчик</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">2. В рамках профессии вы овладели этими специальностями: </h3>
-									<p class="lh-base modal__body-description-text-second">Верстальщик сайтов, Frontend-разработчик,
-										Backend-разработчик</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">3. Вы изучили такие технологии: </h3>
-									<p class=" lh-base modal__body-description-text-second">HTML, CSS + SCSS, Flexbox + Grid Layout, Git,
-										JavaScript, DOM, AJAX, RESTful API, Webpack + Vite, TypeScript, React, Redux, ООП, Jest, PHP, MySQL,
-										Laravel</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">4. Обрели навыки:</h3>
-									<p class=" lh-base modal__body-description-text-second">Работы в команде, адаптивной верстки сайтов,
-										разработки
-										и сборки приложений, тестирования кода, оптимизации загрузки и производительности, построения
-										архитектуры проектов, работы с базами данных, обеспечения безопасности данных и доступности
-										веб-сайтов, публикации и деплоя на сервер.</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">5. У вас в портфолио:</h3>
-									<p class=" lh-base modal__body-description-text-second">Целый ряд совместных и индивидуальных
-										проектов,
-										максимально приближенных к реальным бизнес-задачам, а также фирменный сертификат, подтверждающий
-										успешное освоение программы обучения</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">6. На рынке труда вы можете претендовать на вакансии:</h3>
-									<p class=" lh-base modal__body-description-text-second">
-										Верстальщик сайтов (60-90к/₽)
-										<br>Frontend-разработчик (90-150к/₽)
-										<br>Backend-разработчик (90-150к/₽) <br>Fullstack-разработчик (120-200к/₽)
-									</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">7. А еще вы узнали:</h3>
-									<p class="modal__body-description-text lh-base mb-0">Как правильно составить успешное резюме, как
-										общаться и
-										презентовать себя на всех
-										этапах собеседования, как подготовиться к интервью и что необходимо знать, как и где искать работу,
-										как получать больше откликов, как проходить через фильтры hr-специалистов и многое другое.</p>
-								</li>
-							</ul>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Стоимость обучения</h2>
-							<p class="modal__body-description-text lh-base mb-0">1500 ₽/неделя</p>
-						</div>
-					</div>
-
-					<div class="modal-footer modal__footer text-light  rounded-5 pb-4">
-						<h2 class="modal__footer-title h4 mb-3">Записаться на курс</h2>
-						<hr>
-						<p class="modal__footer-text lh-base my-3">1. Для
-							этого выберите любой удобный мессенджер <br>2. Просто
-							напишите: "Хочу на курс по разработке сайтов"<br>3. Мы обязательно
-							свяжемся с вами и уточним всю
-							интересующую информацию<br>
-							4. Пригласим на беспллатное пробное занятие, где вы лично сможете оценить качество нашего обучения,
-							понять,
-							как будут проходить ваши занятия, а также задать все интересующие вас вопросы. Если все понравится,
-							добро пожаловать на курс</p>
-						<hr>
-						<div class="modal__image-wrapper d-flex gap-1 gap-sm-3 mt-4">
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://vk.me/itpark32_official?message=Здравствуйте! Я хочу записаться на курс "Разработка сайтов и веб-приложений"'>
-									<img class="modal__img" src="img/modal/vk.png" alt="Логотип ВКонтакте">
-									<span class="modal__span d-inline-block">ВКонтакте</span>
-								</a>
-							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://t.me/amsmyslov?text=Здравствуйте! Я хочу записаться на курс "Разработка сайтов и веб-приложений"'>
-									<img class="modal__img" src="img/modal/tg.png" alt="Логотип Telegram">
-									<span class="modal__span d-inline-block">Telegram</span>
-								</a>
-							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									href='https://wa.me/79532819045?text=Здравствуйте! Я хочу записаться на курс "Разработка сайтов и веб-приложений"'
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2">
-									<img class="modal__img" src="img/modal/whatsApp.png" alt="Логотип WhatsApp">
-									<span class=" modal__span d-inline-block">WhatsApp</span>
-								</a>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Modal description - серверное программирование на java-->
-		<div class="modal fade" id="javaCourse" tabindex="-1" aria-labelledby="javaCourseLabel" aria-hidden="true">
-			<div class="modal-dialog modal-xl">
-				<div class="modal-content modal__content-description rounded-5">
-					<div class="modal-header modal__header-description">
-						<h1 class="modal-title modal__header-title lh-base fw-bold pb-3" id="javaCourseLabel">
-							Онлайн-курс «Серверное программирование на Java (16+)»</h1>
-						<button type="button" class="btn-close modal__close-description" data-bs-dismiss="modal"
-							aria-label="Close"></button>
-
-					</div>
-					<div class="modal-body modal__body-description">
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Описание курса</h2>
-							<p class="modal__body-description-text lh-base mb-0">С нуля вы освоите профессию Java Backend разработчик.
-								Мы научим вас создавать
-								Чат-ботов для Telegram на Java с использованием библиотеки telegrambots и базы данных PostgreSQL, также
-								загрузим чат-ботов на выделенный сервер для автономной работы с использованием Docker. Вы сможете
-								разрабатывать серверную часть приложений, которая позволяет функционировать сложным приложениям, таким
-								как
-								СбербанкОнлайн, Тинькофф, ВкусВилл с использованием технологий Spring Boot, Hibernate. Также подключите
-								к
-								своей серверной части S3 хранилище, Redis, Kafka построите микросервисную архитектуру с использованием
-								паттерна SAGA, сделаете веб-приложение на React для взаимодействия с серверной частью и опубликуете эти
-								технологии на VPS с использованием Kubernetes.
-							</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Какие начальные знания требуются</h2>
-							<p class="modal__body-description-text lh-base mb-0">Обучение ведём с полного нуля. Единственное, что от
-								вас
-								требуется – это уверенное владение компьютером и работоспособность. Остальному мы вас научим.
-							</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Продолжительность обучения</h2>
-							<p class="modal__body-description-text lh-base mb-0">14 месяцев</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Старт курса</h2>
-							<p class="modal__body-description-text lh-base mb-0">1 сентября 2024 г.</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Можно ли присоединиться с середины курса?</h2>
-							<p class="modal__body-description-text lh-base mb-0">Да. Если у вас уже имеются базовые знания по
-								программе
-								курса, вы можете присоединиться позже. Оставляйте заявку на обучение в форме ниже, мы с вами свяжемся,
-								продиагностируем ваш уровень знаний и предложим подходящий вариант</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Формат обучения</h2>
-							<ul class="modal__body-list modal__body-description-text d-flex flex-column gap-2 ps-0"
-								style="margin-bottom: 0;">
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">1. Полноценное онлайн-занятие</h3>
-									<p class="lh-base">В конце недели мы проводим 2х-часовое онлайн-занятие в Discord. Это НЕ трансляция с
-										чатом и «немыми» собеседниками. Наши занятия - это полноценное живое общение в режиме реального
-										времени с одногруппникам и преподавателем. Вы вместе рассуждаете над поставленной задачей, вместе ее
-										решаете, предлагая свои варианты и обосновывая их, задаете интересующие вопросы и получаете
-										развернутые ответы на понятном человеческом языке. Все онлайн-встречи сохраняем в записи.</p>
-								</li>
-								<li class="modal__body-item pt-2">
-									<h3 class="d-inline-block mb-1">2. Лекционно-практический видеоматериал</h3>
-									<p class=" lh-base">В начале каждой новой недели выдаем 2х-часовые видеоуроки на самостоятельное
-										изучение базовой части. Это полноценные видеоуроки, состоящие на 20% из необходимой теории и на 80%
-										из
-										практики.</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">3. Домашние задания и индивидуальные проекты</h3>
-									<p class="lh-base"> В течение недели вы прорешиваете заданное домашнее задание, закрепляя полученный
-										из
-										уроков опыт. После освоения нового языка или технологии программирования вы выполняете
-										индивидуальный
-										проект, представляющий собой реальное бизнес-приложение, интегрирующее в себе весь полученный опыт
-										по
-										изученной технологии</p>
-								</li>
-								<li class="modal__body-item ">
-									<h3 class="d-inline-block mb-1">4. Круглосуточная поддержка 24/7</h3>
-									<p class="lh-base">Для каждой группы учащихся создается закрытый чат ВКонтакте, в котором вы всегда
-										имеете доступ к общению с одногруппниками и преподавателем. В этом чате мы размещаем все учебные
-										материалы, дополнительные материалы для расширения кругозора, а также видео-записи с онлайн-занятий.
-									</p>
-								</li>
-							</ul>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Программа обучения</h2>
-							<p class="modal__body-description-text lh-base mb-0">С полной версией программы обучения вы можете
-								ознакомиться
-								по ссылке <a target="_blank" class="d-inline-block"
-									href="https://docs.google.com/document/d/1XzXfkfV17tQODHzFVey6L6ew3lgaNQ7ez1xuvi6gel0">Программа
-									обучения</a></p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Результаты по окончании обучения</h2>
-							<ul class="modal__body-list d-flex flex-column gap-2 p-2" style="margin-bottom: 0;">
-								<li class="modal__body-item pt-2">
-									<h3 class="d-inline-block mb-1">1. Вы освоили профессию:</h3>
-									<p class="lh-base">Java Backend разработчик</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">2. В рамках профессии вы овладели этими специальностями: </h3>
-									<p class="lh-base modal__body-description-text-second">Java программист, Администратор PostgreSQL,
-										Тестировщик/QA инженер</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">3. Вы изучили такие технологии: </h3>
-									<p class=" lh-base modal__body-description-text-second">Java Core, ООП, Git, PostgreSQL, Maven,
-										telegrambots, Spring Boot, RESTful API, Hibernate, JavaScript, React, Redis, Kafka, S3, Docker,
-										Kubernetes</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">4. Обрели навыки:</h3>
-									<p class=" lh-base modal__body-description-text-second">Работы в команде, разработки и сборки
-										приложений, тестирования кода, оптимизации производительности, построения архитектуры проектов,
-										работы
-										с базами данных, обеспечения безопасности данных и доступности серверной части приложений,
-										публикации
-										и деплоя на сервер.</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">5. У вас в портфолио:</h3>
-									<p class=" lh-base modal__body-description-text-second">Целый ряд совместных и индивидуальных
-										проектов,
-										максимально приближенных к реальным бизнес-задачам, а также фирменный сертификат, подтверждающий
-										успешное освоение программы обучения</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">6. На рынке труда вы можете претендовать на вакансии:</h3>
-									<p class=" lh-base modal__body-description-text-second">
-										Java разработчик (70-90к ₽ на старте и 150-200к ₽ с опытом работы от 1 года)
-										<br>Администратор БД PostgreSQL (60-200к ₽)
-										<br>Тестировщик/QA инженер (60-120к ₽)
-									</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">7. А еще вы узнали:</h3>
-									<p class="modal__body-description-text lh-base mb-0">Как правильно составить успешное резюме, как
-										общаться и презентовать себя на всех этапах собеседования, как подготовиться к интервью и что
-										необходимо знать, как и где искать работу, как получать больше откликов, как проходить через фильтры
-										hr-специалистов и многое другое.</p>
-								</li>
-							</ul>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Стоимость обучения</h2>
-							<p class="modal__body-description-text lh-base mb-0">1500 ₽/неделя</p>
-						</div>
-					</div>
-
-					<div class="modal-footer modal__footer text-light  rounded-5 pb-4">
-						<h2 class="modal__footer-title h4 mb-3">Записаться на курс</h2>
-						<hr>
-						<p class="modal__footer-text lh-base my-3">1. Для
-							этого выберите любой удобный мессенджер <br>2. Просто
-							напишите: "Хочу на курс по Java"<br>3. Мы обязательно
-							свяжемся с вами и уточним всю
-							интересующую информацию<br>
-							4. Пригласим на беспллатное пробное занятие, где вы лично сможете оценить качество нашего обучения,
-							понять,
-							как будут проходить ваши занятия, а также задать все интересующие вас вопросы. Если все понравится,
-							добро пожаловать на курс</p>
-						<hr>
-						<div class="modal__image-wrapper d-flex gap-1 gap-sm-3 mt-4">
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://vk.me/itpark32_official?message=Здравствуйте! Я хочу записаться на курс "Серверное программирование на Java"'>
-									<img class="modal__img" src="img/modal/vk.png" alt="Логотип ВКонтакте">
-									<span class="modal__span d-inline-block">ВКонтакте</span>
-								</a>
-							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://t.me/amsmyslov?text=Здравствуйте! Я хочу записаться на курс "Серверное программирование на Java"'>
-									<img class="modal__img" src="img/modal/tg.png" alt="Логотип Telegram">
-									<span class="modal__span d-inline-block">Telegram</span>
-								</a>
-							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									href='https://wa.me/79532819045?text=Здравствуйте! Я хочу записаться на курс "Серверное программирование на Java"'
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2">
-									<img class="modal__img" src="img/modal/whatsApp.png" alt="Логотип WhatsApp">
-									<span class=" modal__span d-inline-block">WhatsApp</span>
-								</a>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Modal description - js react-->
-		<div class="modal fade" id="frontendCourse" tabindex="-1" aria-labelledby="frontendCourseLabel" aria-hidden="true">
-			<div class="modal-dialog modal-xl">
-				<div class="modal-content modal__content-description rounded-5">
-					<div class="modal-header modal__header-description">
-						<h1 class="modal-title modal__header-title lh-base fw-bold pb-3" id="frontendCourseLabel">
-							Онлайн-курс «Фронтенд-разработка на JavaScript и React»</h1>
-						<button type="button" class="btn-close modal__close-description" data-bs-dismiss="modal"
-							aria-label="Close"></button>
-
-					</div>
-					<div class="modal-body modal__body-description">
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Описание курса</h2>
-							<p class="modal__body-description-text lh-base mb-0">Вы освоите профессию Frontend-разработчик. Изучите
-								основной язык фронтенда JavaScript. Мы научим вас разрабатывать современные веб-приложения с
-								использованием TypeScript, React, Redux Toolkit
-							</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Какие начальные знания требуются</h2>
-							<p class="modal__body-description-text lh-base mb-0">Для успешного освоения курса вам необходимы базовые
-								знания HTML и CSS
-							</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Продолжительность обучения</h2>
-							<p class="modal__body-description-text lh-base mb-0">12 месяцев</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Старт курса</h2>
-							<p class="modal__body-description-text lh-base mb-0">1 сентября 2024 г.</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Можно ли присоединиться с середины курса?</h2>
-							<p class="modal__body-description-text lh-base mb-0">Да. Если у вас уже имеются базовые знания по
-								программе
-								курса, вы можете присоединиться позже. Оставляйте заявку на обучение в форме ниже, мы с вами свяжемся,
-								продиагностируем ваш уровень знаний и предложим подходящий вариант</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Формат обучения</h2>
-							<ul class="modal__body-list modal__body-description-text d-flex flex-column gap-2 ps-0"
-								style="margin-bottom: 0;">
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">1. Полноценное онлайн-занятие</h3>
-									<p class="lh-base">В конце недели мы проводим 2х-часовое онлайн-занятие в Discord. Это НЕ трансляция с
-										чатом и «немыми» собеседниками. Наши занятия - это полноценное живое общение в режиме реального
-										времени с одногруппникам и преподавателем. Вы вместе рассуждаете над поставленной задачей, вместе ее
-										решаете, предлагая свои варианты и обосновывая их, задаете интересующие вопросы и получаете
-										развернутые ответы на понятном человеческом языке. Все онлайн-встречи сохраняем в записи.</p>
-								</li>
-								<li class="modal__body-item pt-2">
-									<h3 class="d-inline-block mb-1">2. Лекционно-практический видеоматериал</h3>
-									<p class=" lh-base">В начале каждой новой недели выдаем 3х-часовые видеоуроки на самостоятельное
-										изучение базовой части. Это полноценные видеоуроки, состоящие на 20% из необходимой теории и на 80%
-										из
-										практики.</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">3. Домашние задания и индивидуальные проекты</h3>
-									<p class="lh-base"> В течение недели вы прорешиваете заданное домашнее задание, закрепляя полученный
-										из
-										уроков опыт. После освоения нового языка или технологии программирования вы выполняете
-										индивидуальный
-										проект, представляющий собой реальное бизнес-приложение, интегрирующее в себе весь полученный опыт
-										по
-										изученной технологии</p>
-								</li>
-								<li class="modal__body-item ">
-									<h3 class="d-inline-block mb-1">4. Круглосуточная поддержка 24/7</h3>
-									<p class="lh-base">Для каждой группы учащихся создается закрытый чат ВКонтакте, в котором вы всегда
-										имеете доступ к общению с одногруппниками и преподавателем. В этом чате мы размещаем все учебные
-										материалы, дополнительные материалы для расширения кругозора, а также видео-записи с онлайн-занятий.
-									</p>
-								</li>
-							</ul>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Программа обучения</h2>
-							<p class="modal__body-description-text lh-base mb-0">С полной версией программы обучения вы можете
-								ознакомиться
-								по ссылке <a target="_blank" class="d-inline-block"
-									href="https://docs.google.com/document/d/1UEk1NZ2J8ySoG9hGx5BgYYPfkhXF6ehAxgu8SUM8b1g">Программа
-									обучения</a></p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Результаты по окончании обучения</h2>
-							<ul class="modal__body-list d-flex flex-column gap-2 p-2" style="margin-bottom: 0;">
-								<li class="modal__body-item pt-2">
-									<h3 class="d-inline-block mb-1">1. Вы освоили профессию:</h3>
-									<p class="lh-base">Frontend-разработчик</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">2. Вы изучили такие технологии: </h3>
-									<p class=" lh-base modal__body-description-text-second">JavaScript, DOM, AJAX, RESTful API, Webpack +
-										Vite, TypeScript, React, Routing, JSX, Redux Toolkit, AsyncThunk, Jest, React Testing Library</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">3. Обрели навыки:</h3>
-									<p class=" lh-base modal__body-description-text-second">Работы в команде, разработки и сборки
-										приложений, тестирования кода, типизации данныхоптимизации загрузки и производительности, построения
-										архитектуры проектов, взаимодействия с серверной частью, обеспечения безопасности данных и
-										доступности
-										веб-сайтов, публикации и деплоя на сервер.</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">4. У вас в портфолио:</h3>
-									<p class=" lh-base modal__body-description-text-second">Целый ряд совместных и индивидуальных
-										проектов,
-										максимально приближенных к реальным бизнес-задачам, а также фирменный сертификат, подтверждающий
-										успешное освоение программы обучения</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">5. На рынке труда вы можете претендовать на вакансии:</h3>
-									<p class=" lh-base modal__body-description-text-second">
-										Верстальщик сайтов (60-90к/₽)
-										<br>Frontend-разработчик (90-150к/₽)
-									</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">6. А еще вы узнали:</h3>
-									<p class="modal__body-description-text lh-base mb-0">Как правильно составить успешное резюме, как
-										общаться и презентовать себя на всех этапах собеседования, как подготовиться к интервью и что
-										необходимо знать, как и где искать работу, как получать больше откликов, как проходить через фильтры
-										hr-специалистов и многое другое.</p>
-								</li>
-							</ul>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Дополнительные опции</h2>
-							<p class="modal__body-description-text lh-base mb-0">При желании по окончании курса «Frontend-разработчик»
-								для повышения своих навыков и стоимости оплаты вашего труда вы можете остаться у нас на обучение на курс
-								«Backend-разработчик на PHP». Ознакомиться с программой обучения можно по <a class="d-inline-block"
-									href="https://docs.google.com/document/d/1khAoX97js0iIUC2pBwtzpBYkT3Ig99TrbjcQ64tXFIc/"
-									target="_blank" rel="noopener noreferrer">ссылке</a></p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Стоимость обучения</h2>
-							<p class="modal__body-description-text lh-base mb-0">1500 ₽/неделя</p>
-						</div>
-					</div>
-
-					<div class="modal-footer modal__footer text-light  rounded-5 pb-4">
-						<h2 class="modal__footer-title h4 mb-3">Записаться на курс</h2>
-						<hr>
-						<p class="modal__footer-text lh-base my-3">1. Для
-							этого выберите любой удобный мессенджер <br>2. Просто
-							напишите: "Хочу на курс по Фронтенду"<br>3. Мы обязательно
-							свяжемся с вами и уточним всю
-							интересующую информацию<br>
-							4. Пригласим на беспллатное пробное занятие, где вы лично сможете оценить качество нашего обучения,
-							понять,
-							как будут проходить ваши занятия, а также задать все интересующие вас вопросы. Если все понравится,
-							добро пожаловать на курс</p>
-						<hr>
-						<div class="modal__image-wrapper d-flex gap-1 gap-sm-3 mt-4">
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://vk.me/itpark32_official?message=Здравствуйте! Я хочу записаться на курс "Фронтенд-разработка на JavaScript и React"'>
-									<img class="modal__img" src="img/modal/vk.png" alt="Логотип ВКонтакте">
-									<span class="modal__span d-inline-block">ВКонтакте</span>
-								</a>
-							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://t.me/amsmyslov?text=Здравствуйте! Я хочу записаться на курс "Фронтенд-разработка на JavaScript и React"'>
-									<img class="modal__img" src="img/modal/tg.png" alt="Логотип Telegram">
-									<span class="modal__span d-inline-block">Telegram</span>
-								</a>
-							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									href='https://wa.me/79532819045?text=Здравствуйте! Я хочу записаться на курс "Фронтенд-разработка на JavaScript и React"'
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2">
-									<img class="modal__img" src="img/modal/whatsApp.png" alt="Логотип WhatsApp">
-									<span class=" modal__span d-inline-block">WhatsApp</span>
-								</a>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Modal description - tgJavaCourse -->
-		<div class="modal fade" id="tgJavaCourse" tabindex="-1" aria-labelledby="tgJavaCourseLabel" aria-hidden="true">
-			<div class="modal-dialog modal-xl">
-				<div class="modal-content modal__content-description rounded-5">
-					<div class="modal-header modal__header-description">
-						<h1 class="modal-title modal__header-title lh-base fw-bold pb-3" id="tgJavaCourseLabel">
-							Онлайн-курс “Разработка Telegram ботов на Java”</h1>
-						<button type="button" class="btn-close modal__close-description" data-bs-dismiss="modal"
-							aria-label="Close"></button>
-
-					</div>
-					<div class="modal-body modal__body-description">
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Описание курса</h2>
-							<p class="modal__body-description-text lh-base mb-0">С нуля вы освоите профессию Java разработчик. Мы
-								научим
-								вас создавать Чат-ботов для Telegram на Java с использованием библиотеки telegrambots и базы данных
-								PostgreSQL, также загрузим чат-ботов на выделенный сервер для автономной работы с использованием Docker.
-							</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Какие начальные знания требуются</h2>
-							<p class="modal__body-description-text lh-base mb-0">Для успешного освоения курса вам необходимы базовые
-								знания алгоритмики на Java (переменные, условия, циклы, процедуры, функции) и знание ООП на Java
-							</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Продолжительность обучения</h2>
-							<p class="modal__body-description-text lh-base mb-0">4 месяца</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Старт курса</h2>
-							<p class="modal__body-description-text lh-base mb-0">15 июля 2024 г.</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Можно ли присоединиться с середины курса?</h2>
-							<p class="modal__body-description-text lh-base mb-0">Да. Если у вас уже имеются базовые знания по
-								программе
-								курса, вы можете присоединиться позже. Оставляйте заявку на обучение в форме ниже, мы с вами свяжемся,
-								продиагностируем ваш уровень знаний и предложим подходящий вариант</p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Формат обучения</h2>
-							<ul class="modal__body-list modal__body-description-text d-flex flex-column gap-2 ps-0"
-								style="margin-bottom: 0;">
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">1. Полноценное онлайн-занятие</h3>
-									<p class="lh-base">В конце недели мы проводим 2х-часовое онлайн-занятие в Discord. Это НЕ трансляция с
-										чатом и «немыми» собеседниками. Наши занятия - это полноценное живое общение в режиме реального
-										времени с одногруппникам и преподавателем. Вы вместе рассуждаете над поставленной задачей, вместе ее
-										решаете, предлагая свои варианты и обосновывая их, задаете интересующие вопросы и получаете
-										развернутые ответы на понятном человеческом языке. Все онлайн-встречи сохраняем в записи.</p>
-								</li>
-								<li class="modal__body-item pt-2">
-									<h3 class="d-inline-block mb-1">2. Лекционно-практический видеоматериал</h3>
-									<p class=" lh-base">В начале каждой новой недели выдаем 3х-часовые видеоуроки на самостоятельное
-										изучение базовой части. Это полноценные видеоуроки, состоящие на 20% из необходимой теории и на 80%
-										из
-										практики.</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">3. Домашние задания и индивидуальные проекты</h3>
-									<p class="lh-base"> В течение недели вы прорешиваете заданное домашнее задание, закрепляя полученный
-										из
-										уроков опыт. После освоения нового языка или технологии программирования вы выполняете
-										индивидуальный
-										проект, представляющий собой реальное бизнес-приложение, интегрирующее в себе весь полученный опыт
-										по
-										изученной технологии</p>
-								</li>
-								<li class="modal__body-item ">
-									<h3 class="d-inline-block mb-1">4. Круглосуточная поддержка 24/7</h3>
-									<p class="lh-base">Для каждой группы учащихся создается закрытый чат ВКонтакте, в котором вы всегда
-										имеете доступ к общению с одногруппниками и преподавателем. В этом чате мы размещаем все учебные
-										материалы, дополнительные материалы для расширения кругозора, а также видео-записи с онлайн-занятий.
-									</p>
-								</li>
-							</ul>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Программа обучения</h2>
-							<p class="modal__body-description-text lh-base mb-0">С полной версией программы обучения вы можете
-								ознакомиться
-								по ссылке <a target="_blank" class="d-inline-block"
-									href="https://docs.google.com/document/d/1W5tN-8wK15kU_Ddb5ux2LfgkgA0x35ZWs6lw5dOtmxo">Программа
-									обучения</a></p>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Результаты по окончании обучения</h2>
-							<ul class="modal__body-list d-flex flex-column gap-2 p-2" style="margin-bottom: 0;">
-								<li class="modal__body-item pt-2">
-									<h3 class="d-inline-block mb-1">1. Вы освоили профессию:</h3>
-									<p class="lh-base">Java разработчик</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">2. В рамках профессии вы овладели этими специальностями: </h3>
-									<p class=" lh-base modal__body-description-text-second">Java программист, Администратор PostgreSQL</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">3. Вы изучили такие технологии:</h3>
-									<p class=" lh-base modal__body-description-text-second">Java Core, ООП, Git, PostgreSQL, Maven,
-										telegrambots, Docker</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">4. Обрели навыки:</h3>
-									<p class=" lh-base modal__body-description-text-second">Работы в команде, разработки и сборки
-										приложений, тестирования кода, оптимизации производительности, построения архитектуры проектов,
-										работы
-										с базами данных, обеспечения безопасности данных и доступности серверной части приложений,
-										публикации
-										и деплоя на сервер.</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">5. У вас в портфолио:</h3>
-									<p class=" lh-base modal__body-description-text-second">
-										Целый ряд совместных и индивидуальных проектов, максимально приближенных к реальным бизнес-задачам,
-										а
-										также фирменный сертификат, подтверждающий успешное освоение программы обучения
-									</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">6. На рынке труда вы можете претендовать на вакансии:</h3>
-									<p class="modal__body-description-text-second lh-base">Java разработчик (70-90к ₽ на старте и 150-200к
-										₽
-										с опытом работы от 1 года)
-										<br>Администратор БД PostgreSQL (60-200к ₽)
-									</p>
-								</li>
-								<li class="modal__body-item">
-									<h3 class="d-inline-block mb-1">7. А еще вы узнали:</h3>
-									<p class="modal__body-description-text lh-base mb-0">Как правильно составить успешное резюме, как
-										общаться и презентовать себя на всех этапах собеседования, как подготовиться к интервью и что
-										необходимо знать, как и где искать работу, как получать больше откликов, как проходить через фильтры
-										hr-специалистов и многое другое.</p>
-								</li>
-							</ul>
-						</div>
-						<div>
-							<h2 class="modal__body-title h4 fw-bold">Стоимость обучения</h2>
-							<p class="modal__body-description-text lh-base mb-0">1500 ₽/неделя</p>
-						</div>
-					</div>
-
-					<div class="modal-footer modal__footer text-light  rounded-5 pb-4">
-						<h2 class="modal__footer-title h4 mb-3">Записаться на курс</h2>
-						<hr>
-						<p class="modal__footer-text lh-base my-3">1. Для
-							этого выберите любой удобный мессенджер <br>2. Просто
-							напишите: "Хочу на курс по ботам на Java"<br>3. Мы обязательно
-							свяжемся с вами и уточним всю
-							интересующую информацию<br>
-							4. Пригласим на беспллатное пробное занятие, где вы лично сможете оценить качество нашего обучения,
-							понять,
-							как будут проходить ваши занятия, а также задать все интересующие вас вопросы. Если все понравится,
-							добро пожаловать на курс</p>
-						<hr>
-						<div class="modal__image-wrapper d-flex gap-1 gap-sm-3 mt-4">
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://vk.me/itpark32_official?message=Здравствуйте! Я хочу записаться на курс "Разработка Telegram ботов на Java"'>
-									<img class="modal__img" src="img/modal/vk.png" alt="Логотип ВКонтакте">
-									<span class="modal__span d-inline-block">ВКонтакте</span>
-								</a>
-							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2"
-									href='https://t.me/amsmyslov?text=Здравствуйте! Я хочу записаться на курс "Разработка Telegram ботов на Java"'>
-									<img class="modal__img" src="img/modal/tg.png" alt="Логотип Telegram">
-									<span class="modal__span d-inline-block">Telegram</span>
-								</a>
-							</div>
-							<div class="modal__image-inner d-flex flex-column ">
-								<a target="_blank"
-									href='https://wa.me/79532819045?text=Здравствуйте! Я хочу записаться на курс "Разработка Telegram ботов на Java"'
-									class="modal__link d-flex flex-column align-items-center justify-content-center gap-2">
-									<img class="modal__img" src="img/modal/whatsApp.png" alt="Логотип WhatsApp">
-									<span class=" modal__span d-inline-block">WhatsApp</span>
-								</a>
-							</div>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<!-- Modal description - demo lesson form-->
-		<div class="modal fade modal-course" id="demoLessonModalForm" tabindex="-1"
-			aria-labelledby="demoLessonModalFormLabel" aria-hidden="true">
-			<div class="modal-dialog modal-xl">
-				<div class="modal-content modal__content-description rounded-5">
-					<div class="modal-header modal__header-description">
-						<h1 class="modal-title modal__header-title lh-base fw-bold pb-3" id="demoLessonModalForm">
-							Оставить заявку на обучение профессии</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-					</div>
-
-					<div class="modal-footer modal__footer text-light  rounded-5 pt-0">
-						<p class="modal__footer-text lh-base pb-3 mb-3">Оставьте заявку на беспллатное пробное занятие. Мы
-							обязательно
-							свяжемся с вами и уточним всю интересующую информацию</p>
-						<form class="modal__footer-form" method="post">
-							<div class="col-12">
-								<label class="d-flex flex-column gap-2" for="name">Как вас зовут?
-									<input class="form-control mb-4 mt-2" type="text" name="name" id="name" placeholder="Введите ваше имя"
-										maxlength="100" required>
-								</label>
-
-								<label class="d-flex flex-column gap-2" for="name">Выберите курс
-									<select name="course" class="form-select form-select-lg mb-4 mt-2">
-										<option selected>Выберите один из вариантов</option>
-										<option value="Разработка сайтов и веб-приложений">Разработка сайтов и веб-приложений</option>
-										<option value="Серверное программирование на Java">Серверное программирование на Java</option>
-										<option value="Фронтенд-разработка на JavaScript и React">Фронтенд-разработка на JavaScript и React
-										</option>
-										<option value="Разработка Telegram ботов на Java">Разработка Telegram ботов на Java</option>
-									</select>
-								</label>
-								<p class="modal__footer-text lh-base ">Выберите любой удобный способ связи и заполните поле с контактом
-								</p>
-							</div>
-
-							<div
-								class="modal__footer-contacts col-12 d-flex flex-column d-lg-flex flex-lg-row gap-4 gap-lg-3 gap-xl-0">
-								<div class="col-12 col-lg-6 d-flex flex-column gap-4 ">
-									<div class="d-flex align-items-center gap-4">
-										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
-											<img src="img/modalDescription/whatsApp.png" alt="Логотип WhatsApp" loading="lazy">
-											<label class="modal__footer-form-label d-flex flex-column align-items-center"
-												for="phone">WhatsApp</label>
-										</div>
-										<input class="form-control modal__footer-form-input" type="text" name="whatsApp" id="whatsApp"
-											placeholder="Введите номер или ссылку на профиль" maxlength="100">
-									</div>
-
-									<div class="d-flex align-items-center gap-4">
-										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
-											<img src="img/modalDescription/tg.png" alt="Логотип Telegram" loading="lazy">
-											<label class="modal__footer-form-label d-flex flex-column align-items-center"
-												for="telegram">Telegram</label>
-										</div>
-										<input class="form-control modal__footer-form-input" type="text" name="telegram" id="telegram"
-											placeholder="Введите номер или ссылку на профиль" maxlength="100">
-									</div>
-								</div>
-
-								<div class="col-12 col-lg-6 d-flex flex-column gap-4 ">
-									<div class="d-flex align-items-center gap-4 align-self-xl-end">
-										<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
-											<img src="img/modalDescription/vk.png" alt="Логотип ВКонтакте" loading="lazy">
-											<label class="modal__footer-form-label d-flex flex-column align-items-center"
-												for="vk">ВКонтакте</label>
-										</div>
-										<input class="form-control modal__footer-form-input" type="text" name="vk" id="vk"
-											placeholder="Введите номер или ссылку на профиль" maxlength="100">
-									</div>
-
-									<div class="d-flex align-items-center gap-4 align-self-xl-end">
-										<div class="d-flex flex-column align-items-center gap-2" style="min-width: 54px;">
-											<img src="img/modalDescription/tel.png" alt="Логотип телефона" loading="lazy">
-											<label class="modal__footer-form-label d-flex flex-column align-items-center"
-												for="telephone">Телефон</label>
-										</div>
-										<input class="form-control modal__footer-form-input" type="tel" name="telephone" id="telephone"
-											placeholder="Введите номер телефона" maxlength="100">
-									</div>
-								</div>
-							</div>
-
-							<div class="form-floating col-12 d-flex flex-column gap-3">
-								<div>
-									<label for="floatingTextarea" class="lh-base">Ваш комментарий или вопрос (при необходимости)</label>
-								</div>
-								<div>
-									<textarea class="form-control" name="question" placeholder="Оставить комментарий"
-										id="floatingTextarea"></textarea>
-								</div>
-							</div>
-
-
-							<div class="modal__footer-btn-wrapper d-flex flex-column gap-3 pt-4 ">
-								<div class="form-check mb-3">
-
-									<label class="form-check-label d-flex align-items-center d-lg-flex align-items-lg-end">
-										<input class="modal__footer-check form-check-input d-flex align-self-start"
-											style="width: 20px;height: 20px;" type="checkbox" id="frontendCheck" checked required>
-										<label for="frontendCheck" class="d-inline-block px-3 lh-sm modal__footer-label-text">Отправляя
-											форму, вы соглашаетесь на <a href="assets/confidentiality.pdf" target="_blank">обработку
-												персональных данных
-											</a></label>
-									</label>
-								</div>
-								<button type="submit"
-									class="modal__footer-btn button btn btn-primary rounded-pill fw-medium px-4 py-3  d-flex align-items-center justify-content-center align-self-lg-start">
-									<label class="modal__footer-btn-text">Записаться на обучение</label>
-									<span class="modal__footer-loader spinner-border spinner-border ms-3 mb-2 d-none"
-										aria-hidden="true"></span>
-								</button>
-							</div>
-						</form>
-
-						<!-- Обертка для блокировки UI во время запроса -->
-						<div class="modal__footer-loader-wrapper d-none"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end modal-course-wrapper  -->
-
-	<!-- Modal approval application -->
+	<!-- Modal Thsnkyou application -->
 	<div class="modal" tabindex="-1" id="thankYou">
 		<div class="modal-dialog modal-dialog-centered modal-lg">
 			<div
@@ -2158,21 +1280,21 @@
 				<div class="modal-body d-flex flex-column align-items-center justify-content-center p-0">
 					<span class="d-block text-center fw-bold mb-2 modalApp__body-span">Спасибо!</span>
 
-					<p class="modalApp__body-text lh-sm text-center mb-0 px-2 al">Заявка оформлена. Мы свяжемся с вами в
-						ближайшее
-						время! А&nbsp;пока можете заглянуть к нам в соцсети или <a class="text-decoration-underline mb-3"
-							href="https://vk.com/topic-58525095_28834899" target="_blank">почитать отзывы </a>
+					<p class="modalApp__body-text lh-sm text-center mb-0 px-2 al">Заявка оформлена. Мы вышлем вам запись закрытого
+						вебинара в ближайшее время! А&nbsp;пока можете заглянуть к нам в соцсети или <a
+							class="text-decoration-underline mb-3" href="https://vk.com/topic-58525095_28834899"
+							target="_blank">почитать отзывы </a>
 					</p>
 				</div>
 				<div class="modal-footer border-0 p-0 d-flex align-items-center gap-3">
 					<a href="https://t.me/itpark32" target="_blank">
-						<img src="img/modalApl/tg.png" alt="Логотип Telegram">
+						<img src="img/modal/tg.svg" alt="Логотип Telegram">
 					</a>
 					<a href="https://vk.com/itpark32" target="_blank">
-						<img src="img/modalApl/vk.png" alt="Логотип ВКонтакте">
+						<img src="img/modal/vk.svg" alt="Логотип ВКонтакте">
 					</a>
 					<a href="https://www.youtube.com/@itpark32" target="_blank">
-						<img src="img/modalApl/youtube.png" alt="Логотип Youtube">
+						<img style="width: 40px;" src="img/modal/youtube.svg" alt="Логотип Youtube">
 					</a>
 				</div>
 			</div>
@@ -2235,128 +1357,89 @@
 	</div>
 
 	<!-- modal вебинар карта развития it специалиста -->
-	<div class="modal fade modal-submit modal__submit" id="p" tabindex="-1" aria-labelledby="p" aria-hidden="true">
-		<div class="modal-dialog modal-xl">
-			<div class="modal-content modal__content-submit rounded-5">
-				<div class="modal-header modal__header-description">
-					<h1 class="modal-title modal__header-title lh-base fw-bold pb-3 text-light" id="demoLessonModalForm">
-						Узнайте какая профессия в сфере IT подходит именно вам</h1>
-					<button type="button" class="btn-close modal__close-submit" data-bs-dismiss="modal" aria-label="Close"
-						id="closeBtn"></button>
+
+	<div class="modal fade modal-submit" id="p" tabindex="-1" aria-labelledby="p" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content modal__content-submit rounded-4">
+				<div class="modal-header modal__header-description align-items-start">
+					<h3 class="modal-title h4 lh-base fw-bold" id="demoLessonModalForm">
+						Узнайте, какая профессия в сфере IT подходит именно вам!</h3>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="closeBtn"></button>
+				</div>
+				<div class="modal-body">
+					<p class="modal__footer-text lh-base mb-1 fst-italic fw-bold">Оставьте заявку в форме ниже, и мы пришлем вам
+						запись
+						закрытого
+						вебинара, который проводил руководитель IT-ПАРКа</p>
+					<p class="lh-base mb-1">• Вебинар поможет вам определиться с выбором будущей
+						профессии </p>
+					<p class="lh-base">
+						• Вы узнаете, что в IT-сфере не только "технари", но и гуманитарии</p>
 				</div>
 
-				<div class=" modal__footer text-light ">
-					<p class="modal__footer-text lh-base mb-3">Оставьте заявку в форме ниже и мы пришлем вам запись закрытого
-						вебинара, который проводил руководитель IT-ПАРКа.</p>
-					<p class="modal__footer-text lh-base pb-3 mb-3">Вебинар поможет определиться вам с выбором вашей будущей
-						профессии и расскажет, что в IT сфере есть не только технари но и гуманитарии. </p>
-					<form class="modal__footer-form" method="post">
-						<div class="col-12">
-							<label class="d-flex flex-column gap-2" for="name">Как вас зовут?
-								<input class="form-control mb-4 mt-2" type="text" name="name" id="name" placeholder="Введите ваше имя"
-									maxlength="100" required>
-							</label>
-
-							<label class="d-flex flex-column gap-2" for="age">Сколько вам лет?
-								<input class="form-control mb-4 mt-2" type="text" name="age" id="age" placeholder="Введите ваш возраст"
-									maxlength="100" required>
-							</label>
-
-							<!-- <label class="d-flex flex-column gap-2" for="name">Выберите курс -->
-							<select name="course" class="form-select form-select-lg mb-4 mt-2" hidden>
-								<option selected value="Вебинар карта развития ит специалиста 15 секунд">Выберите один из вариантов
-								</option>
-								<option value="Разработка сайтов и веб-приложений">Разработка сайтов и веб-приложений</option>
-								<option value="Серверное программирование на Java">Серверное программирование на Java</option>
-								<option value="Фронтенд-разработка на JavaScript и React">Фронтенд-разработка на JavaScript и React
-								</option>
-								<option value="Разработка Telegram ботов на Java">Разработка Telegram ботов на Java</option>
-							</select>
-							<!-- </label> -->
-							<p class="modal__footer-text lh-base ">Выберите любой удобный способ связи и заполните поле с контактом
-							</p>
+				<div class="modal-footer modal-footer-bg flex-column py-4 rounded-4">
+					<form class="product__application d-flex flex-column" id="webinarForm">
+						<input type="text" name="course" value="Карта развития IT-специалиста" hidden>
+						<p class="product__application-text lh-sm lh-sm-base mb-0">Выберите удобный способ связи:</p>
+						<div class="btn-group d-flex" role="group" aria-label="Basic radio toggle button group">
+							<input type="radio" class="btn-check" name="messenger" id="btnRadio1" autocomplete="off" value="ВКонтакте"
+								checked>
+							<label class="product__application-lable btn btn-outline-primary rounded-0"
+								for="btnRadio1">ВКонтакте</label>
+							<input type="radio" class="btn-check" name="messenger" id="btnRadio2" autocomplete="off" value="Telegram">
+							<label class="product__application-lable btn btn-outline-primary" for="btnRadio2">Telegram</label>
+							<input type="radio" class="btn-check" name="messenger" id="btnRadio3" autocomplete="off" value="Whatsapp">
+							<label class="product__application-lable btn btn-outline-primary" for="btnRadio3">Whatsapp</label>
+							<input type="radio" class="btn-check" name="messenger" id="btnRadio4" autocomplete="off" value="Телефон">
+							<label class="product__application-lable btn btn-outline-primary rounded-0"
+								for="btnRadio4">Телефон</label>
 						</div>
-
-						<div class="modal__footer-contacts col-12 d-flex flex-column d-lg-flex flex-lg-row gap-4 gap-lg-3 gap-xl-0">
-							<div class="col-12 col-lg-6 d-flex flex-column gap-4 ">
-								<div class="d-flex align-items-center gap-4">
-									<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
-										<img src="img/modalDescription/whatsApp.png" alt="Логотип WhatsApp" loading="lazy">
-										<label class="modal__footer-form-label d-flex flex-column align-items-center"
-											for="phone">WhatsApp</label>
-									</div>
-									<input class="form-control modal__footer-form-input" type="text" name="whatsApp" id="whatsApp"
-										placeholder="Введите номер или ссылку на профиль" maxlength="100">
-								</div>
-
-								<div class="d-flex align-items-center gap-4">
-									<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
-										<img src="img/modalDescription/tg.png" alt="Логотип Telegram" loading="lazy">
-										<label class="modal__footer-form-label d-flex flex-column align-items-center"
-											for="telegram">Telegram</label>
-									</div>
-									<input class="form-control modal__footer-form-input" type="text" name="telegram" id="telegram"
-										placeholder="Введите номер или ссылку на профиль" maxlength="100">
-								</div>
+						<p class="product__application-text lh-sm lh-sm-base mb-0">Заполните контактные данные:</p>
+						<div class="product__form d-flex flex-column">
+							<div class="mb-0">
+								<input type="text" class="form-control product__form-input border-black" id="userName"
+									aria-describedby="textHelp" placeholder="Ваше имя" name="name" required>
 							</div>
-
-							<div class="col-12 col-lg-6 d-flex flex-column gap-4 ">
-								<div class="d-flex align-items-center gap-4 align-self-xl-end">
-									<div class="d-flex flex-column align-items-center gap-2" style="width: 50px;">
-										<img src="img/modalDescription/vk.png" alt="Логотип ВКонтакте" loading="lazy">
-										<label class="modal__footer-form-label d-flex flex-column align-items-center"
-											for="vk">ВКонтакте</label>
-									</div>
-									<input class="form-control modal__footer-form-input" type="text" name="vk" id="vk"
-										placeholder="Введите номер или ссылку на профиль" maxlength="100">
-								</div>
-
-								<div class="d-flex align-items-center gap-4 align-self-xl-end">
-									<div class="d-flex flex-column align-items-center gap-2" style="min-width: 54px;">
-										<img src="img/modalDescription/tel.png" alt="Логотип телефона" loading="lazy">
-										<label class="modal__footer-form-label d-flex flex-column align-items-center"
-											for="telephone">Телефон</label>
-									</div>
-									<input class="form-control modal__footer-form-input" type="tel" name="telephone" id="telephone"
-										placeholder="Введите номер телефона" maxlength="100">
-								</div>
+							<div class="mb-0">
+								<input type="text" class="form-control product__form-input border-black" id="userPhone"
+									placeholder="Введите номер или ссылку на профиль" name="contact" required>
 							</div>
-						</div>
-
-						<div class="form-floating col-12 d-flex flex-column gap-3">
-							<div>
-								<label for="floatingTextarea" class="lh-base">Ваш комментарий или вопрос (при необходимости)</label>
+							<!-- <div class="mb-0">
+								<input type="text" class="form-control product__form-input" id="userComment"
+									placeholder="Комментарий (при необходимости)" name="comment">
+							</div> -->
+							<div class="mb-0 form-check form__check  d-flex align-items-start">
+								<input type="checkbox" class="form-check-input rounded-0 border-black" id="exampleCheck1" checked
+									required>
+								<label class="form-check-label product__form-label_font lh-base fw-medium" for="exampleCheck1">Даю
+									согласие на <a style="text-decoration: underline;" target="_blank" href="assets/confidentiality.pdf">
+										обработку персональных данных</a></label>
 							</div>
-							<div>
-								<textarea class="form-control" name="question" placeholder="Оставить комментарий"
-									id="floatingTextarea"></textarea>
-							</div>
-						</div>
+							<button type="submit" class="btn btn-primary product__form-btn border-0">
 
-
-						<div class="modal__footer-btn-wrapper d-flex flex-column gap-3 pt-4 ">
-							<div class="form-check mb-3">
-
-								<label class="form-check-label d-flex align-items-center d-lg-flex align-items-lg-end">
-									<input class="modal__footer-check form-check-input d-flex align-self-start"
-										style="width: 20px;height: 20px;" type="checkbox" id="frontendCheck" checked required>
-									<label for="frontendCheck" class="d-inline-block px-3 lh-sm modal__footer-label-text">Отправляя
-										форму, вы соглашаетесь на <a href="assets/confidentiality.pdf" target="_blank">обработку
-											персональных данных
-										</a></label>
-								</label>
-							</div>
-							<button type="submit"
-								class="modal__footer-btn button btn btn-primary rounded-pill fw-medium px-4 py-3  d-flex align-items-center justify-content-center align-self-lg-start">
-								<label class="modal__footer-btn-text">Получить запись вебинара</label>
-								<span class="modal__footer-loader spinner-border spinner-border ms-3 mb-2 d-none"
+								<label role="button" class="product__form-btn-text">Получить запись вебинара</label>
+								<span class="product__form-btn-spinner spinner-border spinner-border ms-3 align-middle d-none"
 									aria-hidden="true"></span>
 							</button>
 						</div>
+						<div
+							class="product__sos1al d-flex flex-column align-items-center d-sm-flex flex-sm-row  justify-content-sm-center">
+							<p class="product__sos1al-text lh-sm lh-sm-base mb-0">Или напишите нам в: </p>
+							<div class="product__sos1al-links d-flex">
+								<a target="_blank" href="https://t.me/amsmyslov" class="product__sos1al-link">
+									<img class="product__sos1al-img" src="imgWEB/product/tg.svg" alt="Картинка соц.сети Telegram">
+								</a>
+								<a target="_blank" href="https://wa.me/79532819045" class="product__sos1al-link">
+									<img class="product__sos1al-img" src="imgWEB/product/whaysApp.svg" alt="Картинка соц.сети WhatsApp">
+								</a>
+								<a target="_blank" href="https://vk.me/itpark32_official" class="product__sos1al-link">
+									<img class="product__sos1al-img" src="imgWEB/product/vk.svg" alt="Картинка соц.сети ">
+								</a>
+							</div>
+						</div>
+						<!-- Обертка для блокировки UI во время запроса -->
+						<div class="product__form-loading-wrapper d-none"></div>
 					</form>
-
-					<!-- Обертка для блокировки UI во время запроса -->
-					<div class="modal__footer-loader-wrapper d-none"></div>
 				</div>
 
 			</div>
@@ -2370,14 +1453,14 @@
 			<img src="img/button/1.svg" alt="Картинка соц. сетей" class="fixed__img">
 		</button>
 
-		<a href="https://t.me/amsmyslov" class="fixed__link tg">
-			<img class="fixed__img" src="img/modal/tg.png" alt="Логотип Telegram">
+		<a href="https://t.me/amsmyslov" target="_blank" class="fixed__link tg">
+			<img class="fixed__img" src="img/modal/tg.svg" alt="Логотип Telegram">
 		</a>
-		<a href="https://wa.me/79532819045" class="fixed__link whatsapp">
-			<img class="fixed__img" src="img/modal/whatsApp.png" alt="Логотип WhatsApp">
+		<a href="https://wa.me/79532819045" target="_blank" class="fixed__link whatsapp">
+			<img class="fixed__img" src="img/modal/whaysApp.svg" alt="Логотип WhatsApp">
 		</a>
-		<a href="https://vk.me/itpark32_official" class="fixed__link vk ">
-			<img class="fixed__img" src="img/modal/vk.png" alt="Логотип ВКонтакте">
+		<a href="https://vk.me/itpark32_official" target="_blank" class="fixed__link vk">
+			<img class="fixed__img" src="img/modal/vk.svg" alt="Логотип ВКонтакте">
 		</a>
 
 		<div class="close-wrapper " id="close">
